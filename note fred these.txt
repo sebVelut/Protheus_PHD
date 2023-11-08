@@ -1,0 +1,29 @@
+note fred these:
+martinez et al, 2021 aperiodic stimulations
+
+
+
+
+erp plus puissaznt que les mseq, o, laisse le temps au neurone de faire un pattern régulier
+moins de d"images" mais plus nettes
+On passe a 52.8s de calibration et 94.4% d'accuracy
+
+
+Regarder differents classifiers pour essayer d'améliorer le CNN. Lire des articles sur le c vep, ICM passive
+
+sylvain peut aider sur géométrie rimanienne : Xdown --> filtre spatiale, puis faut travailler sur les matrices de covariances avec des métriques rimanienne
+
+
+Hybride CNN/Rimanien
+
+Durant la thèse, faire la attnetional lapses avec le poassif mais avec des c-vep et non ssvep (utiliser le coeff de correlation)
+
+
+
+
+
+note 
+bruna : brain data and data aligment
+salim: imagery processing, computation process with DL
+bruno : 
+sara : post doc, SPDNet on BCI application, working on MOABB
