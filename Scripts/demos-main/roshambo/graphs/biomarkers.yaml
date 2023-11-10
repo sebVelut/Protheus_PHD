@@ -1,0 +1,180 @@
+graphs:
+
+  - id: emg_biomarkers
+    nodes:
+
+      # Subscribe to signals
+      # --------------------
+      - id: sub
+        module: timeflux.nodes.zmq
+        class: Sub
+        params:
+          topics: [raw, events]
+
+      # Clean signal
+      # ------------
+      - id: notch
+        module: timeflux_dsp.nodes.filters
+        class: IIRFilter
+        params:
+          filter_type: bandstop
+          frequencies: [45, 55]
+          order: 1
+
+      - id: bandpass
+        module: timeflux_dsp.nodes.filters
+        class: IIRFilter
+        params:
+          filter_type: bandpass
+          frequencies: [10, 200]
+          order: 2
+
+      - id: mask_saturation
+        module: nodes.filters
+        class:  DropOutsider
+        params:
+          left: -1.5
+          right: 1.5
+
+      # Detect burst using TKEO
+      # -----------------------
+      - id: tkeo
+        module: nodes.emg
+        class:  TKEO
+
+      - id: smooth
+        module: nodes.filters
+        class:  MovingAverage
+        params:
+          length: .5 
+          step: 0.
+
+      - id: scale
+        module: nodes.filters
+        class: RecursiveScaler
+        params:
+          method: minmax
+          limits: [.1, 2]
+
+      # KNN on temporal features
+      # ------------------------
+
+      - id: epoch
+        module: timeflux.nodes.epoch
+        class: Epoch
+        params:
+          before: 0.0
+          after: 3.5
+          event_trigger: trial_starts
+
+      - id: trim
+        module: timeflux.nodes.epoch
+        class: Trim
+        params:
+          # assumes 1000 Hz sample rate and trim to 3 seconds
+          samples: 3000
+
+      - id: window
+        module: timeflux.nodes.window
+        class: Slide
+        params:
+          length: 3.0
+          step: 0.2
+
+      - id: fit_predict
+        module: timeflux.nodes.ml
+        class: Pipeline
+        params:
+          mode: predict
+          event_start_accumulation:  calibration_starts
+          event_stop_accumulation: calibration_stops
+          event_start_training: calibration_stops
+          meta_label: [epoch, context, id]
+          steps:
+            - module: estimators.emg
+              class: EMGFeatures
+            - module: sklearn.preprocessing
+              class: Normalizer
+              args:
+                norm: max
+            - module: sklearn.neighbors
+              class: KNeighborsClassifier
+
+
+      # Finally, publish some streams to save them
+      # ------------------------------------------
+      - id: pub_events
+        module: timeflux.nodes.zmq
+        class: Pub
+        params:
+          topic: events
+
+      - id: pub_filtered
+        module: timeflux.nodes.zmq
+        class: Pub
+        params:
+          topic: filtered
+
+      - id: pub_burst
+        module: timeflux.nodes.zmq
+        class: Pub
+        params:
+          topic: burst
+
+      # for debug purpose
+      # -----------------
+      - id: display
+        module: timeflux.nodes.debug
+        class: Display
+
+
+    edges:
+      - source: sub:raw
+        target: mask_saturation
+      - source: mask_saturation
+        target: notch
+      - source: notch
+        target: bandpass
+
+      # Detect burst using TKEO
+      # -----------------------
+      - source: bandpass
+        target: tkeo
+      - source: tkeo
+        target: smooth
+      - source: smooth
+        target: scale
+
+      # KNN on temporal features
+      # ------------------------
+      - source: bandpass
+        target: epoch
+      - source: sub:events   
+        target: epoch:events
+      - source: bandpass
+        target: window
+      - source: sub:events
+        target: fit_predict:events
+      - source: epoch:*
+        target: trim
+      - source: trim:*
+        target: fit_predict:training
+      - source: window:*
+        target: fit_predict
+
+
+      # Publish
+      # -------
+      - source: bandpass
+        target: pub_filtered
+      - source: fit_predict:events
+        target: pub_events
+      - source: scale
+        target: pub_burst
+
+      # for debug purpose 
+      # -----------------
+      - source: fit_predict:events
+        target: display
+
+    rate: 0

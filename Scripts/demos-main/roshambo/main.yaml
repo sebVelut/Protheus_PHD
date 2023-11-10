@@ -1,0 +1,22 @@
+
+import:
+
+  # Input graphs
+  # ------------
+  - graphs/random.yaml # random data
+  # - graphs/replay.yaml # pre-recorded data
+  # - graphs/bitalino.yaml # BITalino device
+
+  # Biomarkers and UI
+  # -----------------
+  - graphs/biomarkers.yaml
+  - graphs/ui.yaml
+  # - graphs/save.yaml # save the data in HDF5
+
+graphs:
+
+  - id: broker
+    nodes:
+      - id: broker
+        module: timeflux.nodes.zmq
+        class: Broker

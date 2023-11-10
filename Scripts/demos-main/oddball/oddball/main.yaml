@@ -1,0 +1,85 @@
+import:
+  - graphs/random.yaml
+  #- graphs/lsl.yaml
+  #- graphs/cyton.yaml
+  - graphs/record.yaml
+
+graphs:
+
+  - id: protocol
+    nodes:
+    - id: ui
+      module: timeflux_ui.nodes.ui
+      class: UI
+      params:
+        # The application is available at http://localhost:8000/oddball/
+        # Please use Chrome as it is the only browser that is well tested for now
+        routes:
+          # This assumes that the oddball directory is in the current directory
+          # Adjust if necessary
+          oddball: ./www
+        # The full list of options is available here:
+        # https://github.com/timeflux/demos/blob/main/oddball/oddball/www/assets/js/app.js#L26
+        settings:
+          oddball:
+            photodiode:
+              enabled: false # Set to "true" to display the photodiode patch on the bottom-left corner
+    - id: publish
+      module: timeflux.nodes.zmq
+      class: Pub
+      params:
+        topic: events
+    - id: subscribe
+      module: timeflux.nodes.zmq
+      class: Sub
+      params:
+        topics: [ filtered ]
+    edges:
+      - source: ui:events
+        target: publish
+      - source: subscribe:filtered
+        target: ui:eeg
+    rate: 30
+
+  # Uncomment this graph if you want to use a photodiode
+  # We already validated that the events are synchronized with screen refresh, so this is not strictly required
+  # There is a sensor firmware for Arduino and generic Timeflux plugin here: https://github.com/mesca/timeflux_serial
+  # - id: photodiode
+  #   nodes:
+  #   - id: arduino
+  #     module: timeflux_serial.nodes.driver
+  #     class: SerialDevice
+  #     params:
+  #       port: /dev/tty.SLAB_USBtoUART # Find the correct port on your computer
+  #       rate: 1000
+  #   - id: publish
+  #     module: timeflux.nodes.zmq
+  #     class: Pub
+  #     params:
+  #       topic: photodiode
+  #   edges:
+  #   - source: arduino
+  #     target: publish
+  #   rate: 40
+
+  # Uncomment this graph if you want to print debug information in the console
+  # - id: display
+  #   nodes:
+  #   - id: subscribe
+  #     module: timeflux.nodes.zmq
+  #     class: Sub
+  #     params:
+  #       topics: [ photodiode, events, eeg ]
+  #   - id: debug
+  #     module: timeflux.nodes.debug
+  #     class: Display
+  #   edges:
+  #     - source: subscribe:events
+  #       target: debug
+  #   rate: 1
+
+  - id: broker
+    nodes:
+    - id: broker
+      module: timeflux.nodes.zmq
+      class: Broker

@@ -1,0 +1,37 @@
+graphs:
+
+  - id: LSL
+    nodes:
+    - id: data
+      # This assumes EEG data is received through a LSL stream
+      # Change this node as appropriate
+      module: timeflux.nodes.lsl
+      class: Receive
+      params:
+        prop: name
+        value: my_lsl_stream # Set the name of the LSL stream here
+    - id: bandpass
+      module: timeflux_dsp.nodes.filters
+      class: IIRFilter
+      params:
+        filter_type: bandpass
+        frequencies: [1, 40]
+        order: 3
+    - id: publish_raw
+      module: timeflux.nodes.zmq
+      class: Pub
+      params:
+        topic: raw
+    - id: publish_filtered
+      module: timeflux.nodes.zmq
+      class: Pub
+      params:
+        topic: filtered
+    edges:
+      - source: data
+        target: publish_raw
+      - source: data
+        target: bandpass
+      - source: bandpass
+        target: publish_filtered
+    rate: 10
