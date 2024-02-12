@@ -39,7 +39,7 @@ def make_preds_pvalue(y_pred, codes, min_len=50, sfreq=500, obj_p=1e-5, diff_rat
                 corrs.append(corp)
                 if corp > corr:
                     corr = corp
-                    p_max = p_value
+                    p_max = 1-p_value
                     tmp = key
             corrs_idx = np.argsort(corrs)
             # If p_value bigger than a treshold and 50% diff between first and second guess
@@ -67,7 +67,6 @@ def make_preds_accumul_aggresive(y_pred, codes, min_len=30, sfreq=500, consecuti
     code_pos = 0
     y_tmp = [] 
     mean_long = []
-
 
     for trial in range(int(len(y_pred)/length)):   
         # Retrieve a trial

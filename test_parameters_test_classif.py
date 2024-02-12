@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.cross_decomposition import CCA
 from EEG2CodeKeras import (basearchi,
                            basearchitest_batchnorm,
                            basearchi_patchembedding,
@@ -7,6 +8,7 @@ from EEG2CodeKeras import (basearchi,
                            vanilliaEEG2Code,
                            vanilliaEEG2Code2,
                            EEGnet_Inception)
+from Scripts.SPDNet.optimizer.riemannian_adam import RiemannianAdam
 from _utils import make_preds_accumul_aggresive, make_preds_pvalue
 import time
 
@@ -32,7 +34,10 @@ from moabb.paradigms import CVEP
 from moabb.datasets import Cattan2019_VR
 sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\moabb\\moabb\\datasets")
 sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\moabb\\moabb\\paradigms")
+sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\Protheus_PHD\\Scripts\\SPDNet")
 from castillos2023 import CasitllosCVEP100,CasitllosCVEP40,CasitllosBurstVEP100,CasitllosBurstVEP40
+from Scripts.SPDNet.spd_net_2_tensorflow import SPDNet_AJD
+from Scripts.SPDNet.spd_net_tensorflow import SPDNet_Tensorflow
 
 
 import sys
@@ -52,7 +57,7 @@ fps = 60
 window_size = 0.25
 
 id_min = 1
-id_max = 13
+id_max = 2
 nb_point_per_sec = 60
 results_df = pd.DataFrame(columns=["Score","time","subject","nb_cal","clf","score_01","time_training"])
 
@@ -95,53 +100,54 @@ for id_parti in range(id_min,id_max):
     # assert(1==0)
 
 
-    # pipelines = {}
-    # pipelines["RG+LDA"]=make_pipeline(
-    #     XdawnCovariances(
-    #         nfilter=6, estimator="oas", xdawn_estimator="lwf"
-    #     ),
-    #     TangentSpace(),
-    #     LDA(solver="lsqr", shrinkage="auto"),
-    # )
-    # pipelines["RG+SVC"] = make_pipeline(XdawnCovariances(nfilter=6, estimator="oas", xdawn_estimator="lwf"),
-    # TangentSpace(),
-    # svm.SVC())
-    # pipelines["Xd+LDA"] = make_pipeline(Xdawn(nfilter=6, estimator="lwf"),Vectorizer(),LDA(solver="lsqr", shrinkage="auto"))
+    pipelines = {}
+    pipelines["RG+LDA"]=make_pipeline(
+        XdawnCovariances(
+            nfilter=6, estimator="oas", xdawn_estimator="lwf"
+        ),
+        TangentSpace(),
+        LDA(solver="lsqr", shrinkage="auto"),
+    )
+    pipelines["RG+SVC"] = make_pipeline(XdawnCovariances(nfilter=6, estimator="oas", xdawn_estimator="lwf"),
+    TangentSpace(),
+    svm.SVC())
+    pipelines["Xd+LDA"] = make_pipeline(Xdawn(nfilter=6, estimator="lwf"),Vectorizer(),LDA(solver="lsqr", shrinkage="auto"))
 
-    # # paradigm = CVEP(resample=128)
-    # print("charging dataset")
-    # print(dataset_moabb.event_id)
-    # dataset_moabb.subject_list = dataset_moabb.subject_list[:]
-    # print(dataset_moabb.subject_list)
-    # datasets = [dataset_moabb]
-    # overwrite = True  # set to True if we want to overwrite cached results
-    # evaluation = WithinSessionEvaluation(
-    #     paradigm=paradigm, datasets=datasets, suffix="examples", overwrite=overwrite
-    # )
 
-    # results = evaluation.process(pipelines)
+    # paradigm = CVEP(resample=128)
+    print("charging dataset")
+    print(dataset_moabb.event_id)
+    dataset_moabb.subject_list = dataset_moabb.subject_list[:]
+    print(dataset_moabb.subject_list)
+    datasets = [dataset_moabb]
+    overwrite = True  # set to True if we want to overwrite cached results
+    evaluation = WithinSessionEvaluation(
+        paradigm=paradigm, datasets=datasets, suffix="examples", overwrite=overwrite
+    )
 
-    # print("aaaaaaaaaaaaaaaaaaaaaaaa\n\n\n\n\n\n",results)
+    results = evaluation.process(pipelines)
 
-    # fig, ax = plt.subplots(facecolor="white", figsize=[8, 4])
+    print("aaaaaaaaaaaaaaaaaaaaaaaa\n\n\n\n\n\n",results)
 
-    # sns.stripplot(
-    #     data=results,
-    #     y="score",
-    #     x="pipeline",
-    #     ax=ax,
-    #     jitter=True,
-    #     alpha=0.5,
-    #     zorder=1,
-    #     palette="Set1",
-    # )
-    # sns.pointplot(data=results, y="score", x="pipeline", ax=ax, palette="Set1")
+    fig, ax = plt.subplots(facecolor="white", figsize=[8, 4])
 
-    # ax.set_ylabel("ROC AUC")
-    # ax.set_ylim(0.5, 1)
+    sns.stripplot(
+        data=results,
+        y="score",
+        x="pipeline",
+        ax=ax,
+        jitter=True,
+        alpha=0.5,
+        zorder=1,
+        palette="Set1",
+    )
+    sns.pointplot(data=results, y="score", x="pipeline", ax=ax, palette="Set1")
 
-    # plt.show()
-    # exit
+    ax.set_ylabel("ROC AUC")
+    ax.set_ylim(0.5, 1)
+
+    plt.show()
+    break
 
     ##########################
     # raw = mne.io.read_raw_eeglab(os.path.join(path, file_name), preload=True, verbose=False)
@@ -219,7 +225,7 @@ for id_parti in range(id_min,id_max):
     accuracy = []
     for n_cal in range(n_cal_min,n_cal_max):
         print("nb participant :",n_cal)
-        epochs = mne.Epochs(raw,events,{"0":100,"1":101},picks=raw.ch_names[:-2],tmin=-0.01,tmax=0.3)
+        epochs = mne.Epochs(raw,events,{"0":100,"1":101},picks=raw.ch_names[:-2],tmin=-0.01,tmax=window_size)
         X=epochs.get_data()
         print(n_class*n_cal*nb_point_per_sec)
         label = epochs.events[...,-1]-100
@@ -402,4 +408,4 @@ for id_parti in range(id_min,id_max):
 
 # plt.show()
 
-results_df.to_csv("C:\\Users\\s.velut\\Documents\\These\\Protheus_PHD\\results\\results_{0}.csv".format(txt))
+# results_df.to_csv("C:\\Users\\s.velut\\Documents\\These\\Protheus_PHD\\results\\results_{0}.csv".format(txt))

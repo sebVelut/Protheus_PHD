@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -13,6 +14,9 @@ def plot_score_code(path):
     sns.lineplot(data=df,x="nb_cal",y="time",hue="clf",legend="full")
     plt.figure(4)
     sns.lineplot(data=df,x="nb_cal",y="time_training",hue="clf",legend="full")
+    plt.figure(5)
+    sns.lineplot(data=df[df["clf"]=="Xdawn+LDA"],x="nb_cal",y="Score",hue="subject",legend="full")
+    plt.plot(np.ones(12)*0.9)
     # plt.figure(10)
     # sns.lineplot(data=df,x="nb_cal",y="Score",hue="subject",legend="full",units="subject")
     plt.show()

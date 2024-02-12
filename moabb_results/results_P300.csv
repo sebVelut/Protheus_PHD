@@ -119,80 +119,80 @@
 117,0.9902467,1.3736987,576.0,0.006760041,10,session_0,16,3,BNCI2014-009,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 118,0.9794408,1.2253604,576.0,0.0060466644,10,session_1,16,3,BNCI2014-009,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 119,0.9757182,1.1414492,576.0,0.005602728,10,session_2,16,3,BNCI2014-009,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-120,0.9852889,4.492826,4283.0,0.042483725,1,subject01_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-121,0.9897403,3.6549642,4284.0,0.034535427,1,subject01_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-122,0.992827,4.02332,4283.0,0.038041614,1,subject01_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-123,0.97929806,3.8104875,4284.0,0.036019474,2,subject02_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-124,0.981179,4.060749,4284.0,0.038391426,2,subject02_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-125,0.9772101,3.652364,4284.0,0.034513354,2,subject02_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-126,0.9713056,4.151512,4283.0,0.03922755,3,subject03_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-127,0.9728375,4.0080447,4284.0,0.037888326,3,subject03_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-128,0.98275137,3.8929107,4283.0,0.03679474,3,subject03_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-129,0.99412763,4.144643,4284.0,0.039183244,4,subject04_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-130,0.99048877,3.727906,4283.0,0.035239168,4,subject04_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-131,0.99205476,3.625031,4283.0,0.034244932,4,subject04_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-132,0.9486785,4.2132463,4284.0,0.0398334,5,subject05_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-133,0.95955527,3.9486144,4284.0,0.03733204,5,subject05_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-134,0.9720899,4.2494183,4284.0,0.040176887,5,subject05_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-135,0.98952866,3.9704993,4281.0,0.037537575,6,subject06_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-136,0.9963965,4.354537,4284.0,0.04117536,6,subject06_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-137,0.99715817,3.8852932,4284.0,0.036724012,7,subject07_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-138,0.9983513,3.6837862,4284.0,0.034766328,7,subject07_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-139,0.9990324,3.4497359,4284.0,0.032597214,7,subject07_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-140,0.9227482,4.388516,4283.0,0.041239835,8,subject08_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-141,0.94384277,4.026958,4283.0,0.038071346,8,subject08_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-142,0.9269757,3.6685266,4284.0,0.03467706,8,subject08_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-143,0.9875385,5.297084,4284.0,0.050098374,9,subject09_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-144,0.9936608,3.420733,4284.0,0.032327574,9,subject09_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-145,0.9929279,3.6592941,4284.0,0.03458576,9,subject09_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-146,0.99503535,3.835277,4283.0,0.036248155,10,subject10_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-147,0.9945019,4.062308,4268.0,0.038389955,10,subject10_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-148,0.99504906,3.8170857,4281.0,0.036086254,10,subject10_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-149,0.8234207,4.7247176,4282.0,0.044676624,11,subject11_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-150,0.73602325,4.4689226,4284.0,0.04225405,11,subject11_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-151,0.70477116,4.820945,4283.0,0.04557948,11,subject11_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-152,0.97875,4.3543205,4284.0,0.04116843,12,subject12_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-153,0.9896224,3.8600595,4284.0,0.036483888,12,subject12_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-154,0.97450435,3.70867,4284.0,0.03505696,12,subject12_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-155,0.98768663,4.742031,4284.0,0.044835158,13,subject13_block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-156,0.98709387,4.854157,4283.0,0.045901306,13,subject13_block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-157,0.954048,4.403903,4284.0,0.041627545,13,subject13_block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-158,0.9777539,5.106906,4759.0,0.048300676,1,subject01_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-159,0.96427345,4.57274,4760.0,0.043211482,1,subject01_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-160,0.9539038,4.429109,4760.0,0.04185846,1,subject01_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-161,0.99086046,3.5467439,4760.0,0.033499647,2,subject02_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-162,0.9885768,3.5740201,4760.0,0.03341087,2,subject02_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-163,0.9906581,3.4644518,4760.0,0.0321264,2,subject02_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-164,0.9886492,3.7818923,4760.0,0.03571208,3,subject03_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-165,0.9886725,3.6902006,4760.0,0.033772416,3,subject03_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-166,0.98807764,4.0272536,4760.0,0.038054142,3,subject03_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-167,0.96336466,4.1662498,4760.0,0.039383054,4,subject04_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-168,0.95517564,4.1193995,4760.0,0.03892558,4,subject04_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-169,0.984922,3.8370295,4760.0,0.03626225,4,subject04_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-170,0.93553275,3.8277533,4760.0,0.036166757,5,subject05_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-171,0.9462644,3.8606913,4754.0,0.036482774,5,subject05_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-172,0.9205308,4.124237,4760.0,0.038978387,5,subject05_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-173,0.98961073,4.789697,4760.0,0.045280606,6,subject06_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-174,0.9930595,3.7957406,4760.0,0.035857588,6,subject06_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-175,0.9923408,3.7381253,4760.0,0.035326004,6,subject06_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-176,0.9518094,3.810883,4758.0,0.036005784,7,subject07_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-177,0.95985746,4.0362267,4758.0,0.038132396,7,subject07_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-178,0.9742752,3.9306452,4760.0,0.037140124,7,subject07_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-179,0.9660383,3.8602767,4760.0,0.03647146,8,subject08_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-180,0.96452975,3.774013,4760.0,0.035659272,8,subject08_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-181,0.9616893,3.59452,4760.0,0.0336211,8,subject08_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-182,0.96505326,3.8710375,4759.0,0.036539525,9,subject09_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-183,0.97382873,3.8583193,4760.0,0.03645745,9,subject09_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-184,0.97243184,3.5912187,4760.0,0.033922724,9,subject09_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-185,0.9531753,4.138167,4760.0,0.03867619,10,subject10_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-186,0.9622155,3.9370782,4760.0,0.03721569,10,subject10_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-187,0.9704143,3.7447782,4760.0,0.035376124,10,subject10_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-188,0.9272689,4.415907,4760.0,0.041746907,11,subject11_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-189,0.9357436,4.0693808,4698.0,0.038456965,11,subject11_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-190,0.94942236,3.7296553,4760.0,0.03523837,11,subject11_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-191,0.9641312,4.131363,4760.0,0.039051097,12,subject12_block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-192,0.95473903,4.2412405,4760.0,0.04007931,12,subject12_block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-193,0.9602728,3.7247097,4760.0,0.035191584,12,subject12_block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+120,0.9852889,4.492826,4283.0,0.042483725,1,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+121,0.9897403,3.6549642,4284.0,0.034535427,1,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+122,0.992827,4.02332,4283.0,0.038041614,1,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+123,0.97929806,3.8104875,4284.0,0.036019474,2,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+124,0.981179,4.060749,4284.0,0.038391426,2,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+125,0.9772101,3.652364,4284.0,0.034513354,2,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+126,0.9713056,4.151512,4283.0,0.03922755,3,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+127,0.9728375,4.0080447,4284.0,0.037888326,3,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+128,0.98275137,3.8929107,4283.0,0.03679474,3,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+129,0.99412763,4.144643,4284.0,0.039183244,4,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+130,0.99048877,3.727906,4283.0,0.035239168,4,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+131,0.99205476,3.625031,4283.0,0.034244932,4,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+132,0.9486785,4.2132463,4284.0,0.0398334,5,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+133,0.95955527,3.9486144,4284.0,0.03733204,5,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+134,0.9720899,4.2494183,4284.0,0.040176887,5,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+135,0.98952866,3.9704993,4281.0,0.037537575,6,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+136,0.9963965,4.354537,4284.0,0.04117536,6,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+137,0.99715817,3.8852932,4284.0,0.036724012,7,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+138,0.9983513,3.6837862,4284.0,0.034766328,7,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+139,0.9990324,3.4497359,4284.0,0.032597214,7,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+140,0.9227482,4.388516,4283.0,0.041239835,8,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+141,0.94384277,4.026958,4283.0,0.038071346,8,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+142,0.9269757,3.6685266,4284.0,0.03467706,8,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+143,0.9875385,5.297084,4284.0,0.050098374,9,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+144,0.9936608,3.420733,4284.0,0.032327574,9,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+145,0.9929279,3.6592941,4284.0,0.03458576,9,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+146,0.99503535,3.835277,4283.0,0.036248155,10,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+147,0.9945019,4.062308,4268.0,0.038389955,10,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+148,0.99504906,3.8170857,4281.0,0.036086254,10,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+149,0.8234207,4.7247176,4282.0,0.044676624,11,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+150,0.73602325,4.4689226,4284.0,0.04225405,11,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+151,0.70477116,4.820945,4283.0,0.04557948,11,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+152,0.97875,4.3543205,4284.0,0.04116843,12,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+153,0.9896224,3.8600595,4284.0,0.036483888,12,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+154,0.97450435,3.70867,4284.0,0.03505696,12,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+155,0.98768663,4.742031,4284.0,0.044835158,13,block_1,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+156,0.98709387,4.854157,4283.0,0.045901306,13,block_2,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+157,0.954048,4.403903,4284.0,0.041627545,13,block_3,31,1,Huebner2017,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+158,0.9777539,5.106906,4759.0,0.048300676,1,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+159,0.96427345,4.57274,4760.0,0.043211482,1,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+160,0.9539038,4.429109,4760.0,0.04185846,1,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+161,0.99086046,3.5467439,4760.0,0.033499647,2,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+162,0.9885768,3.5740201,4760.0,0.03341087,2,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+163,0.9906581,3.4644518,4760.0,0.0321264,2,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+164,0.9886492,3.7818923,4760.0,0.03571208,3,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+165,0.9886725,3.6902006,4760.0,0.033772416,3,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+166,0.98807764,4.0272536,4760.0,0.038054142,3,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+167,0.96336466,4.1662498,4760.0,0.039383054,4,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+168,0.95517564,4.1193995,4760.0,0.03892558,4,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+169,0.984922,3.8370295,4760.0,0.03626225,4,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+170,0.93553275,3.8277533,4760.0,0.036166757,5,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+171,0.9462644,3.8606913,4754.0,0.036482774,5,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+172,0.9205308,4.124237,4760.0,0.038978387,5,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+173,0.98961073,4.789697,4760.0,0.045280606,6,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+174,0.9930595,3.7957406,4760.0,0.035857588,6,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+175,0.9923408,3.7381253,4760.0,0.035326004,6,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+176,0.9518094,3.810883,4758.0,0.036005784,7,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+177,0.95985746,4.0362267,4758.0,0.038132396,7,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+178,0.9742752,3.9306452,4760.0,0.037140124,7,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+179,0.9660383,3.8602767,4760.0,0.03647146,8,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+180,0.96452975,3.774013,4760.0,0.035659272,8,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+181,0.9616893,3.59452,4760.0,0.0336211,8,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+182,0.96505326,3.8710375,4759.0,0.036539525,9,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+183,0.97382873,3.8583193,4760.0,0.03645745,9,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+184,0.97243184,3.5912187,4760.0,0.033922724,9,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+185,0.9531753,4.138167,4760.0,0.03867619,10,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+186,0.9622155,3.9370782,4760.0,0.03721569,10,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+187,0.9704143,3.7447782,4760.0,0.035376124,10,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+188,0.9272689,4.415907,4760.0,0.041746907,11,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+189,0.9357436,4.0693808,4698.0,0.038456965,11,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+190,0.94942236,3.7296553,4760.0,0.03523837,11,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+191,0.9641312,4.131363,4760.0,0.039051097,12,block_1,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+192,0.95473903,4.2412405,4760.0,0.04007931,12,block_2,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+193,0.9602728,3.7247097,4760.0,0.035191584,12,block_3,31,1,Huebner2018,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 194,0.76663494,2.0021577,5400.0,0.009861278,1,session_0,8,1,BNCI2015-003,XDAWNCov + MDM,P300,WithinSession,Riemannian
 195,0.9276952,1.7074807,5400.0,0.00838443,2,session_0,8,1,BNCI2015-003,XDAWNCov + MDM,P300,WithinSession,Riemannian
 196,0.8118889,0.6965011,1800.0,0.003425097,3,session_0,8,1,BNCI2015-003,XDAWNCov + MDM,P300,WithinSession,Riemannian
@@ -233,42 +233,42 @@
 231,0.9000667,3.0792487,1800.0,0.015157128,8,session_0,8,1,BNCI2015-003,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 232,0.8856111,3.1396544,1800.0,0.01545538,9,session_0,8,1,BNCI2015-003,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 233,0.8861778,2.9972923,1800.0,0.01477269,10,session_0,8,1,BNCI2015-003,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-234,0.9408363,32.45581,4759.0,0.1599495,1,subject01_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-235,0.8700194,34.349937,4760.0,0.169175,1,subject01_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-236,0.8311298,37.080444,4760.0,0.18264896,1,subject01_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-237,0.9886308,29.894552,4760.0,0.14725825,2,subject02_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-238,0.98458105,30.813484,4760.0,0.15167972,2,subject02_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-239,0.9848018,30.902075,4760.0,0.15221752,2,subject02_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-240,0.9821919,34.756924,4760.0,0.17121471,3,subject03_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-241,0.98958254,29.8798,4760.0,0.14716884,3,subject03_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-242,0.97799253,31.731546,4760.0,0.15633264,3,subject03_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-243,0.8879943,31.416227,4760.0,0.15477233,4,subject04_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-244,0.89724416,32.845642,4760.0,0.16165878,4,subject04_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-245,0.9604297,32.24888,4760.0,0.15888822,4,subject04_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-246,0.94193363,29.670046,4760.0,0.14615513,5,subject05_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-247,0.9400786,26.816069,4754.0,0.13202164,5,subject05_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-248,0.8902791,32.18063,4760.0,0.15850161,5,subject05_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-249,0.98788756,37.73653,4760.0,0.185928,6,subject06_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-250,0.9907991,27.334316,4760.0,0.13461997,6,subject06_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-251,0.99262655,30.973343,4760.0,0.15255308,6,subject06_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-252,0.95303833,28.620216,4758.0,0.14097443,7,subject07_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-253,0.9575789,28.259552,4758.0,0.1391967,7,subject07_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-254,0.9742028,32.782436,4760.0,0.16152416,7,subject07_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-255,0.96614254,31.278467,4760.0,0.1541338,8,subject08_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-256,0.9624227,30.138689,4760.0,0.14846015,8,subject08_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-257,0.9597037,28.890255,4760.0,0.14231156,8,subject08_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-258,0.9603703,29.340466,4759.0,0.14456472,9,subject09_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-259,0.9651565,30.711239,4760.0,0.15130456,9,subject09_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-260,0.971458,30.913273,4760.0,0.15228091,9,subject09_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-261,0.9547059,33.819855,4760.0,0.16650932,10,subject10_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-262,0.96231973,30.720028,4760.0,0.15128216,10,subject10_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-263,0.97350866,32.46053,4760.0,0.15992598,10,subject10_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-264,0.90152204,33.944847,4760.0,0.16715214,11,subject11_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-265,0.91595924,28.725243,4698.0,0.14151895,11,subject11_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-266,0.9547329,29.454016,4760.0,0.14513525,11,subject11_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-267,0.9651528,31.991438,4760.0,0.15756665,12,subject12_block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-268,0.9568755,32.159763,4760.0,0.15843119,12,subject12_block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
-269,0.95946085,31.302584,4760.0,0.1541442,12,subject12_block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+234,0.9408363,32.45581,4759.0,0.1599495,1,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+235,0.8700194,34.349937,4760.0,0.169175,1,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+236,0.8311298,37.080444,4760.0,0.18264896,1,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+237,0.9886308,29.894552,4760.0,0.14725825,2,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+238,0.98458105,30.813484,4760.0,0.15167972,2,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+239,0.9848018,30.902075,4760.0,0.15221752,2,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+240,0.9821919,34.756924,4760.0,0.17121471,3,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+241,0.98958254,29.8798,4760.0,0.14716884,3,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+242,0.97799253,31.731546,4760.0,0.15633264,3,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+243,0.8879943,31.416227,4760.0,0.15477233,4,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+244,0.89724416,32.845642,4760.0,0.16165878,4,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+245,0.9604297,32.24888,4760.0,0.15888822,4,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+246,0.94193363,29.670046,4760.0,0.14615513,5,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+247,0.9400786,26.816069,4754.0,0.13202164,5,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+248,0.8902791,32.18063,4760.0,0.15850161,5,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+249,0.98788756,37.73653,4760.0,0.185928,6,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+250,0.9907991,27.334316,4760.0,0.13461997,6,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+251,0.99262655,30.973343,4760.0,0.15255308,6,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+252,0.95303833,28.620216,4758.0,0.14097443,7,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+253,0.9575789,28.259552,4758.0,0.1391967,7,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+254,0.9742028,32.782436,4760.0,0.16152416,7,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+255,0.96614254,31.278467,4760.0,0.1541338,8,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+256,0.9624227,30.138689,4760.0,0.14846015,8,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+257,0.9597037,28.890255,4760.0,0.14231156,8,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+258,0.9603703,29.340466,4759.0,0.14456472,9,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+259,0.9651565,30.711239,4760.0,0.15130456,9,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+260,0.971458,30.913273,4760.0,0.15228091,9,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+261,0.9547059,33.819855,4760.0,0.16650932,10,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+262,0.96231973,30.720028,4760.0,0.15128216,10,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+263,0.97350866,32.46053,4760.0,0.15992598,10,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+264,0.90152204,33.944847,4760.0,0.16715214,11,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+265,0.91595924,28.725243,4698.0,0.14151895,11,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+266,0.9547329,29.454016,4760.0,0.14513525,11,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+267,0.9651528,31.991438,4760.0,0.15756665,12,block_1,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+268,0.9568755,32.159763,4760.0,0.15843119,12,block_2,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
+269,0.95946085,31.302584,4760.0,0.1541442,12,block_3,31,1,Huebner2018,ERPCov + MDM,P300,WithinSession,Riemannian
 270,0.72067076,8.418932,850.0,0.041483857,1,session_1,32,4,EPFLP300,ERPCov + MDM,P300,WithinSession,Riemannian
 271,0.7827276,7.4086466,816.0,0.03651777,1,session_2,32,4,EPFLP300,ERPCov + MDM,P300,WithinSession,Riemannian
 272,0.7065887,8.393127,825.0,0.04135444,1,session_3,32,4,EPFLP300,ERPCov + MDM,P300,WithinSession,Riemannian
@@ -749,44 +749,44 @@
 747,0.9766667,0.83959615,720.0,0.007908761,19,VR,16,1,Cattan2019-VR,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 748,0.9920833,0.8453225,720.0,0.007962652,20,PC,16,1,Cattan2019-VR,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 749,0.9297917,0.85862964,720.0,0.008076649,20,VR,16,1,Cattan2019-VR,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-750,0.99022084,5.6743574,4283.0,0.02795159,1,subject01_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-751,0.98824,5.0989747,4284.0,0.025098734,1,subject01_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-752,0.99157226,5.4907966,4283.0,0.027069153,1,subject01_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-753,0.9813059,4.956297,4284.0,0.024403434,2,subject02_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-754,0.9814029,5.0244393,4284.0,0.02473778,2,subject02_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-755,0.98138356,4.0994954,4284.0,0.02017102,2,subject02_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-756,0.9757248,4.924397,4283.0,0.024250297,3,subject03_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-757,0.98186314,4.4821544,4284.0,0.02207287,3,subject03_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-758,0.98677945,4.3585854,4283.0,0.021467822,3,subject03_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-759,0.99601823,4.5333624,4284.0,0.022316922,4,subject04_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-760,0.99493474,4.3895025,4283.0,0.021615976,4,subject04_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-761,0.994178,4.219012,4283.0,0.020765366,4,subject04_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-762,0.9706768,4.766818,4284.0,0.023485178,5,subject05_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-763,0.9686109,4.3849654,4284.0,0.021608785,5,subject05_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-764,0.97988766,4.696134,4284.0,0.023138722,5,subject05_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-765,0.99206084,5.4799547,4281.0,0.026989652,6,subject06_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-766,0.9952136,4.48487,4284.0,0.022079142,6,subject06_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-767,0.9978846,5.087359,4284.0,0.025057256,7,subject07_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-768,0.9987426,5.117012,4284.0,0.025200332,7,subject07_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-769,0.99893844,5.0970488,4284.0,0.025116341,7,subject07_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-770,0.9426298,5.3411374,4283.0,0.026287923,8,subject08_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-771,0.95970225,5.0582113,4283.0,0.024912935,8,subject08_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-772,0.95863706,5.28513,4284.0,0.026072562,8,subject08_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-773,0.99122643,5.3265247,4284.0,0.026224755,9,subject09_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-774,0.99348,4.8842354,4284.0,0.024054894,9,subject09_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-775,0.994248,4.615906,4284.0,0.022738315,9,subject09_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-776,0.9942733,4.884851,4283.0,0.024063818,10,subject10_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-777,0.99328,4.2780886,4268.0,0.02107121,10,subject10_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-778,0.99535316,4.4048557,4281.0,0.021686982,10,subject10_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-779,0.92679363,5.0896807,4282.0,0.025069973,11,subject11_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-780,0.918774,4.475043,4284.0,0.022010773,11,subject11_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-781,0.92114514,4.7963433,4283.0,0.023624348,11,subject11_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-782,0.9898612,4.9978695,4284.0,0.02460259,12,subject12_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-783,0.9936567,5.1445904,4284.0,0.025331875,12,subject12_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-784,0.9850016,5.1350384,4284.0,0.025282377,12,subject12_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-785,0.98861897,4.349578,4284.0,0.02141633,13,subject13_block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-786,0.99099064,4.425799,4283.0,0.021784391,13,subject13_block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
-787,0.9847848,5.314857,4284.0,0.026176862,13,subject13_block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+750,0.99022084,5.6743574,4283.0,0.02795159,1,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+751,0.98824,5.0989747,4284.0,0.025098734,1,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+752,0.99157226,5.4907966,4283.0,0.027069153,1,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+753,0.9813059,4.956297,4284.0,0.024403434,2,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+754,0.9814029,5.0244393,4284.0,0.02473778,2,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+755,0.98138356,4.0994954,4284.0,0.02017102,2,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+756,0.9757248,4.924397,4283.0,0.024250297,3,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+757,0.98186314,4.4821544,4284.0,0.02207287,3,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+758,0.98677945,4.3585854,4283.0,0.021467822,3,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+759,0.99601823,4.5333624,4284.0,0.022316922,4,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+760,0.99493474,4.3895025,4283.0,0.021615976,4,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+761,0.994178,4.219012,4283.0,0.020765366,4,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+762,0.9706768,4.766818,4284.0,0.023485178,5,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+763,0.9686109,4.3849654,4284.0,0.021608785,5,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+764,0.97988766,4.696134,4284.0,0.023138722,5,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+765,0.99206084,5.4799547,4281.0,0.026989652,6,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+766,0.9952136,4.48487,4284.0,0.022079142,6,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+767,0.9978846,5.087359,4284.0,0.025057256,7,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+768,0.9987426,5.117012,4284.0,0.025200332,7,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+769,0.99893844,5.0970488,4284.0,0.025116341,7,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+770,0.9426298,5.3411374,4283.0,0.026287923,8,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+771,0.95970225,5.0582113,4283.0,0.024912935,8,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+772,0.95863706,5.28513,4284.0,0.026072562,8,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+773,0.99122643,5.3265247,4284.0,0.026224755,9,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+774,0.99348,4.8842354,4284.0,0.024054894,9,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+775,0.994248,4.615906,4284.0,0.022738315,9,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+776,0.9942733,4.884851,4283.0,0.024063818,10,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+777,0.99328,4.2780886,4268.0,0.02107121,10,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+778,0.99535316,4.4048557,4281.0,0.021686982,10,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+779,0.92679363,5.0896807,4282.0,0.025069973,11,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+780,0.918774,4.475043,4284.0,0.022010773,11,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+781,0.92114514,4.7963433,4283.0,0.023624348,11,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+782,0.9898612,4.9978695,4284.0,0.02460259,12,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+783,0.9936567,5.1445904,4284.0,0.025331875,12,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+784,0.9850016,5.1350384,4284.0,0.025282377,12,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+785,0.98861897,4.349578,4284.0,0.02141633,13,block_1,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+786,0.99099064,4.425799,4283.0,0.021784391,13,block_2,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
+787,0.9847848,5.314857,4284.0,0.026176862,13,block_3,31,1,Huebner2017,XDAWNCov + MDM,P300,WithinSession,Riemannian
 788,0.990625,0.44614506,240.0,0.0021893005,1,session_1,32,1,BrainInvaders2014b,XDAWNCov + MDM,P300,WithinSession,Riemannian
 789,0.97268516,0.23689047,252.0,0.0011609263,2,session_1,32,1,BrainInvaders2014b,XDAWNCov + MDM,P300,WithinSession,Riemannian
 790,0.92995167,0.2423956,276.0,0.0011674585,3,session_1,32,1,BrainInvaders2014b,XDAWNCov + MDM,P300,WithinSession,Riemannian
@@ -935,42 +935,42 @@
 933,0.5362434,0.8622384,252.0,0.0042178268,35,session_1,32,1,BrainInvaders2014b,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 934,0.5252,1.1467783,300.0,0.0056315875,36,session_1,32,1,BrainInvaders2014b,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 935,0.9580688,0.93133825,252.0,0.004560554,37,session_1,32,1,BrainInvaders2014b,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-936,0.98937476,34.02301,4759.0,0.16761899,1,subject01_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-937,0.98624414,32.93685,4760.0,0.16218896,1,subject01_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-938,0.98385864,33.5551,4760.0,0.1652888,1,subject01_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-939,0.9938616,32.814114,4760.0,0.16161703,2,subject02_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-940,0.99279827,30.455408,4760.0,0.15001379,2,subject02_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-941,0.9928167,30.973671,4760.0,0.15258436,2,subject02_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-942,0.99436074,30.75161,4760.0,0.15146482,3,subject03_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-943,0.994519,32.04746,4760.0,0.15792766,3,subject03_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-944,0.99399036,32.758785,4760.0,0.16144374,3,subject03_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-945,0.9786254,32.169785,4760.0,0.15846701,4,subject04_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-946,0.9814536,31.013165,4760.0,0.15277793,4,subject04_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-947,0.99006206,30.85254,4760.0,0.15199871,4,subject04_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-948,0.94484276,31.738073,4760.0,0.15635197,5,subject05_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-949,0.9483939,32.418594,4754.0,0.15972048,5,subject05_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-950,0.96068853,33.587986,4760.0,0.16542932,5,subject05_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-951,0.99599195,33.074406,4760.0,0.16290599,6,subject06_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-952,0.9953334,31.399633,4760.0,0.15458111,6,subject06_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-953,0.99529535,31.06768,4760.0,0.15294349,6,subject06_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-954,0.95902354,32.0892,4758.0,0.15805177,7,subject07_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-955,0.97889566,31.183765,4758.0,0.15360971,7,subject07_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-956,0.9824887,33.097538,4760.0,0.16305083,7,subject07_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-957,0.9613729,33.859295,4760.0,0.16671978,8,subject08_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-958,0.9606346,33.25002,4760.0,0.16380969,8,subject08_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-959,0.95320106,33.109104,4760.0,0.16298677,8,subject08_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-960,0.9708294,34.665653,4759.0,0.17080374,9,subject09_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-961,0.98560756,33.344578,4760.0,0.16422229,9,subject09_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-962,0.9845197,34.482464,4760.0,0.16980556,9,subject09_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-963,0.9597687,33.018562,4760.0,0.16265184,10,subject10_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-964,0.96529996,31.945105,4760.0,0.15736625,10,subject10_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-965,0.97163707,32.854294,4760.0,0.16188294,10,subject10_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-966,0.96341985,32.825924,4760.0,0.16174082,11,subject11_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-967,0.95097697,36.648018,4698.0,0.18049704,11,subject11_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-968,0.96435565,33.184956,4760.0,0.16348359,11,subject11_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-969,0.9673543,35.87311,4760.0,0.17673434,12,subject12_block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-970,0.95931983,32.26094,4760.0,0.15895858,12,subject12_block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
-971,0.9618463,32.117382,4760.0,0.15823367,12,subject12_block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+936,0.98937476,34.02301,4759.0,0.16761899,1,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+937,0.98624414,32.93685,4760.0,0.16218896,1,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+938,0.98385864,33.5551,4760.0,0.1652888,1,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+939,0.9938616,32.814114,4760.0,0.16161703,2,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+940,0.99279827,30.455408,4760.0,0.15001379,2,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+941,0.9928167,30.973671,4760.0,0.15258436,2,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+942,0.99436074,30.75161,4760.0,0.15146482,3,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+943,0.994519,32.04746,4760.0,0.15792766,3,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+944,0.99399036,32.758785,4760.0,0.16144374,3,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+945,0.9786254,32.169785,4760.0,0.15846701,4,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+946,0.9814536,31.013165,4760.0,0.15277793,4,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+947,0.99006206,30.85254,4760.0,0.15199871,4,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+948,0.94484276,31.738073,4760.0,0.15635197,5,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+949,0.9483939,32.418594,4754.0,0.15972048,5,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+950,0.96068853,33.587986,4760.0,0.16542932,5,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+951,0.99599195,33.074406,4760.0,0.16290599,6,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+952,0.9953334,31.399633,4760.0,0.15458111,6,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+953,0.99529535,31.06768,4760.0,0.15294349,6,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+954,0.95902354,32.0892,4758.0,0.15805177,7,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+955,0.97889566,31.183765,4758.0,0.15360971,7,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+956,0.9824887,33.097538,4760.0,0.16305083,7,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+957,0.9613729,33.859295,4760.0,0.16671978,8,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+958,0.9606346,33.25002,4760.0,0.16380969,8,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+959,0.95320106,33.109104,4760.0,0.16298677,8,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+960,0.9708294,34.665653,4759.0,0.17080374,9,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+961,0.98560756,33.344578,4760.0,0.16422229,9,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+962,0.9845197,34.482464,4760.0,0.16980556,9,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+963,0.9597687,33.018562,4760.0,0.16265184,10,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+964,0.96529996,31.945105,4760.0,0.15736625,10,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+965,0.97163707,32.854294,4760.0,0.16188294,10,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+966,0.96341985,32.825924,4760.0,0.16174082,11,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+967,0.95097697,36.648018,4698.0,0.18049704,11,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+968,0.96435565,33.184956,4760.0,0.16348359,11,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+969,0.9673543,35.87311,4760.0,0.17673434,12,block_1,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+970,0.95931983,32.26094,4760.0,0.15895858,12,block_2,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
+971,0.9618463,32.117382,4760.0,0.15823367,12,block_3,31,1,Huebner2018,XDAWN + LDA,P300,WithinSession,Raw
 972,0.5469985,153.93666,4140.0,0.75839,1,session_1,62,2,Lee2019-ERP,ERPCov + MDM,P300,WithinSession,Riemannian
 973,0.5519334,150.26161,4140.0,0.74021226,1,session_2,62,2,Lee2019-ERP,ERPCov + MDM,P300,WithinSession,Riemannian
 974,0.86317056,126.956406,4140.0,0.6254157,2,session_1,62,2,Lee2019-ERP,ERPCov + MDM,P300,WithinSession,Riemannian
@@ -1079,84 +1079,84 @@
 1077,0.8996639,114.88814,4140.0,0.5661107,53,session_2,62,2,Lee2019-ERP,ERPCov + MDM,P300,WithinSession,Riemannian
 1078,0.6264482,127.24267,4140.0,0.62673926,54,session_1,62,2,Lee2019-ERP,ERPCov + MDM,P300,WithinSession,Riemannian
 1079,0.7316404,120.00728,4140.0,0.59105664,54,session_2,62,2,Lee2019-ERP,ERPCov + MDM,P300,WithinSession,Riemannian
-1080,0.72643334,2.1305985,1800.0,0.020136295,1,session_1_soa_226,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1081,0.7779,1.9220991,1800.0,0.018159475,1,session_1_soa_235,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1082,0.67638886,1.8044007,1800.0,0.017051069,1,session_1_soa_518,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1083,0.7670111,1.9214447,1800.0,0.018149624,1,session_1_soa_596,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1084,0.63476664,1.9003375,1800.0,0.017952178,2,session_1_soa_180,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1085,0.7132111,1.7209737,1800.0,0.016249744,2,session_1_soa_400,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1086,0.7380111,1.8508712,1800.0,0.01748218,2,session_1_soa_447,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1087,0.9181778,1.6367389,1800.0,0.015452665,3,session_1_soa_273,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1088,0.8612889,1.712157,1800.0,0.01616957,3,session_1_soa_384,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1089,0.86792225,1.8744354,1800.0,0.017716587,3,session_1_soa_600,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1090,0.6285,1.6954226,1800.0,0.016016655,4,session_1_soa_161,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1091,0.61086667,1.8171526,1800.0,0.017171588,4,session_1_soa_418,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1092,0.6297889,1.75341,1800.0,0.016569825,4,session_1_soa_600,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1093,0.58654445,1.7438658,1800.0,0.016439999,5,session_1_soa_193,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1094,0.6347778,1.6602588,1800.0,0.01567865,5,session_1_soa_220,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1095,0.6492,1.6318109,1800.0,0.015408407,5,session_1_soa_600,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1096,0.5269222,1.707608,1800.0,0.016124824,6,session_1_soa_220,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1097,0.60143334,1.7634261,1800.0,0.01665811,6,session_1_soa_325,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1098,0.54764444,1.7807064,1800.0,0.016824821,6,session_1_soa_402,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1099,0.44856668,1.605514,1800.0,0.015154055,7,session_1_soa_200,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1100,0.4887,1.6786714,1800.0,0.015856965,7,session_1_soa_306,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1101,0.5503,1.5937595,1800.0,0.015047066,7,session_1_soa_600,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1102,0.7919111,1.4868765,1800.0,0.014035696,8,session_1_soa_208,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1103,0.7297889,1.4772086,1800.0,0.0139447125,8,session_1_soa_226,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1104,0.5756889,1.4858378,1800.0,0.014023993,8,session_1_soa_508,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1105,0.81585556,1.3816326,1800.0,0.013038491,9,session_1_soa_359,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1106,0.8195111,1.3947875,1800.0,0.013163094,9,session_1_soa_425,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1107,0.76254445,1.3745184,1800.0,0.012970113,9,session_1_soa_457,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1108,0.9852889,1.3818384,1800.0,0.013039838,10,session_1_soa_193,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1109,0.9821333,1.379873,1800.0,0.013022312,10,session_1_soa_286,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1110,0.93663335,1.3581601,1800.0,0.01281543,10,session_1_soa_506,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1111,0.8231222,1.3827368,1800.0,0.013032308,11,session_1_soa_179,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1112,0.72613335,1.4799515,1800.0,0.013778509,11,session_1_soa_194,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1113,0.8000111,1.4273769,1800.0,0.013463261,11,session_1_soa_513,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1114,0.50945556,1.689085,1800.0,0.015932307,12,session_1_soa_175,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1115,0.54884446,1.5688787,1800.0,0.014785875,12,session_1_soa_296,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1116,0.5219667,1.6573533,1800.0,0.015640317,12,session_1_soa_474,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1117,0.73954445,1.3790276,1800.0,0.013013366,13,session_1_soa_177,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1118,0.7938,1.4420935,1800.0,0.013609936,13,session_1_soa_256,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1119,0.8063,1.4539073,1800.0,0.013726752,13,session_1_soa_446,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1120,0.9954807,10.343598,4283.0,0.06661472,1,subject01_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1121,0.99420285,9.904959,4284.0,0.06378611,1,subject01_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1122,0.9962608,9.911792,4283.0,0.063831046,1,subject01_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1123,0.9895642,9.936037,4284.0,0.06397995,2,subject02_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1124,0.992336,9.777186,4284.0,0.06296157,2,subject02_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1125,0.9906582,9.962728,4284.0,0.06415019,2,subject02_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1126,0.9812311,10.063264,4283.0,0.06480644,3,subject03_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1127,0.98647064,9.638929,4284.0,0.062070392,3,subject03_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1128,0.9907201,9.857515,4283.0,0.06344514,3,subject03_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1129,0.9988471,9.585759,4284.0,0.061721735,4,subject04_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1130,0.9978927,9.712349,4283.0,0.06253688,4,subject04_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1131,0.9978033,9.756755,4283.0,0.06283592,4,subject04_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1132,0.9768171,9.799967,4284.0,0.06311198,5,subject05_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1133,0.97623634,9.901225,4284.0,0.063762575,5,subject05_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1134,0.9889536,10.025212,4284.0,0.06456276,5,subject05_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1135,0.99655104,9.816458,4281.0,0.06321454,6,subject06_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1136,0.99897873,9.535609,4284.0,0.0614057,6,subject06_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1137,0.9994213,9.421425,4284.0,0.060666014,7,subject07_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1138,0.99987584,9.629874,4284.0,0.062004562,7,subject07_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1139,0.99988025,9.325709,4284.0,0.0600515,7,subject07_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1140,0.95546865,9.928695,4283.0,0.06393346,8,subject08_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1141,0.97134495,12.3317,4283.0,0.079298615,8,subject08_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1142,0.96760625,11.028139,4284.0,0.07101549,8,subject08_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1143,0.996783,8.983036,4284.0,0.05786629,9,subject09_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1144,0.9973435,10.663576,4284.0,0.068680346,9,subject09_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1145,0.9985977,11.04962,4284.0,0.07117275,9,subject09_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1146,0.9975136,10.785368,4283.0,0.06940644,10,subject10_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1147,0.9972093,9.405456,4268.0,0.060565356,10,subject10_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1148,0.99809015,11.338371,4281.0,0.07297545,10,subject10_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1149,0.93948156,11.320822,4282.0,0.07291955,11,subject11_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1150,0.933148,9.940042,4284.0,0.06400715,11,subject11_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1151,0.93510777,11.680642,4283.0,0.07515874,11,subject11_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1152,0.9924165,10.085651,4284.0,0.06495468,12,subject12_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1153,0.99650776,9.095775,4284.0,0.058570802,12,subject12_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1154,0.9905571,9.90553,4284.0,0.06378219,12,subject12_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1155,0.99431574,11.210184,4284.0,0.0721302,13,subject13_block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1156,0.9966258,9.490833,4283.0,0.061117526,13,subject13_block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-1157,0.9946773,8.752879,4284.0,0.05637602,13,subject13_block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1080,0.72643334,2.1305985,1800.0,0.020136295,1,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1081,0.7779,1.9220991,1800.0,0.018159475,1,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1082,0.67638886,1.8044007,1800.0,0.017051069,1,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1083,0.7670111,1.9214447,1800.0,0.018149624,1,session_4,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1084,0.63476664,1.9003375,1800.0,0.017952178,2,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1085,0.7132111,1.7209737,1800.0,0.016249744,2,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1086,0.7380111,1.8508712,1800.0,0.01748218,2,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1087,0.9181778,1.6367389,1800.0,0.015452665,3,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1088,0.8612889,1.712157,1800.0,0.01616957,3,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1089,0.86792225,1.8744354,1800.0,0.017716587,3,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1090,0.6285,1.6954226,1800.0,0.016016655,4,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1091,0.61086667,1.8171526,1800.0,0.017171588,4,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1092,0.6297889,1.75341,1800.0,0.016569825,4,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1093,0.58654445,1.7438658,1800.0,0.016439999,5,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1094,0.6347778,1.6602588,1800.0,0.01567865,5,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1095,0.6492,1.6318109,1800.0,0.015408407,5,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1096,0.5269222,1.707608,1800.0,0.016124824,6,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1097,0.60143334,1.7634261,1800.0,0.01665811,6,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1098,0.54764444,1.7807064,1800.0,0.016824821,6,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1099,0.44856668,1.605514,1800.0,0.015154055,7,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1100,0.4887,1.6786714,1800.0,0.015856965,7,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1101,0.5503,1.5937595,1800.0,0.015047066,7,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1102,0.7919111,1.4868765,1800.0,0.014035696,8,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1103,0.7297889,1.4772086,1800.0,0.0139447125,8,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1104,0.5756889,1.4858378,1800.0,0.014023993,8,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1105,0.81585556,1.3816326,1800.0,0.013038491,9,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1106,0.8195111,1.3947875,1800.0,0.013163094,9,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1107,0.76254445,1.3745184,1800.0,0.012970113,9,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1108,0.9852889,1.3818384,1800.0,0.013039838,10,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1109,0.9821333,1.379873,1800.0,0.013022312,10,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1110,0.93663335,1.3581601,1800.0,0.01281543,10,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1111,0.8231222,1.3827368,1800.0,0.013032308,11,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1112,0.72613335,1.4799515,1800.0,0.013778509,11,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1113,0.8000111,1.4273769,1800.0,0.013463261,11,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1114,0.50945556,1.689085,1800.0,0.015932307,12,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1115,0.54884446,1.5688787,1800.0,0.014785875,12,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1116,0.5219667,1.6573533,1800.0,0.015640317,12,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1117,0.73954445,1.3790276,1800.0,0.013013366,13,session_1,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1118,0.7938,1.4420935,1800.0,0.013609936,13,session_2,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1119,0.8063,1.4539073,1800.0,0.013726752,13,session_3,31,1,Sosulski2019,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
+1120,0.9954807,10.343598,4283.0,0.06661472,1,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1121,0.99420285,9.904959,4284.0,0.06378611,1,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1122,0.9962608,9.911792,4283.0,0.063831046,1,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1123,0.9895642,9.936037,4284.0,0.06397995,2,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1124,0.992336,9.777186,4284.0,0.06296157,2,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1125,0.9906582,9.962728,4284.0,0.06415019,2,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1126,0.9812311,10.063264,4283.0,0.06480644,3,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1127,0.98647064,9.638929,4284.0,0.062070392,3,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1128,0.9907201,9.857515,4283.0,0.06344514,3,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1129,0.9988471,9.585759,4284.0,0.061721735,4,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1130,0.9978927,9.712349,4283.0,0.06253688,4,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1131,0.9978033,9.756755,4283.0,0.06283592,4,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1132,0.9768171,9.799967,4284.0,0.06311198,5,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1133,0.97623634,9.901225,4284.0,0.063762575,5,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1134,0.9889536,10.025212,4284.0,0.06456276,5,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1135,0.99655104,9.816458,4281.0,0.06321454,6,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1136,0.99897873,9.535609,4284.0,0.0614057,6,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1137,0.9994213,9.421425,4284.0,0.060666014,7,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1138,0.99987584,9.629874,4284.0,0.062004562,7,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1139,0.99988025,9.325709,4284.0,0.0600515,7,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1140,0.95546865,9.928695,4283.0,0.06393346,8,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1141,0.97134495,12.3317,4283.0,0.079298615,8,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1142,0.96760625,11.028139,4284.0,0.07101549,8,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1143,0.996783,8.983036,4284.0,0.05786629,9,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1144,0.9973435,10.663576,4284.0,0.068680346,9,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1145,0.9985977,11.04962,4284.0,0.07117275,9,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1146,0.9975136,10.785368,4283.0,0.06940644,10,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1147,0.9972093,9.405456,4268.0,0.060565356,10,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1148,0.99809015,11.338371,4281.0,0.07297545,10,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1149,0.93948156,11.320822,4282.0,0.07291955,11,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1150,0.933148,9.940042,4284.0,0.06400715,11,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1151,0.93510777,11.680642,4283.0,0.07515874,11,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1152,0.9924165,10.085651,4284.0,0.06495468,12,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1153,0.99650776,9.095775,4284.0,0.058570802,12,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1154,0.9905571,9.90553,4284.0,0.06378219,12,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1155,0.99431574,11.210184,4284.0,0.0721302,13,block_1,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1156,0.9966258,9.490833,4283.0,0.061117526,13,block_2,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+1157,0.9946773,8.752879,4284.0,0.05637602,13,block_3,31,1,Huebner2017,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 1158,0.9164419,9.650398,4140.0,0.047556154,1,session_1,62,2,Lee2019-ERP,XDAWNCov + MDM,P300,WithinSession,Riemannian
 1159,0.9264482,7.354307,4140.0,0.036234386,1,session_2,62,2,Lee2019-ERP,XDAWNCov + MDM,P300,WithinSession,Riemannian
 1160,0.99274313,9.0008335,4140.0,0.044340517,2,session_1,62,2,Lee2019-ERP,XDAWNCov + MDM,P300,WithinSession,Riemannian
@@ -1305,44 +1305,44 @@
 1303,0.924375,0.2582478,720.0,0.0023996935,19,VR,16,1,Cattan2019-VR,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 1304,0.88993055,0.2467114,720.0,0.002289422,20,PC,16,1,Cattan2019-VR,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 1305,0.8275,0.25479373,720.0,0.0023664199,20,VR,16,1,Cattan2019-VR,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-1306,0.94261885,31.949093,4283.0,0.15739238,1,subject01_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1307,0.9878773,29.895008,4284.0,0.14724772,1,subject01_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1308,0.9814131,30.924978,4283.0,0.15232062,1,subject01_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1309,0.9755466,28.043365,4284.0,0.13817306,2,subject02_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1310,0.9798246,26.68351,4284.0,0.13151178,2,subject02_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1311,0.97090983,26.688465,4284.0,0.13150385,2,subject02_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1312,0.95493615,31.027637,4283.0,0.15285899,3,subject03_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1313,0.97109693,30.169647,4284.0,0.14865991,3,subject03_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1314,0.9710948,27.964092,4283.0,0.13775149,3,subject03_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1315,0.98148185,27.207191,4284.0,0.13408348,4,subject04_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1316,0.97223437,27.604935,4283.0,0.13596268,4,subject04_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1317,0.9846025,27.557392,4283.0,0.13572453,4,subject04_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1318,0.91487324,28.728397,4284.0,0.14154343,5,subject05_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1319,0.91653234,27.93123,4284.0,0.13760194,5,subject05_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1320,0.9016815,27.30584,4284.0,0.13449289,5,subject05_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1321,0.967833,29.012259,4281.0,0.14297792,6,subject06_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1322,0.9897023,26.670036,4284.0,0.13139614,6,subject06_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1323,0.99582297,26.838104,4284.0,0.13223876,7,subject07_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1324,0.9981222,26.658476,4284.0,0.13130043,7,subject07_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1325,0.9986905,26.91976,4284.0,0.13265058,7,subject07_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1326,0.93164325,26.962248,4283.0,0.13280547,8,subject08_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1327,0.9512647,27.22296,4283.0,0.13412467,8,subject08_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1328,0.89500266,27.790804,4284.0,0.13689514,8,subject08_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1329,0.9803763,36.304886,4284.0,0.1788268,9,subject09_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1330,0.9881816,24.486912,4284.0,0.120647885,9,subject09_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1331,0.9673132,24.87902,4284.0,0.122529306,9,subject09_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1332,0.9950398,24.318602,4283.0,0.119816,10,subject10_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1333,0.9925747,26.722315,4268.0,0.131661,10,subject10_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1334,0.99372715,25.73612,4281.0,0.12677751,10,subject10_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1335,0.8128299,29.607794,4282.0,0.1459204,11,subject11_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1336,0.6497004,29.848581,4284.0,0.14703599,11,subject11_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1337,0.6182738,29.797085,4283.0,0.14684264,11,subject11_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1338,0.97762465,23.291735,4284.0,0.11477492,12,subject12_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1339,0.987727,25.116611,4284.0,0.123753615,12,subject12_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1340,0.96561474,25.614939,4284.0,0.12615477,12,subject12_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1341,0.98814595,27.081102,4284.0,0.13335446,13,subject13_block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1342,0.96157897,29.186058,4283.0,0.14381059,13,subject13_block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
-1343,0.88480586,30.89672,4284.0,0.15222113,13,subject13_block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1306,0.94261885,31.949093,4283.0,0.15739238,1,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1307,0.9878773,29.895008,4284.0,0.14724772,1,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1308,0.9814131,30.924978,4283.0,0.15232062,1,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1309,0.9755466,28.043365,4284.0,0.13817306,2,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1310,0.9798246,26.68351,4284.0,0.13151178,2,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1311,0.97090983,26.688465,4284.0,0.13150385,2,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1312,0.95493615,31.027637,4283.0,0.15285899,3,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1313,0.97109693,30.169647,4284.0,0.14865991,3,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1314,0.9710948,27.964092,4283.0,0.13775149,3,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1315,0.98148185,27.207191,4284.0,0.13408348,4,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1316,0.97223437,27.604935,4283.0,0.13596268,4,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1317,0.9846025,27.557392,4283.0,0.13572453,4,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1318,0.91487324,28.728397,4284.0,0.14154343,5,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1319,0.91653234,27.93123,4284.0,0.13760194,5,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1320,0.9016815,27.30584,4284.0,0.13449289,5,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1321,0.967833,29.012259,4281.0,0.14297792,6,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1322,0.9897023,26.670036,4284.0,0.13139614,6,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1323,0.99582297,26.838104,4284.0,0.13223876,7,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1324,0.9981222,26.658476,4284.0,0.13130043,7,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1325,0.9986905,26.91976,4284.0,0.13265058,7,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1326,0.93164325,26.962248,4283.0,0.13280547,8,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1327,0.9512647,27.22296,4283.0,0.13412467,8,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1328,0.89500266,27.790804,4284.0,0.13689514,8,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1329,0.9803763,36.304886,4284.0,0.1788268,9,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1330,0.9881816,24.486912,4284.0,0.120647885,9,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1331,0.9673132,24.87902,4284.0,0.122529306,9,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1332,0.9950398,24.318602,4283.0,0.119816,10,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1333,0.9925747,26.722315,4268.0,0.131661,10,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1334,0.99372715,25.73612,4281.0,0.12677751,10,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1335,0.8128299,29.607794,4282.0,0.1459204,11,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1336,0.6497004,29.848581,4284.0,0.14703599,11,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1337,0.6182738,29.797085,4283.0,0.14684264,11,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1338,0.97762465,23.291735,4284.0,0.11477492,12,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1339,0.987727,25.116611,4284.0,0.123753615,12,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1340,0.96561474,25.614939,4284.0,0.12615477,12,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1341,0.98814595,27.081102,4284.0,0.13335446,13,block_1,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1342,0.96157897,29.186058,4283.0,0.14381059,13,block_2,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
+1343,0.88480586,30.89672,4284.0,0.15222113,13,block_3,31,1,Huebner2017,ERPCov + MDM,P300,WithinSession,Riemannian
 1344,0.9170312,0.5611262,480.0,0.0027554228,1,session_1,16,1,BrainInvaders2013a,XDAWNCov + MDM,P300,WithinSession,Riemannian
 1345,0.9429687,0.32266793,480.0,0.0015839466,1,session_2,16,1,BrainInvaders2013a,XDAWNCov + MDM,P300,WithinSession,Riemannian
 1346,0.8720313,0.30074257,480.0,0.0014726343,1,session_3,16,1,BrainInvaders2013a,XDAWNCov + MDM,P300,WithinSession,Riemannian
@@ -2073,46 +2073,46 @@
 2071,0.86980176,0.6169258,795.0,0.0057948814,9,session_2,32,4,EPFLP300,XDAWNCov + MDM,P300,WithinSession,Riemannian
 2072,0.7796138,0.6681349,862.0,0.006278865,9,session_3,32,4,EPFLP300,XDAWNCov + MDM,P300,WithinSession,Riemannian
 2073,0.6665578,0.62577355,818.0,0.0058796424,9,session_4,32,4,EPFLP300,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2074,0.67767775,12.985995,1800.0,0.063967,1,session_1_soa_226,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2075,0.7441667,11.598531,1800.0,0.05716258,1,session_1_soa_235,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2076,0.63553333,11.871068,1800.0,0.05848904,1,session_1_soa_518,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2077,0.70145553,12.108458,1800.0,0.05959987,1,session_1_soa_596,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2078,0.6023889,11.340027,1800.0,0.055859774,2,session_1_soa_180,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2079,0.7072778,11.158245,1800.0,0.05499552,2,session_1_soa_400,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2080,0.70431113,12.210125,1800.0,0.06013559,2,session_1_soa_447,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2081,0.9174889,11.338926,1800.0,0.055877887,3,session_1_soa_273,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2082,0.8086445,11.089291,1800.0,0.05464833,3,session_1_soa_384,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2083,0.85922223,12.14039,1800.0,0.059765104,3,session_1_soa_600,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2084,0.60936666,11.286537,1800.0,0.055595867,4,session_1_soa_161,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2085,0.5777556,11.871881,1800.0,0.058492396,4,session_1_soa_418,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2086,0.6333111,13.103862,1800.0,0.06453629,4,session_1_soa_600,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2087,0.5797667,14.119463,1800.0,0.06955065,5,session_1_soa_193,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2088,0.58464444,12.960851,1800.0,0.063865796,5,session_1_soa_220,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2089,0.62957776,13.432428,1800.0,0.06615205,5,session_1_soa_600,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2090,0.54955554,12.35304,1800.0,0.060847078,6,session_1_soa_220,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2091,0.5918,14.240787,1800.0,0.070155814,6,session_1_soa_325,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2092,0.5259889,12.409228,1800.0,0.06115244,6,session_1_soa_402,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2093,0.45018888,13.526141,1800.0,0.06662905,7,session_1_soa_200,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2094,0.47157776,14.174103,1800.0,0.06980069,7,session_1_soa_306,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2095,0.5384778,14.462711,1800.0,0.07125343,7,session_1_soa_600,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2096,0.75663334,13.032096,1800.0,0.064177416,8,session_1_soa_208,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2097,0.6688778,14.112427,1800.0,0.06950629,8,session_1_soa_226,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2098,0.5526222,13.406517,1800.0,0.06600522,8,session_1_soa_508,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2099,0.72044444,12.539425,1800.0,0.061753742,9,session_1_soa_359,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2100,0.7956333,12.010947,1800.0,0.059159625,9,session_1_soa_425,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2101,0.7131,13.5431595,1800.0,0.066715784,9,session_1_soa_457,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2102,0.98554444,12.724474,1800.0,0.06264075,10,session_1_soa_193,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2103,0.98521113,12.4366045,1800.0,0.061253265,10,session_1_soa_286,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2104,0.8909778,12.670074,1800.0,0.06238294,10,session_1_soa_506,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2105,0.7853444,12.019982,1800.0,0.05923459,11,session_1_soa_179,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2106,0.7477,11.658833,1800.0,0.057434183,11,session_1_soa_194,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2107,0.66850555,12.465005,1800.0,0.061414685,11,session_1_soa_513,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2108,0.48137778,15.277803,1800.0,0.07523476,12,session_1_soa_175,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2109,0.5372667,13.4784155,1800.0,0.066392064,12,session_1_soa_296,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2110,0.50233334,13.203895,1800.0,0.06504306,12,session_1_soa_474,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2111,0.7569778,13.436482,1800.0,0.06617301,13,session_1_soa_177,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2112,0.82232225,12.404857,1800.0,0.061097264,13,session_1_soa_256,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
-2113,0.79514444,11.744583,1800.0,0.057879053,13,session_1_soa_446,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2074,0.67767775,12.985995,1800.0,0.063967,1,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2075,0.7441667,11.598531,1800.0,0.05716258,1,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2076,0.63553333,11.871068,1800.0,0.05848904,1,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2077,0.70145553,12.108458,1800.0,0.05959987,1,session_4,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2078,0.6023889,11.340027,1800.0,0.055859774,2,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2079,0.7072778,11.158245,1800.0,0.05499552,2,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2080,0.70431113,12.210125,1800.0,0.06013559,2,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2081,0.9174889,11.338926,1800.0,0.055877887,3,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2082,0.8086445,11.089291,1800.0,0.05464833,3,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2083,0.85922223,12.14039,1800.0,0.059765104,3,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2084,0.60936666,11.286537,1800.0,0.055595867,4,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2085,0.5777556,11.871881,1800.0,0.058492396,4,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2086,0.6333111,13.103862,1800.0,0.06453629,4,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2087,0.5797667,14.119463,1800.0,0.06955065,5,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2088,0.58464444,12.960851,1800.0,0.063865796,5,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2089,0.62957776,13.432428,1800.0,0.06615205,5,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2090,0.54955554,12.35304,1800.0,0.060847078,6,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2091,0.5918,14.240787,1800.0,0.070155814,6,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2092,0.5259889,12.409228,1800.0,0.06115244,6,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2093,0.45018888,13.526141,1800.0,0.06662905,7,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2094,0.47157776,14.174103,1800.0,0.06980069,7,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2095,0.5384778,14.462711,1800.0,0.07125343,7,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2096,0.75663334,13.032096,1800.0,0.064177416,8,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2097,0.6688778,14.112427,1800.0,0.06950629,8,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2098,0.5526222,13.406517,1800.0,0.06600522,8,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2099,0.72044444,12.539425,1800.0,0.061753742,9,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2100,0.7956333,12.010947,1800.0,0.059159625,9,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2101,0.7131,13.5431595,1800.0,0.066715784,9,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2102,0.98554444,12.724474,1800.0,0.06264075,10,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2103,0.98521113,12.4366045,1800.0,0.061253265,10,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2104,0.8909778,12.670074,1800.0,0.06238294,10,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2105,0.7853444,12.019982,1800.0,0.05923459,11,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2106,0.7477,11.658833,1800.0,0.057434183,11,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2107,0.66850555,12.465005,1800.0,0.061414685,11,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2108,0.48137778,15.277803,1800.0,0.07523476,12,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2109,0.5372667,13.4784155,1800.0,0.066392064,12,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2110,0.50233334,13.203895,1800.0,0.06504306,12,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2111,0.7569778,13.436482,1800.0,0.06617301,13,session_1,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2112,0.82232225,12.404857,1800.0,0.061097264,13,session_2,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
+2113,0.79514444,11.744583,1800.0,0.057879053,13,session_3,31,1,Sosulski2019,ERPCov + MDM,P300,WithinSession,Riemannian
 2114,0.62077886,0.6960561,768.0,0.00654572,1,session_1,16,1,BrainInvaders2012,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 2115,0.8331428,0.4681107,764.0,0.0043843566,2,session_1,16,1,BrainInvaders2012,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 2116,0.57008415,0.5441424,768.0,0.005097443,3,session_1,16,1,BrainInvaders2012,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
@@ -2211,46 +2211,46 @@
 2209,0.771875,0.2955883,480.0,0.0027530238,22,session_1,16,1,BrainInvaders2013a,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 2210,0.80515623,0.18438944,480.0,0.001711332,23,session_1,16,1,BrainInvaders2013a,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 2211,0.9015625,0.2834139,480.0,0.0026395984,24,session_1,16,1,BrainInvaders2013a,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-2212,0.90665555,4.4007854,1800.0,0.02165559,1,session_1_soa_226,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2213,0.9197889,3.4555776,1800.0,0.017017592,1,session_1_soa_235,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2214,0.85062224,2.9624653,1800.0,0.014599866,1,session_1_soa_518,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2215,0.83864444,2.8610554,1800.0,0.014114888,1,session_1_soa_596,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2216,0.8067667,2.9617944,1800.0,0.014595778,2,session_1_soa_180,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2217,0.8644,3.3399727,1800.0,0.016441058,2,session_1_soa_400,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2218,0.8618444,3.2439806,1800.0,0.01590988,2,session_1_soa_447,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2219,0.9537111,2.820494,1800.0,0.013899876,3,session_1_soa_273,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2220,0.9290222,2.6765873,1800.0,0.013167215,3,session_1_soa_384,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2221,0.9201556,2.7957056,1800.0,0.013777836,3,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2222,0.80763334,3.1073513,1800.0,0.015283364,4,session_1_soa_161,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2223,0.8226333,2.5626783,1800.0,0.012576161,4,session_1_soa_418,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2224,0.7899,2.3399477,1800.0,0.011522068,4,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2225,0.7717,2.3276408,1800.0,0.011451437,5,session_1_soa_193,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2226,0.80527776,2.2876015,1800.0,0.011271136,5,session_1_soa_220,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2227,0.8222889,2.151782,1800.0,0.010592173,5,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2228,0.7728556,2.6471934,1800.0,0.013048938,6,session_1_soa_220,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2229,0.8216778,3.4987094,1800.0,0.017223196,6,session_1_soa_325,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2230,0.76474446,3.3233588,1800.0,0.016351903,6,session_1_soa_402,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2231,0.72697777,2.5106575,1800.0,0.012364576,7,session_1_soa_200,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2232,0.7700667,2.3867025,1800.0,0.011752724,7,session_1_soa_306,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2233,0.731,2.5955594,1800.0,0.012787619,7,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2234,0.9089444,2.6063619,1800.0,0.012843593,8,session_1_soa_208,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2235,0.91004443,2.6066256,1800.0,0.012838116,8,session_1_soa_226,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2236,0.8448333,2.381597,1800.0,0.011732868,8,session_1_soa_508,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2237,0.9154,2.8071012,1800.0,0.013824947,9,session_1_soa_359,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2238,0.8922222,2.450489,1800.0,0.012080519,9,session_1_soa_425,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2239,0.8715,3.0891519,1800.0,0.015181579,9,session_1_soa_457,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2240,0.9907778,2.6898043,1800.0,0.013258456,10,session_1_soa_193,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2241,0.9924667,2.5050323,1800.0,0.01233876,10,session_1_soa_286,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2242,0.9663889,2.3799238,1800.0,0.011724033,10,session_1_soa_506,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2243,0.9425,2.3707857,1800.0,0.011691224,11,session_1_soa_179,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2244,0.9084,2.5994687,1800.0,0.012829904,11,session_1_soa_194,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2245,0.94725555,2.5267317,1800.0,0.012449429,11,session_1_soa_513,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2246,0.8091,2.6011877,1800.0,0.012818618,12,session_1_soa_175,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2247,0.7726,2.5776584,1800.0,0.012699204,12,session_1_soa_296,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2248,0.7764556,2.6585293,1800.0,0.013109005,12,session_1_soa_474,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2249,0.8913556,3.7619824,1800.0,0.018531855,13,session_1_soa_177,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2250,0.9089556,2.6647682,1800.0,0.013122817,13,session_1_soa_256,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2251,0.9221,3.9496498,1800.0,0.019421002,13,session_1_soa_446,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2212,0.90665555,4.4007854,1800.0,0.02165559,1,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2213,0.9197889,3.4555776,1800.0,0.017017592,1,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2214,0.85062224,2.9624653,1800.0,0.014599866,1,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2215,0.83864444,2.8610554,1800.0,0.014114888,1,session_4,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2216,0.8067667,2.9617944,1800.0,0.014595778,2,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2217,0.8644,3.3399727,1800.0,0.016441058,2,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2218,0.8618444,3.2439806,1800.0,0.01590988,2,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2219,0.9537111,2.820494,1800.0,0.013899876,3,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2220,0.9290222,2.6765873,1800.0,0.013167215,3,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2221,0.9201556,2.7957056,1800.0,0.013777836,3,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2222,0.80763334,3.1073513,1800.0,0.015283364,4,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2223,0.8226333,2.5626783,1800.0,0.012576161,4,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2224,0.7899,2.3399477,1800.0,0.011522068,4,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2225,0.7717,2.3276408,1800.0,0.011451437,5,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2226,0.80527776,2.2876015,1800.0,0.011271136,5,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2227,0.8222889,2.151782,1800.0,0.010592173,5,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2228,0.7728556,2.6471934,1800.0,0.013048938,6,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2229,0.8216778,3.4987094,1800.0,0.017223196,6,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2230,0.76474446,3.3233588,1800.0,0.016351903,6,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2231,0.72697777,2.5106575,1800.0,0.012364576,7,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2232,0.7700667,2.3867025,1800.0,0.011752724,7,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2233,0.731,2.5955594,1800.0,0.012787619,7,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2234,0.9089444,2.6063619,1800.0,0.012843593,8,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2235,0.91004443,2.6066256,1800.0,0.012838116,8,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2236,0.8448333,2.381597,1800.0,0.011732868,8,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2237,0.9154,2.8071012,1800.0,0.013824947,9,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2238,0.8922222,2.450489,1800.0,0.012080519,9,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2239,0.8715,3.0891519,1800.0,0.015181579,9,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2240,0.9907778,2.6898043,1800.0,0.013258456,10,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2241,0.9924667,2.5050323,1800.0,0.01233876,10,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2242,0.9663889,2.3799238,1800.0,0.011724033,10,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2243,0.9425,2.3707857,1800.0,0.011691224,11,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2244,0.9084,2.5994687,1800.0,0.012829904,11,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2245,0.94725555,2.5267317,1800.0,0.012449429,11,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2246,0.8091,2.6011877,1800.0,0.012818618,12,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2247,0.7726,2.5776584,1800.0,0.012699204,12,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2248,0.7764556,2.6585293,1800.0,0.013109005,12,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2249,0.8913556,3.7619824,1800.0,0.018531855,13,session_1,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2250,0.9089556,2.6647682,1800.0,0.013122817,13,session_2,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2251,0.9221,3.9496498,1800.0,0.019421002,13,session_3,31,1,Sosulski2019,XDAWNCov + MDM,P300,WithinSession,Riemannian
 2252,0.94894385,1.8881793,2640.0,0.0093143685,1,session_1,32,1,BrainInvaders2015b,XDAWNCov + MDM,P300,WithinSession,Riemannian
 2253,0.7131655,1.6758287,2640.0,0.008247552,2,session_1,32,1,BrainInvaders2015b,XDAWNCov + MDM,P300,WithinSession,Riemannian
 2254,0.9778839,1.9814113,2640.0,0.009759824,3,session_1,32,1,BrainInvaders2015b,XDAWNCov + MDM,P300,WithinSession,Riemannian
@@ -2427,82 +2427,82 @@
 2425,0.6399354,9.47055,2640.0,0.04666712,42,session_1,32,1,BrainInvaders2015b,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2426,0.9768181,7.5575576,2640.0,0.03723853,43,session_1,32,1,BrainInvaders2015b,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2427,0.74095774,7.9951134,2640.0,0.039394144,44,session_1,32,1,BrainInvaders2015b,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2428,0.71734446,7.566643,1800.0,0.037253186,1,session_1_soa_226,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2429,0.67462224,6.5407143,1800.0,0.03222768,1,session_1_soa_235,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2430,0.6887,6.6748075,1800.0,0.03283723,1,session_1_soa_518,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2431,0.6673333,6.5790873,1800.0,0.03239058,1,session_1_soa_596,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2432,0.5878556,6.475113,1800.0,0.031876612,2,session_1_soa_180,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2433,0.65676665,6.722957,1800.0,0.033103548,2,session_1_soa_400,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2434,0.6493,6.5259657,1800.0,0.032137837,2,session_1_soa_447,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2435,0.7554,6.8724613,1800.0,0.033826,3,session_1_soa_273,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2436,0.7193889,7.0310016,1800.0,0.034624256,3,session_1_soa_384,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2437,0.71536666,7.826105,1800.0,0.038562294,3,session_1_soa_600,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2438,0.62531114,6.798633,1800.0,0.0334736,4,session_1_soa_161,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2439,0.64093333,7.393747,1800.0,0.03639576,4,session_1_soa_418,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2440,0.5770778,7.4466553,1800.0,0.036705967,4,session_1_soa_600,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2441,0.5837111,8.587816,1800.0,0.042313073,5,session_1_soa_193,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2442,0.61233336,7.3049307,1800.0,0.035956454,5,session_1_soa_220,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2443,0.6367111,6.8583093,1800.0,0.03377165,5,session_1_soa_600,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2444,0.66033334,7.137,1800.0,0.035139326,6,session_1_soa_220,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2445,0.62365556,7.36034,1800.0,0.03628172,6,session_1_soa_325,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2446,0.5819,6.899004,1800.0,0.03396713,6,session_1_soa_402,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2447,0.57582223,9.053638,1800.0,0.044551264,7,session_1_soa_200,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2448,0.5753111,6.4771132,1800.0,0.031903457,7,session_1_soa_306,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2449,0.60105556,7.5705605,1800.0,0.037279025,7,session_1_soa_600,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2450,0.71801114,8.007905,1800.0,0.039452482,8,session_1_soa_208,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2451,0.6878,6.2143803,1800.0,0.030599795,8,session_1_soa_226,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2452,0.6846333,6.7726207,1800.0,0.03336916,8,session_1_soa_508,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2453,0.67705554,7.826656,1800.0,0.038554657,9,session_1_soa_359,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2454,0.70163333,7.5519686,1800.0,0.037201297,9,session_1_soa_425,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2455,0.6491889,7.304644,1800.0,0.03595896,9,session_1_soa_457,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2456,0.8852,8.58897,1800.0,0.0423113,10,session_1_soa_193,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2457,0.8952778,7.1870527,1800.0,0.035390783,10,session_1_soa_286,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2458,0.80755556,8.192609,1800.0,0.04036661,10,session_1_soa_506,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2459,0.7164556,7.1896744,1800.0,0.035411168,11,session_1_soa_179,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2460,0.6744,6.7442236,1800.0,0.033215232,11,session_1_soa_194,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2461,0.73274446,7.4719896,1800.0,0.036800273,11,session_1_soa_513,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2462,0.63904446,8.948324,1800.0,0.04409249,12,session_1_soa_175,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2463,0.6428889,6.3893127,1800.0,0.031470235,12,session_1_soa_296,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2464,0.58294445,8.290154,1800.0,0.040835362,12,session_1_soa_474,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2465,0.7125111,7.006812,1800.0,0.03450138,13,session_1_soa_177,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2466,0.72367775,6.7688985,1800.0,0.033298496,13,session_1_soa_256,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2467,0.7373667,8.92766,1800.0,0.043994423,13,session_1_soa_446,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
-2468,0.9846422,5.428841,4759.0,0.026751118,1,subject01_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2469,0.9818583,4.5138254,4760.0,0.022231705,1,subject01_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2470,0.98113716,4.3802595,4760.0,0.02155636,1,subject01_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2471,0.99154854,4.835204,4760.0,0.023818962,2,subject02_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2472,0.9898229,4.6172047,4760.0,0.022732463,2,subject02_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2473,0.99125785,7.8653135,4760.0,0.038739853,2,subject02_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2474,0.9907293,4.580168,4760.0,0.022553306,3,subject03_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2475,0.9894231,4.148616,4760.0,0.020413298,3,subject03_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2476,0.98847747,4.2995453,4760.0,0.021155542,3,subject03_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2477,0.97871125,4.911344,4760.0,0.02418861,4,subject04_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2478,0.9814928,4.5105743,4760.0,0.022209188,4,subject04_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2479,0.9868451,4.896847,4760.0,0.024118533,4,subject04_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2480,0.95755005,5.281602,4760.0,0.026011784,5,subject05_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2481,0.96090955,4.809468,4754.0,0.023682645,5,subject05_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2482,0.9670783,5.26233,4760.0,0.025930643,5,subject05_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2483,0.99404556,5.6417756,4760.0,0.02778785,6,subject06_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2484,0.99458647,5.3471165,4760.0,0.026356593,6,subject06_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2485,0.9924696,5.0986896,4760.0,0.025129627,6,subject06_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2486,0.9610059,4.790826,4758.0,0.023591504,7,subject07_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2487,0.9787021,5.4611087,4758.0,0.026897004,7,subject07_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2488,0.98079866,4.987146,4760.0,0.024569917,7,subject07_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2489,0.97267216,4.800756,4760.0,0.023650361,8,subject08_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2490,0.9737478,4.7719436,4760.0,0.02350773,8,subject08_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2491,0.9693044,5.265686,4760.0,0.025932658,8,subject08_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2492,0.973055,4.9529724,4759.0,0.024383102,9,subject09_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2493,0.98062575,4.2312093,4760.0,0.02084783,9,subject09_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2494,0.98208153,4.706416,4760.0,0.023188632,9,subject09_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2495,0.9630678,5.2689524,4760.0,0.025970628,10,subject10_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2496,0.96888125,5.705874,4760.0,0.02810396,10,subject10_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2497,0.9774321,5.6687107,4760.0,0.027924374,10,subject10_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2498,0.97113174,5.094284,4760.0,0.025094923,11,subject11_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2499,0.9656246,4.665342,4698.0,0.022970704,11,subject11_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2500,0.97272736,4.1215878,4760.0,0.020306649,11,subject11_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2501,0.9730867,5.5952454,4760.0,0.027557395,12,subject12_block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2502,0.96686494,4.8232584,4760.0,0.023751281,12,subject12_block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
-2503,0.9688199,5.2003217,4760.0,0.025627391,12,subject12_block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2428,0.71734446,7.566643,1800.0,0.037253186,1,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2429,0.67462224,6.5407143,1800.0,0.03222768,1,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2430,0.6887,6.6748075,1800.0,0.03283723,1,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2431,0.6673333,6.5790873,1800.0,0.03239058,1,session_4,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2432,0.5878556,6.475113,1800.0,0.031876612,2,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2433,0.65676665,6.722957,1800.0,0.033103548,2,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2434,0.6493,6.5259657,1800.0,0.032137837,2,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2435,0.7554,6.8724613,1800.0,0.033826,3,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2436,0.7193889,7.0310016,1800.0,0.034624256,3,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2437,0.71536666,7.826105,1800.0,0.038562294,3,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2438,0.62531114,6.798633,1800.0,0.0334736,4,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2439,0.64093333,7.393747,1800.0,0.03639576,4,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2440,0.5770778,7.4466553,1800.0,0.036705967,4,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2441,0.5837111,8.587816,1800.0,0.042313073,5,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2442,0.61233336,7.3049307,1800.0,0.035956454,5,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2443,0.6367111,6.8583093,1800.0,0.03377165,5,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2444,0.66033334,7.137,1800.0,0.035139326,6,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2445,0.62365556,7.36034,1800.0,0.03628172,6,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2446,0.5819,6.899004,1800.0,0.03396713,6,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2447,0.57582223,9.053638,1800.0,0.044551264,7,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2448,0.5753111,6.4771132,1800.0,0.031903457,7,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2449,0.60105556,7.5705605,1800.0,0.037279025,7,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2450,0.71801114,8.007905,1800.0,0.039452482,8,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2451,0.6878,6.2143803,1800.0,0.030599795,8,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2452,0.6846333,6.7726207,1800.0,0.03336916,8,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2453,0.67705554,7.826656,1800.0,0.038554657,9,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2454,0.70163333,7.5519686,1800.0,0.037201297,9,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2455,0.6491889,7.304644,1800.0,0.03595896,9,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2456,0.8852,8.58897,1800.0,0.0423113,10,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2457,0.8952778,7.1870527,1800.0,0.035390783,10,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2458,0.80755556,8.192609,1800.0,0.04036661,10,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2459,0.7164556,7.1896744,1800.0,0.035411168,11,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2460,0.6744,6.7442236,1800.0,0.033215232,11,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2461,0.73274446,7.4719896,1800.0,0.036800273,11,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2462,0.63904446,8.948324,1800.0,0.04409249,12,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2463,0.6428889,6.3893127,1800.0,0.031470235,12,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2464,0.58294445,8.290154,1800.0,0.040835362,12,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2465,0.7125111,7.006812,1800.0,0.03450138,13,session_1,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2466,0.72367775,6.7688985,1800.0,0.033298496,13,session_2,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2467,0.7373667,8.92766,1800.0,0.043994423,13,session_3,31,1,Sosulski2019,XDAWN + LDA,P300,WithinSession,Raw
+2468,0.9846422,5.428841,4759.0,0.026751118,1,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2469,0.9818583,4.5138254,4760.0,0.022231705,1,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2470,0.98113716,4.3802595,4760.0,0.02155636,1,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2471,0.99154854,4.835204,4760.0,0.023818962,2,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2472,0.9898229,4.6172047,4760.0,0.022732463,2,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2473,0.99125785,7.8653135,4760.0,0.038739853,2,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2474,0.9907293,4.580168,4760.0,0.022553306,3,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2475,0.9894231,4.148616,4760.0,0.020413298,3,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2476,0.98847747,4.2995453,4760.0,0.021155542,3,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2477,0.97871125,4.911344,4760.0,0.02418861,4,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2478,0.9814928,4.5105743,4760.0,0.022209188,4,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2479,0.9868451,4.896847,4760.0,0.024118533,4,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2480,0.95755005,5.281602,4760.0,0.026011784,5,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2481,0.96090955,4.809468,4754.0,0.023682645,5,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2482,0.9670783,5.26233,4760.0,0.025930643,5,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2483,0.99404556,5.6417756,4760.0,0.02778785,6,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2484,0.99458647,5.3471165,4760.0,0.026356593,6,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2485,0.9924696,5.0986896,4760.0,0.025129627,6,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2486,0.9610059,4.790826,4758.0,0.023591504,7,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2487,0.9787021,5.4611087,4758.0,0.026897004,7,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2488,0.98079866,4.987146,4760.0,0.024569917,7,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2489,0.97267216,4.800756,4760.0,0.023650361,8,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2490,0.9737478,4.7719436,4760.0,0.02350773,8,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2491,0.9693044,5.265686,4760.0,0.025932658,8,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2492,0.973055,4.9529724,4759.0,0.024383102,9,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2493,0.98062575,4.2312093,4760.0,0.02084783,9,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2494,0.98208153,4.706416,4760.0,0.023188632,9,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2495,0.9630678,5.2689524,4760.0,0.025970628,10,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2496,0.96888125,5.705874,4760.0,0.02810396,10,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2497,0.9774321,5.6687107,4760.0,0.027924374,10,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2498,0.97113174,5.094284,4760.0,0.025094923,11,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2499,0.9656246,4.665342,4698.0,0.022970704,11,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2500,0.97272736,4.1215878,4760.0,0.020306649,11,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2501,0.9730867,5.5952454,4760.0,0.027557395,12,block_1,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2502,0.96686494,4.8232584,4760.0,0.023751281,12,block_2,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
+2503,0.9688199,5.2003217,4760.0,0.025627391,12,block_3,31,1,Huebner2018,XDAWNCov + MDM,P300,WithinSession,Riemannian
 2504,0.92449903,17.051073,4140.0,0.16120611,1,session_1,62,2,Lee2019-ERP,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2505,0.9390716,16.293074,4140.0,0.15406312,1,session_2,62,2,Lee2019-ERP,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2506,0.99714977,16.064524,4140.0,0.15185449,2,session_1,62,2,Lee2019-ERP,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
@@ -2611,42 +2611,42 @@
 2609,0.9954484,19.005524,4140.0,0.17941807,53,session_2,62,2,Lee2019-ERP,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2610,0.9789351,19.439497,4140.0,0.1834901,54,session_1,62,2,Lee2019-ERP,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2611,0.9799223,20.509754,4140.0,0.19370355,54,session_2,62,2,Lee2019-ERP,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2612,0.99386793,10.230813,4759.0,0.08129757,1,subject01_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2613,0.9933011,9.624753,4760.0,0.076479465,1,subject01_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2614,0.99146634,9.489111,4760.0,0.07540247,1,subject01_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2615,0.9960925,9.96019,4760.0,0.079152346,2,subject02_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2616,0.99563015,9.628945,4760.0,0.0765109,2,subject02_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2617,0.99663585,9.83724,4760.0,0.0781607,2,subject02_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2618,0.995521,9.706418,4760.0,0.0771277,3,subject03_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2619,0.9959576,9.548833,4760.0,0.075874865,3,subject03_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2620,0.9956044,10.008609,4760.0,0.07953521,3,subject03_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2621,0.9861926,9.897144,4760.0,0.078655936,4,subject04_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2622,0.98775876,10.029686,4760.0,0.079704955,4,subject04_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2623,0.99308157,9.840943,4760.0,0.07820208,4,subject04_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2624,0.9684299,10.46962,4760.0,0.083165266,5,subject05_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2625,0.97128946,10.147678,4754.0,0.080643065,5,subject05_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2626,0.97692186,10.1887455,4760.0,0.08097018,5,subject05_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2627,0.9978378,9.430528,4760.0,0.074917264,6,subject06_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2628,0.99803644,9.8197155,4760.0,0.078027725,6,subject06_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2629,0.9977041,9.849754,4760.0,0.078260645,6,subject06_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2630,0.971125,9.988188,4758.0,0.07931818,7,subject07_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2631,0.98556024,9.929271,4758.0,0.078896716,7,subject07_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2632,0.9887228,9.824456,4760.0,0.07807076,7,subject07_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2633,0.97570395,10.115744,4760.0,0.08037338,8,subject08_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2634,0.9767158,10.144361,4760.0,0.08061712,8,subject08_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2635,0.97302663,10.128338,4760.0,0.080491364,8,subject08_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2636,0.97961295,10.246312,4759.0,0.081428625,9,subject09_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2637,0.9899946,10.025276,4760.0,0.079673365,9,subject09_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2638,0.9886124,9.954575,4760.0,0.07910886,9,subject09_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2639,0.97151196,10.171925,4760.0,0.08083039,10,subject10_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2640,0.9772849,9.774874,4760.0,0.07767101,10,subject10_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2641,0.9838783,9.794689,4760.0,0.07783261,10,subject10_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2642,0.97825867,9.753441,4760.0,0.07750397,11,subject11_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2643,0.97167915,9.8729725,4698.0,0.07844262,11,subject11_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2644,0.97922146,10.046175,4760.0,0.07983665,11,subject11_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2645,0.9784917,10.30528,4760.0,0.081902266,12,subject12_block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2646,0.97303766,9.844809,4760.0,0.078233995,12,subject12_block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-2647,0.97397226,10.24184,4760.0,0.08137319,12,subject12_block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2612,0.99386793,10.230813,4759.0,0.08129757,1,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2613,0.9933011,9.624753,4760.0,0.076479465,1,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2614,0.99146634,9.489111,4760.0,0.07540247,1,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2615,0.9960925,9.96019,4760.0,0.079152346,2,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2616,0.99563015,9.628945,4760.0,0.0765109,2,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2617,0.99663585,9.83724,4760.0,0.0781607,2,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2618,0.995521,9.706418,4760.0,0.0771277,3,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2619,0.9959576,9.548833,4760.0,0.075874865,3,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2620,0.9956044,10.008609,4760.0,0.07953521,3,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2621,0.9861926,9.897144,4760.0,0.078655936,4,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2622,0.98775876,10.029686,4760.0,0.079704955,4,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2623,0.99308157,9.840943,4760.0,0.07820208,4,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2624,0.9684299,10.46962,4760.0,0.083165266,5,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2625,0.97128946,10.147678,4754.0,0.080643065,5,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2626,0.97692186,10.1887455,4760.0,0.08097018,5,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2627,0.9978378,9.430528,4760.0,0.074917264,6,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2628,0.99803644,9.8197155,4760.0,0.078027725,6,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2629,0.9977041,9.849754,4760.0,0.078260645,6,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2630,0.971125,9.988188,4758.0,0.07931818,7,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2631,0.98556024,9.929271,4758.0,0.078896716,7,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2632,0.9887228,9.824456,4760.0,0.07807076,7,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2633,0.97570395,10.115744,4760.0,0.08037338,8,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2634,0.9767158,10.144361,4760.0,0.08061712,8,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2635,0.97302663,10.128338,4760.0,0.080491364,8,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2636,0.97961295,10.246312,4759.0,0.081428625,9,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2637,0.9899946,10.025276,4760.0,0.079673365,9,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2638,0.9886124,9.954575,4760.0,0.07910886,9,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2639,0.97151196,10.171925,4760.0,0.08083039,10,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2640,0.9772849,9.774874,4760.0,0.07767101,10,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2641,0.9838783,9.794689,4760.0,0.07783261,10,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2642,0.97825867,9.753441,4760.0,0.07750397,11,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2643,0.97167915,9.8729725,4698.0,0.07844262,11,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2644,0.97922146,10.046175,4760.0,0.07983665,11,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2645,0.9784917,10.30528,4760.0,0.081902266,12,block_1,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2646,0.97303766,9.844809,4760.0,0.078233995,12,block_2,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+2647,0.97397226,10.24184,4760.0,0.08137319,12,block_3,31,1,Huebner2018,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 2648,0.5909781,4.8035045,850.0,0.023661636,1,session_1,32,4,EPFLP300,XDAWN + LDA,P300,WithinSession,Raw
 2649,0.5965449,4.6811175,816.0,0.023089241,1,session_2,32,4,EPFLP300,XDAWN + LDA,P300,WithinSession,Raw
 2650,0.59328145,3.8969471,825.0,0.019183801,1,session_3,32,4,EPFLP300,XDAWN + LDA,P300,WithinSession,Raw
@@ -3435,84 +3435,84 @@
 3433,0.78422934,1.2094669,795.0,0.0113839805,9,session_2,32,4,EPFLP300,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 3434,0.60080045,1.0082326,862.0,0.009502653,9,session_3,32,4,EPFLP300,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 3435,0.5137932,1.1459923,818.0,0.01081068,9,session_4,32,4,EPFLP300,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
-3436,0.99160373,28.749731,4283.0,0.14163199,1,subject01_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3437,0.9901452,26.96326,4284.0,0.13283941,1,subject01_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3438,0.99375904,27.396175,4283.0,0.13495444,1,subject01_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3439,0.9830136,26.334959,4284.0,0.12973703,2,subject02_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3440,0.98291254,27.526766,4284.0,0.13561875,2,subject02_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3441,0.98477656,29.931854,4284.0,0.14744407,2,subject02_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3442,0.97345597,26.80928,4283.0,0.13205318,3,subject03_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3443,0.9786864,28.02793,4284.0,0.13803534,3,subject03_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3444,0.9830133,28.735954,4283.0,0.14154038,3,subject03_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3445,0.99695706,28.65681,4284.0,0.14112855,4,subject04_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3446,0.9960246,28.078596,4283.0,0.13830595,4,subject04_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3447,0.99416417,28.278913,4283.0,0.13932367,4,subject04_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3448,0.95781875,25.453876,4284.0,0.12540294,5,subject05_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3449,0.9549567,25.183079,4284.0,0.124072134,5,subject05_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3450,0.9679779,26.496548,4284.0,0.1305305,5,subject05_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3451,0.9935759,26.070534,4281.0,0.12842682,6,subject06_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3452,0.99679226,25.412031,4284.0,0.1251639,6,subject06_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3453,0.9989663,25.772297,4284.0,0.12696841,7,subject07_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3454,0.99976075,24.655369,4284.0,0.1214477,7,subject07_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3455,0.999738,26.304075,4284.0,0.12958176,7,subject07_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3456,0.9324415,25.303827,4283.0,0.12460391,8,subject08_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3457,0.9513819,25.440022,4283.0,0.12531711,8,subject08_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3458,0.94457424,25.353317,4284.0,0.12485214,8,subject08_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3459,0.99258727,25.168188,4284.0,0.123957664,9,subject09_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3460,0.99555707,24.8864,4284.0,0.122585714,9,subject09_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3461,0.9956159,25.092505,4284.0,0.123621605,9,subject09_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3462,0.99511963,25.036997,4283.0,0.12337304,10,subject10_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3463,0.9951194,24.776888,4268.0,0.12204033,10,subject10_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3464,0.9949751,24.765219,4281.0,0.12199543,10,subject10_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3465,0.9028811,24.757498,4282.0,0.121973686,11,subject11_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3466,0.888623,24.245707,4284.0,0.119414516,11,subject11_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3467,0.9011997,25.874,4283.0,0.12743816,11,subject11_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3468,0.98877513,24.510098,4284.0,0.12075756,12,subject12_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3469,0.9919364,23.995468,4284.0,0.11822379,12,subject12_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3470,0.9793831,23.725996,4284.0,0.11693047,12,subject12_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3471,0.99168605,23.45112,4284.0,0.11552889,13,subject13_block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3472,0.99534047,24.573969,4283.0,0.12105381,13,subject13_block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3473,0.98691946,24.168636,4284.0,0.119085014,13,subject13_block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
-3474,0.9167889,4.8327003,1800.0,0.031118704,1,session_1_soa_226,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3475,0.9220667,4.2767024,1800.0,0.027530385,1,session_1_soa_235,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3476,0.8759556,4.518077,1800.0,0.029087417,1,session_1_soa_518,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3477,0.86954445,4.378124,1800.0,0.028185783,1,session_1_soa_596,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3478,0.7985,4.3332653,1800.0,0.027894692,2,session_1_soa_180,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3479,0.87504447,4.4133115,1800.0,0.028402112,2,session_1_soa_400,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3480,0.86943334,4.2938037,1800.0,0.027641637,2,session_1_soa_447,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3481,0.9574556,4.277633,1800.0,0.027532266,3,session_1_soa_273,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3482,0.92895555,4.2933474,1800.0,0.027627598,3,session_1_soa_384,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3483,0.93366665,4.3110776,1800.0,0.02775232,3,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3484,0.82185555,4.456821,1800.0,0.028686393,4,session_1_soa_161,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3485,0.8297333,4.390809,1800.0,0.028269975,4,session_1_soa_418,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3486,0.81006664,4.4453936,1800.0,0.028618222,4,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3487,0.7681,4.2112236,1800.0,0.027101854,5,session_1_soa_193,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3488,0.8041222,4.2695165,1800.0,0.02748267,5,session_1_soa_220,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3489,0.83882225,4.209211,1800.0,0.027094668,5,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3490,0.7929222,4.347645,1800.0,0.02798885,6,session_1_soa_220,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3491,0.8353111,4.198209,1800.0,0.027015395,6,session_1_soa_325,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3492,0.7745778,4.264955,1800.0,0.02745141,6,session_1_soa_402,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3493,0.73557776,4.314041,1800.0,0.027771391,7,session_1_soa_200,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3494,0.7748,4.4133587,1800.0,0.028404329,7,session_1_soa_306,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3495,0.7500889,4.4382267,1800.0,0.028570754,7,session_1_soa_600,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3496,0.9299667,4.255553,1800.0,0.027395379,8,session_1_soa_208,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3497,0.9254,4.3338604,1800.0,0.027900597,8,session_1_soa_226,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3498,0.8717667,4.3320255,1800.0,0.027883308,8,session_1_soa_508,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3499,0.9209889,4.348588,1800.0,0.027997194,9,session_1_soa_359,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3500,0.9050222,4.4678526,1800.0,0.028764406,9,session_1_soa_425,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3501,0.8850333,4.2616205,1800.0,0.02743149,9,session_1_soa_457,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3502,0.9943889,4.3039885,1800.0,0.027710194,10,session_1_soa_193,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3503,0.9945,4.1929946,1800.0,0.026991555,10,session_1_soa_286,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3504,0.9694222,4.314776,1800.0,0.02777014,10,session_1_soa_506,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3505,0.94317776,4.4030604,1800.0,0.02834778,11,session_1_soa_179,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3506,0.90812224,4.2225356,1800.0,0.027181452,11,session_1_soa_194,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3507,0.9583333,4.332943,1800.0,0.027890895,11,session_1_soa_513,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3508,0.84261113,4.152048,1800.0,0.026728278,12,session_1_soa_175,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3509,0.8046111,4.287466,1800.0,0.027604312,12,session_1_soa_296,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3510,0.7993111,4.4195137,1800.0,0.028451232,12,session_1_soa_474,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3511,0.9166222,4.3586392,1800.0,0.028061287,13,session_1_soa_177,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3512,0.9253333,4.276337,1800.0,0.027530057,13,session_1_soa_256,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
-3513,0.93564445,4.1756473,1800.0,0.026878366,13,session_1_soa_446,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3436,0.99160373,28.749731,4283.0,0.14163199,1,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3437,0.9901452,26.96326,4284.0,0.13283941,1,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3438,0.99375904,27.396175,4283.0,0.13495444,1,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3439,0.9830136,26.334959,4284.0,0.12973703,2,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3440,0.98291254,27.526766,4284.0,0.13561875,2,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3441,0.98477656,29.931854,4284.0,0.14744407,2,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3442,0.97345597,26.80928,4283.0,0.13205318,3,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3443,0.9786864,28.02793,4284.0,0.13803534,3,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3444,0.9830133,28.735954,4283.0,0.14154038,3,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3445,0.99695706,28.65681,4284.0,0.14112855,4,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3446,0.9960246,28.078596,4283.0,0.13830595,4,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3447,0.99416417,28.278913,4283.0,0.13932367,4,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3448,0.95781875,25.453876,4284.0,0.12540294,5,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3449,0.9549567,25.183079,4284.0,0.124072134,5,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3450,0.9679779,26.496548,4284.0,0.1305305,5,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3451,0.9935759,26.070534,4281.0,0.12842682,6,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3452,0.99679226,25.412031,4284.0,0.1251639,6,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3453,0.9989663,25.772297,4284.0,0.12696841,7,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3454,0.99976075,24.655369,4284.0,0.1214477,7,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3455,0.999738,26.304075,4284.0,0.12958176,7,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3456,0.9324415,25.303827,4283.0,0.12460391,8,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3457,0.9513819,25.440022,4283.0,0.12531711,8,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3458,0.94457424,25.353317,4284.0,0.12485214,8,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3459,0.99258727,25.168188,4284.0,0.123957664,9,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3460,0.99555707,24.8864,4284.0,0.122585714,9,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3461,0.9956159,25.092505,4284.0,0.123621605,9,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3462,0.99511963,25.036997,4283.0,0.12337304,10,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3463,0.9951194,24.776888,4268.0,0.12204033,10,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3464,0.9949751,24.765219,4281.0,0.12199543,10,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3465,0.9028811,24.757498,4282.0,0.121973686,11,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3466,0.888623,24.245707,4284.0,0.119414516,11,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3467,0.9011997,25.874,4283.0,0.12743816,11,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3468,0.98877513,24.510098,4284.0,0.12075756,12,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3469,0.9919364,23.995468,4284.0,0.11822379,12,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3470,0.9793831,23.725996,4284.0,0.11693047,12,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3471,0.99168605,23.45112,4284.0,0.11552889,13,block_1,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3472,0.99534047,24.573969,4283.0,0.12105381,13,block_2,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3473,0.98691946,24.168636,4284.0,0.119085014,13,block_3,31,1,Huebner2017,XDAWN + LDA,P300,WithinSession,Raw
+3474,0.9167889,4.8327003,1800.0,0.031118704,1,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3475,0.9220667,4.2767024,1800.0,0.027530385,1,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3476,0.8759556,4.518077,1800.0,0.029087417,1,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3477,0.86954445,4.378124,1800.0,0.028185783,1,session_4,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3478,0.7985,4.3332653,1800.0,0.027894692,2,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3479,0.87504447,4.4133115,1800.0,0.028402112,2,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3480,0.86943334,4.2938037,1800.0,0.027641637,2,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3481,0.9574556,4.277633,1800.0,0.027532266,3,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3482,0.92895555,4.2933474,1800.0,0.027627598,3,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3483,0.93366665,4.3110776,1800.0,0.02775232,3,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3484,0.82185555,4.456821,1800.0,0.028686393,4,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3485,0.8297333,4.390809,1800.0,0.028269975,4,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3486,0.81006664,4.4453936,1800.0,0.028618222,4,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3487,0.7681,4.2112236,1800.0,0.027101854,5,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3488,0.8041222,4.2695165,1800.0,0.02748267,5,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3489,0.83882225,4.209211,1800.0,0.027094668,5,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3490,0.7929222,4.347645,1800.0,0.02798885,6,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3491,0.8353111,4.198209,1800.0,0.027015395,6,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3492,0.7745778,4.264955,1800.0,0.02745141,6,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3493,0.73557776,4.314041,1800.0,0.027771391,7,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3494,0.7748,4.4133587,1800.0,0.028404329,7,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3495,0.7500889,4.4382267,1800.0,0.028570754,7,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3496,0.9299667,4.255553,1800.0,0.027395379,8,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3497,0.9254,4.3338604,1800.0,0.027900597,8,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3498,0.8717667,4.3320255,1800.0,0.027883308,8,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3499,0.9209889,4.348588,1800.0,0.027997194,9,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3500,0.9050222,4.4678526,1800.0,0.028764406,9,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3501,0.8850333,4.2616205,1800.0,0.02743149,9,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3502,0.9943889,4.3039885,1800.0,0.027710194,10,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3503,0.9945,4.1929946,1800.0,0.026991555,10,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3504,0.9694222,4.314776,1800.0,0.02777014,10,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3505,0.94317776,4.4030604,1800.0,0.02834778,11,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3506,0.90812224,4.2225356,1800.0,0.027181452,11,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3507,0.9583333,4.332943,1800.0,0.027890895,11,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3508,0.84261113,4.152048,1800.0,0.026728278,12,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3509,0.8046111,4.287466,1800.0,0.027604312,12,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3510,0.7993111,4.4195137,1800.0,0.028451232,12,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3511,0.9166222,4.3586392,1800.0,0.028061287,13,session_1,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3512,0.9253333,4.276337,1800.0,0.027530057,13,session_2,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
+3513,0.93564445,4.1756473,1800.0,0.026878366,13,session_3,31,1,Sosulski2019,XDAWNCov + TS + SVM,P300,WithinSession,Riemannian
 3514,0.74462223,1.0342556,5400.0,0.009760161,1,session_0,8,1,BNCI2015-003,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 3515,0.92128253,1.0813944,5400.0,0.010207365,2,session_0,8,1,BNCI2015-003,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
 3516,0.7762778,0.42706394,1800.0,0.004005564,3,session_0,8,1,BNCI2015-003,ERPCov(svd_n=4) + MDM,P300,WithinSession,Riemannian
