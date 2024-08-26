@@ -148,6 +148,7 @@ class SPDBatchNormImpl(BaseBatchNorm):
 
     def forward(self, X):
         if self.training:
+            # print("shape X in batchNorm", X.shape)
             # compute the Karcher flow for the current batch
             batch_mean = X.mean(dim=self.batchdim, keepdim=True)
             if X.shape[self.batchdim] > 1:
@@ -182,6 +183,7 @@ class SPDBatchNormImpl(BaseBatchNorm):
                     if self.adapt_observation > 1:
                         t = torch.tensor([1. / (self.adapt_observation + 1)])
                         rm_sq, rm_invsq = functionals.sym_invsqrtm2.apply(self.running_mean_test)
+                        # print("running mean",self.running_mean_test)
                         rminvX = rm_invsq @ x[None,...] @ rm_invsq
                         rm = rm_sq @ functionals.sym_powm.apply(rminvX, t) @ rm_sq
 
@@ -195,6 +197,8 @@ class SPDBatchNormImpl(BaseBatchNorm):
                 
                 with torch.no_grad():
                     self.running_mean_test = rm.clone()
+                    # print("running mean at the end",self.running_mean_test)
+
                     if self.dispersion is BatchNormDispersion.SCALAR:
                         self.running_var_test = rv.clone()
 
@@ -208,6 +212,7 @@ class SPDBatchNormImpl(BaseBatchNorm):
                 rm, self.std/(rv + self.eps).sqrt(), self.mean)
         else:
             Xn = self.manifold.transp_via_identity(X, rm, self.mean)
+        # print("mean value:",self.mean)
 
         if self.training:
             with torch.no_grad():
@@ -223,7 +228,7 @@ class SPDBatchNormImpl(BaseBatchNorm):
                         rminvX = rm_invsq @ batch_mean @ rm_invsq
                         batch_var_test = functionals.sym_logm.apply(rminvX).square().sum(dim=(-1,-2), keepdim=True).squeeze(-1)
                     self.running_var_test = (1. - self.eta_test) * self.running_var_test + self.eta_test * batch_var_test
-
+        # print("shape of output", Xn.shape)
         return Xn
 
 
@@ -321,6 +326,7 @@ class DomainSPDBatchNormImpl(BaseDomainBatchNorm):
 
         cls = type(self).domain_bn_cls
         for domain in domains:
+            # print("shape when add domain", shape)
             self.add_domain_(cls(shape=shape, batchdim=self.batchdim, 
                                 learn_mean=learn_mean,learn_std=learn_std, dispersion=dispersion,
                                 mean=self.mean, std=self.std, eta=eta, eta_test=eta_test, **kwargs),

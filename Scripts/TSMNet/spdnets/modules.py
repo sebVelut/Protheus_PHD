@@ -14,7 +14,7 @@ class CovariancePool(nn.Module):
     def __init__(self, alpha = None, unitvar = False):
         super().__init__()
         self.pooldim = -1
-        self.chandim = -2
+        self.chandim = 1
         self.alpha = alpha
         self.unitvar = unitvar
     
@@ -58,7 +58,8 @@ class BiMap(nn.Module):
         if isinstance(self.W.manifold, Sphere):
             return self.W @ X @ self.W.transpose(-2,-1)
         else:
-            return self.W.transpose(-2,-1) @ X @ self.W
+            # print("device in bimap",(self.W.device,X.device))
+            return self.W.to(device=X.device,dtype=X.dtype).transpose(-2,-1) @ X @ self.W.to(device=X.device,dtype=X.dtype)
 
     @torch.no_grad()
     def reset_parameters(self):

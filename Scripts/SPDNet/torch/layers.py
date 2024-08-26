@@ -15,8 +15,10 @@ class BiMap(nn.Module):
     Stiefel parameter of size (ho,hi,ni,no)
     """
 
-    def __init__(self, ho, hi, ni, no):
+    def __init__(self, ho, hi, ni, no, dtype=th.float64, device=th.device('cpu')):
         super(BiMap, self).__init__()
+        self.device = th.device(device)
+        self.dtype = dtype
         self._W = functional.StiefelParameter(th.empty(ho, hi, ni, no, dtype=dtype, device=device))
         self._ho = ho;
         self._hi = hi;
@@ -145,7 +147,7 @@ class BatchNormSPD(nn.Module):
     Batch Norm SPD
     """
 
-    def __init__(self, momentum, n):
+    def __init__(self, momentum, n, dtype=th.float64, device=th.device('cpu')):
         """
 
         :param momentum:
@@ -154,12 +156,14 @@ class BatchNormSPD(nn.Module):
         super(__class__, self).__init__()
 
         self.momentum = momentum
+        self.device = th.device(device)
+        self.dtype = dtype
 
-        self.running_mean = ManifoldParameter(th.eye(n, dtype=dtype),
+        self.running_mean = ManifoldParameter(th.eye(n, dtype=self.dtype, device=self.device),
                                               manifold=SymmetricPositiveDefinite(),
                                               requires_grad=False
                                               )
-        self.weight = ManifoldParameter(th.eye(n, dtype=dtype),
+        self.weight = ManifoldParameter(th.eye(n, dtype=self.dtype, device=self.device),
                                         manifold=SymmetricPositiveDefinite(),
                                         )
 
