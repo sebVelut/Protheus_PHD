@@ -9,6 +9,7 @@ from .covariance import compute_covariances, mean_covariance
 
 
 def compute_ref_riemann(data=None, mean=None, dtype='covmat'):
+    data = copy.deepcopy(data)
     if dtype != 'covmat':
         covmats = compute_covariances(data, estimator='lwf')
         data = covmats

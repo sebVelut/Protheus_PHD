@@ -2,20 +2,16 @@ from copy import deepcopy
 
 import geotorch
 import numpy as np
-import pandas as pd
-from sklearn import clone
+from sklearn.model_selection import train_test_split
 import torch
-from lightning import LightningModule
 from sklearn.metrics import balanced_accuracy_score
-from sklearn.metrics import r2_score
 from torch import Tensor
 from torch import nn
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch.utils.data import DataLoader
-from torch.utils.data import Subset
+from torch.utils.data import DataLoader, TensorDataset
 
 import sys
-sys.path.append('C:/Users/s.velut/Documents/These/Protheus_PHD/Scripts')
+sys.path.append('D:/s.velut/Documents/Thèse/Protheus_PHD/Scripts')
+from SPDNet.SPD_torch.optimizers import riemannian_adam as torch_riemannian_adam
 from Wavelets.Green_files.green.spd_layers import BiMap
 from Wavelets.Green_files.green.spd_layers import LogMap
 from Wavelets.Green_files.green.spd_layers import Shrinkage
@@ -25,299 +21,6 @@ from Wavelets.Green_files.green.wavelet_layers import CrossCovariance
 from Wavelets.Green_files.green.wavelet_layers import CrossPW_PLV
 from Wavelets.Green_files.green.wavelet_layers import RealCovariance
 from Wavelets.Green_files.green.wavelet_layers import WaveletConv
-
-
-def get_train_test_loaders(dataset,
-                           train_indices,
-                           test_indices,
-                           batch_size=128,
-                           num_workers=0,
-                           shuffle=True,
-                           pin_memory=True,
-                           final_val=False
-                           ):
-    train_set = Subset(dataset, train_indices)
-    test_set = Subset(dataset, test_indices)
-    train_loader = DataLoader(
-        train_set,
-        batch_size=batch_size,
-        shuffle=shuffle,
-        pin_memory=pin_memory,
-        num_workers=num_workers
-    )
-    test_loader = DataLoader(
-        test_set,
-        batch_size=batch_size,
-        pin_memory=pin_memory,
-        num_workers=min(int(len(test_set) // batch_size), num_workers)
-    )
-    if final_val:
-        test_set_final = deepcopy(test_set)
-        test_set_final.dataset.padding = None
-        test_set_final.dataset.n_epochs = 150
-        test_loader_final = DataLoader(
-            test_set_final,
-            batch_size=1,
-            num_workers=num_workers * 2
-        )
-        return train_loader, test_loader, test_loader_final
-
-    return train_loader, test_loader
-
-
-class GreenRegressorLM(LightningModule):
-    def __init__(
-            self,
-            model,
-            lr=1e-1,
-            weight_decay=1e-5,
-            lr_wavelet=None,
-            data_type=torch.float32):
-        super().__init__()
-        self.model = model
-        self.lr = lr
-        self.weight_decay = weight_decay
-        self.predict_outputs = list()
-        self.lr_wavelet = lr_wavelet
-        self.data_type = data_type
-
-    def training_step(self, batch, batch_idx):
-        # training_step defines the train loop.
-        # it is independent of forward
-        x, y_true = batch
-        y_true = y_true.to(self.data_type)
-        y_pred = self.model(x)
-        loss = torch.nn.functional.mse_loss(y_pred.squeeze(-1), y_true)
-        self.log("train_loss", loss)
-        return loss
-
-    def test_step(self, batch, batch_idx):
-        x, y_true = batch
-        y_true = y_true.to(self.data_type)
-        y_true = y_true.cpu()
-
-        y_pred = self.model(x).cpu()
-        test_loss = torch.nn.functional.mse_loss(y_pred.squeeze(-1),
-                                                 y_true)
-        test_score = r2_score(y_pred=y_pred.squeeze(-1).numpy(),
-                              y_true=y_true.numpy())
-        self.log("test_loss", test_loss)
-        self.log("test_score", test_score)
-
-    def validation_step(self, batch, batch_idx):
-        x, y_true = batch
-        y_true = y_true.to(self.data_type)
-        y_true = y_true.cpu()
-
-        y_pred = self.model(x).cpu()
-        valid_loss = torch.nn.functional.mse_loss(y_pred.squeeze(-1),
-                                                  y_true)
-        valid_score = r2_score(y_pred=y_pred.squeeze(-1).numpy(),
-                               y_true=y_true.numpy())
-        self.log("valid_loss", valid_loss, prog_bar=True,)
-        self.log("valid_score", valid_score, prog_bar=True,)
-
-    def predict_step(self, batch, batch_idx):
-        x, y_true = batch
-        y_true = y_true.to(self.data_type)
-        y_true = y_true.cpu()
-
-        y_pred = self.model(x).cpu()
-        self.predict_outputs.append(pd.DataFrame(dict(
-            y_pred=y_pred.squeeze(-1).numpy(),
-            y_true=y_true.numpy().ravel(),
-        )))
-        return pd.DataFrame(dict(
-            y_pred=y_pred.squeeze(-1).numpy(),
-            y_true=y_true.numpy().ravel(),
-        ))
-
-    def configure_optimizers(self):
-        params = list(self.named_parameters())
-        if self.lr_wavelet is not None:
-            def is_faster(n): return ('foi' in n) or ('fwhm' in n)
-            grouped_parameters = [
-                {"params": [p for n, p in params if not is_faster(n)],
-                 'lr': self.lr},
-                {"params": [p for n, p in params if is_faster(n)],
-                 'lr': self.lr * self.lr_wavelet},
-            ]
-        else:
-            grouped_parameters = self.parameters()
-
-        optimizer = torch.optim.Adam(
-            grouped_parameters,
-            lr=self.lr,
-            weight_decay=self.weight_decay
-        )
-        return {
-            "optimizer": optimizer,
-            "lr_scheduler": {
-                "scheduler": ReduceLROnPlateau(optimizer,
-                                               mode='min',
-                                               factor=.25),
-                "monitor": "train_loss",
-                "interval": "step",
-                "frequency": 5,
-            },
-        }
-
-    def on_predict_epoch_end(self, ):
-        all_preds = pd.concat(self.predict_outputs)
-        self.predict_outputs.clear()
-        return all_preds
-
-
-class GreenClassifierLM(LightningModule):
-    def __init__(
-            self,
-            model,
-            lr=1e-1,
-            weight_decay=1e-5,
-            lr_wavelet=None,
-            data_type=torch.float32,
-            use_age: bool = False,
-            criterion: callable = torch.nn.functional.cross_entropy,
-            scheduler_track: str = "train_loss"):
-        super().__init__()
-        self.model = model
-        self.lr = lr
-        self.weight_decay = weight_decay
-        self.predict_outputs = list()
-        self.lr_wavelet = lr_wavelet
-        self.data_type = data_type
-        self.use_age = use_age
-        self.criterion = criterion
-        self.init_metrics = True
-        self.scheduler_track = scheduler_track
-
-    def training_step(self, batch, batch_idx):
-        print('training')
-        if self.current_epoch < 1:
-            self.log("val_loss", torch.tensor(1e3))
-            self.log("val_acc", torch.tensor(-1e3))
-            self.init_metrics = False
-
-        # training_step defines the train loop.
-        # it is independent of forward
-        if self.use_age:
-            x, age, y_true = batch
-            y_pred = self.model(x, age)
-        else:
-            x, y_true = batch
-            y_pred = self.model(x)
-
-        y_true = y_true.to(self.data_type)
-        loss = self.criterion(y_pred, y_true)
-        self.log("train_loss", loss)
-        return loss
-
-    def test_step(self, batch, batch_idx):
-        if self.use_age:
-            x, age, y_true = batch
-            y_pred = self.model(x, age)
-        else:
-            x, y_true = batch
-            y_pred = self.model(x)
-
-        test_loss = self.criterion(y_pred, y_true)
-
-        y_pred = y_pred.cpu()
-        y_true = y_true.to(self.data_type)
-        y_true = y_true.cpu()
-
-        test_score = balanced_accuracy_score(
-            y_pred=torch.argmax(y_pred, dim=1).numpy(),
-            y_true=torch.argmax(y_true, dim=1).numpy())
-        self.log("test_loss", test_loss)
-        self.log("test_score", test_score)
-
-    def validation_step(self, batch, batch_idx):
-        print('validation',batch_idx)
-        if self.use_age:
-            x, age, y_true = batch
-            y_pred = self.model(x, age)
-        else:
-            x, y_true = batch
-            y_pred = self.model(x)
-
-        print("shape ypred et ytrue",y_pred.shape,y_true.shape)
-        print("ypred et ytrue",y_pred,y_true)
-        print(np.sum(y_true.detach().to('cpu').numpy()))
-
-        val_loss = self.criterion(y_pred, y_true)
-        y_pred = y_pred.cpu()
-        y_true = y_true.to(self.data_type)
-        y_true = y_true.cpu()
-
-        val_acc = balanced_accuracy_score(
-            y_pred=torch.argmax(y_pred, dim=1).numpy(),
-            y_true=torch.argmax(y_true, dim=1).numpy())
-
-        self.log("val_loss", val_loss, prog_bar=True,)
-        self.log("val_acc", val_acc, prog_bar=True,)
-
-    def predict_step(self, batch, batch_idx):
-        if self.use_age:
-            x, age, y_true = batch
-            y_pred = self.model(x, age).cpu()
-        else:
-            x, y_true = batch
-            y_pred = self.model(x).cpu()
-        y_true = y_true.to(self.data_type)
-        y_true = y_true.cpu()
-        pred_acc = balanced_accuracy_score(
-            y_pred=torch.argmax(y_pred, dim=1).numpy(),
-            y_true=torch.argmax(y_true, dim=1).numpy())
-        print("pred_acc = ", pred_acc)
-
-        self.predict_outputs.append(pd.DataFrame(dict(
-            y_pred=torch.argmax(y_pred, dim=1).numpy(),
-            y_true=torch.argmax(y_true, dim=1).numpy(),
-            y_pred_proba=tuple(y_pred.numpy()),
-            y_true_proba=tuple(y_true.numpy())
-        )))
-        return pd.DataFrame(dict(
-            y_pred=torch.argmax(y_pred, dim=1).numpy(),
-            y_true=torch.argmax(y_true, dim=1).numpy(),
-            y_pred_proba=tuple(y_pred.numpy()),
-            y_true_proba=tuple(y_true.numpy())
-        ))
-
-    def configure_optimizers(self):
-        params = list(self.named_parameters())
-        if self.lr_wavelet is not None:
-            def is_faster(n): return ('foi' in n) or ('fwhm' in n)
-            grouped_parameters = [
-                {"params": [p for n, p in params if not is_faster(n)],
-                 'lr': self.lr},
-                {"params": [p for n, p in params if is_faster(n)],
-                 'lr': self.lr * self.lr_wavelet},
-            ]
-        else:
-            grouped_parameters = self.parameters()
-
-        optimizer = torch.optim.Adam(
-            grouped_parameters,
-            lr=self.lr,
-            weight_decay=self.weight_decay
-        )
-        return {
-            "optimizer": optimizer,
-            "lr_scheduler": {
-                "scheduler": ReduceLROnPlateau(optimizer,
-                                               mode='min',
-                                               factor=.25,
-                                               min_lr=1e-5,
-                                               patience=5),
-                "monitor": self.scheduler_track,
-            },
-        }
-
-    def on_predict_epoch_end(self, ):
-        all_preds = pd.concat(self.predict_outputs)
-        self.predict_outputs.clear()
-        return all_preds
 
 
 def vectorize_upper(X: Tensor) -> Tensor:
@@ -387,7 +90,7 @@ class Green(nn.Module):
                  spd_layers: nn.Module,
                  head: nn.Module,
                  proj: nn.Module,
-                 use_age: bool = False
+                 device: torch.device
                  ):
         """
         Neural network model that processes EEG epochs using convolutional
@@ -406,10 +109,9 @@ class Green(nn.Module):
             The head layer that acts in the Euclidean space.
         proj : nn.Module
             The projection layer that projects the SPD features to the
-            Euclidean
-            space.
-        age : bool, optional
-            Whether to include age in the model, by default False
+            Euclidean space.
+        device: torch.device
+            The device to send the tensors
         """
         super(Green, self).__init__()
         self.conv_layers = conv_layers
@@ -417,7 +119,7 @@ class Green(nn.Module):
         self.spd_layers = spd_layers
         self.proj = proj
         self.head = head
-        self.use_age = use_age
+        self.device = device
 
     def forward(self, X: Tensor):
         """
@@ -425,17 +127,12 @@ class Green(nn.Module):
         ----------
         X : Tensor
             N x P x T
-        age : _type_, optional
-            N, by default None
         """
         X_hat = self.conv_layers(X)
-        # print("conv",X_hat.shape)
         X_hat = self.pooling_layers(X_hat)
-        # print("pool",X_hat.shape)
         X_hat = self.spd_layers(X_hat)
-        # print("spd",X_hat.shape)
         X_hat = self.proj(X_hat)
-        # print("proj",X_hat.shape)
+        # Vectorize the matrice depending on the wanted covariance
         if isinstance(
             self.pooling_layers, RealCovariance
         ) or isinstance(self.pooling_layers, CombinedPooling):
@@ -448,11 +145,124 @@ class Green(nn.Module):
         ):
             X_hat = vectorize_upper_one(X_hat)
 
-        # print("vecto",X_hat.shape)
         X_hat = torch.flatten(X_hat, start_dim=1)
-        # print("conv",X_hat.shape)
         X_hat = self.head(X_hat)
         return X_hat
+    
+    def set_params(self):
+        pass
+
+    def fit(self,X_train,Y_train, epochs=20, batch_size=64,shuffle=True):
+        """
+        fit the green classifier
+        parameters:
+        X_train: numpy array S x C x T, mandatory
+            training EEG data
+        X_train: numpy array S x 1, mandatory
+            training labels
+        epochs: int, optional
+            number of epochs, optional
+        X_train: int, optional
+            size of the batch, optional
+        """
+        # Separate the training data in training and validation set
+        x_train, x_val, y_train, y_val = train_test_split(X_train, Y_train, test_size=0.2, random_state=42, shuffle=True)
+
+        # Convert data into PyTorch tensors
+        X_train_tensor = torch.tensor(x_train, dtype=torch.float64, device=self.device)
+        y_train_tensor = torch.tensor(y_train, dtype=torch.long, device=self.device)
+        X_val_tensor = torch.tensor(x_val, dtype=torch.float64, device=self.device)
+        y_val_tensor = torch.tensor(y_val, dtype=torch.long, device=self.device)
+
+        # Create DataLoader for train, validation, and test sets
+        train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
+        train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle)
+        val_dataset = TensorDataset(X_val_tensor, y_val_tensor)
+        val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+        # Define loss function and optimizer
+        criterion = torch.nn.CrossEntropyLoss()
+        optimizer = torch_riemannian_adam.RiemannianAdam(self.parameters(), lr=1e-3)
+
+        # Train the model
+        for epoch in range(epochs):
+            running_loss = 0.0
+            train_y_pred= []
+            y_train = []
+            self.train()
+            for inputs, labels in train_dataloader:
+                # Zero the parameter gradients
+                optimizer.zero_grad()
+
+                # Forward pass
+                outputs = self(inputs)
+                labels = labels.to('cpu')
+                loss = criterion(outputs, labels)
+
+                # Backward pass and optimize
+                loss.backward()
+                optimizer.step()
+                _, predicted = torch.max(outputs, 1)
+                train_y_pred.append(predicted.to('cpu'))
+                y_train.append(labels)
+
+                running_loss += loss.item()
+            
+            # Calcul of the balanced accuracy
+            train_accuracy = balanced_accuracy_score(np.concatenate(y_train),np.array([1 if (y >= 0.5) else 0 for y in np.concatenate(train_y_pred)]))
+            
+            # Validation
+            self.eval()
+            val_correct = 0
+            val_y_pred = []
+            with torch.no_grad():
+                for inputs, labels in val_dataloader:
+                    outputs = self(inputs)
+                    _, predicted = torch.max(outputs, 1)
+                    predicted = predicted.to('cpu')
+                    val_correct += (predicted == labels.to('cpu')).sum().item()
+                    val_y_pred.append(predicted)
+
+
+            val_accuracy = balanced_accuracy_score(y_val,np.array([1 if (y >= 0.5) else 0 for y in np.concatenate(val_y_pred)]))
+            print(f"Epoch {epoch+1} train Accuracy: {train_accuracy} ||  Validation Accuracy: {val_accuracy}")
+
+            print(f"Epoch {epoch+1}, Loss: {running_loss / len(train_dataloader)}")
+
+        print("Training finished!")
+
+        return self
+    
+    def predict(self,X, batchsize=64):
+        """
+        predict the label
+        parameters:
+        X: numpy array,
+            EEG data to predict their labels
+        batchsize: int, optional
+            size of the batches, By default 64
+        """
+        # Transform the data in tensors
+        X_test_tensor = torch.tensor(X, dtype=torch.float64, device=self.device)
+        test_dataset = TensorDataset(X_test_tensor)
+        test_dataloader = DataLoader(test_dataset, batch_size=batchsize, shuffle=False)
+        self.eval()
+        y_pred= []
+        # predict
+        with torch.no_grad():
+            for inputs in test_dataloader:
+                outputs = self(inputs[0])
+                _, predicted = torch.max(outputs, 1)
+                predicted = predicted.to('cpu')
+                y_pred.append(predicted)
+        
+        # print("getting accuracy of participant ", i)
+        test_y_pred = np.concatenate(y_pred)
+
+        y_pred_norm = np.array([1 if (y >= 0.5) else 0 for y in test_y_pred])
+
+        return y_pred_norm
+
 
 
 def get_green(
@@ -469,10 +279,10 @@ def get_green(
     hidden_dim: int = 32,
     sfreq: int = 125,
     dtype: torch.dtype = torch.float32,
+    device: torch.device = torch.device('cpu'),
     pool_layer: nn.Module = RealCovariance(),
     bi_out: int = None,
     out_dim: int = 1,
-    use_age: bool = False,
     orth_weights=True
 ):
     """
@@ -506,14 +316,16 @@ def get_green(
         Sampling frequency, by default 125
     dtype : torch.dtype, optional
         Data type of the tensors, by default torch.float32
+    device : torch.device, optional
+        Device of the tensors, by default torch.device("cpu")
     pool_layer : nn.Module, optional
         Pooling layer, by default RealCovariance()
     bi_out : int, optional
         Dimension of the output layer after BiMap, by default None
     out_dim : int, optional
         Dimension of the output layer, by default 1
-    use_age : bool, optional
-        Whether to include age in the model, by default False
+    orth_weigths, bool, optionnal
+        Usage of orthogonal weigths, by default True
 
     Returns
     -------
@@ -600,8 +412,6 @@ def get_green(
         else:
             feat_dim = int(n_freqs * n_compo * (n_compo + 1) / 2)
 
-    if use_age:
-        feat_dim += 1
     spd_layers = nn.Sequential(*spd_layers_list)
 
     # Projection to tangent space
@@ -615,12 +425,14 @@ def get_green(
     if hidden_dim is None:
         head = torch.nn.Sequential(*[
             torch.nn.BatchNorm1d(feat_dim,
-                                 dtype=dtype),
+                                 dtype=dtype,
+                                 device=device),
             torch.nn.Dropout(
                 p=dropout) if dropout is not None else nn.Identity(),
             torch.nn.Linear(feat_dim,
                             out_dim,
-                            dtype=dtype),
+                            dtype=dtype,
+                            device=device),
         ])
     else:
         # add multiple FC layers
@@ -628,23 +440,27 @@ def get_green(
         for hd in hidden_dim:
             sequential_list.extend([
                 torch.nn.BatchNorm1d(feat_dim,
-                                     dtype=dtype),
+                                     dtype=dtype,
+                                     device=device),
                 torch.nn.Dropout(
                     p=dropout) if dropout is not None else nn.Identity(),
                 torch.nn.Linear(feat_dim,
                                 hd,
-                                dtype=dtype),
+                                dtype=dtype,
+                                device=device),
                 torch.nn.GELU()
             ])
             feat_dim = hd
         sequential_list.extend([
             torch.nn.BatchNorm1d(feat_dim,
-                                 dtype=dtype),
+                                 dtype=dtype,
+                                 device=device),
             torch.nn.Dropout(
                 p=dropout) if dropout is not None else nn.Identity(),
             torch.nn.Linear(feat_dim,
                             out_dim,
-                            dtype=dtype)
+                            dtype=dtype,
+                            device=device)
         ])
         head = torch.nn.Sequential(*sequential_list)
 
@@ -655,6 +471,6 @@ def get_green(
         spd_layers=spd_layers,
         head=head,
         proj=proj,
-        use_age=use_age,
+        device=device
     )
     return model

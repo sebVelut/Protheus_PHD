@@ -1,0 +1,22 @@
+\begin{table*}
+\centering
+\caption{ITR_SSVEP}
+\label{tab:ITR_SSVEP_agg_dataset}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{c|ccccccc|c}
+\toprule
+      pipeline &                       Kalunga2016 &                      Lee2019-SSVEP &                            MAMEM1 &                          MAMEM2 &                          MAMEM3 &                    Nakanishi2015 &        Wang2016 &        Average \\
+\midrule
+           CCA &                     0.96$\pm$0.54 &                    92.71$\pm$30.16 &                     0.16$\pm$0.14 &                   0.08$\pm$0.10 &                   0.22$\pm$0.39 &                  44.70$\pm$11.65 & 52.33$\pm$15.10 &          27.31 \\
+      EEGITNet &                     0.19$\pm$0.32 &                    84.51$\pm$36.97 &                   14.50$\pm$12.83 &                   0.41$\pm$0.95 &                   0.22$\pm$0.24 &                   32.13$\pm$2.25 &             NaN &          21.99 \\
+        EEGNeX &                     1.92$\pm$3.95 &                   102.36$\pm$27.65 & \textbf{18.91}$\pm$\textbf{13.45} &                   0.83$\pm$1.31 &                   0.16$\pm$0.13 &                   33.55$\pm$1.15 &             NaN &          26.29 \\
+    EEGNet-8.2 &                    7.14$\pm$11.50 &                    48.70$\pm$46.97 &                    8.38$\pm$14.05 &                   0.41$\pm$0.49 &                   0.54$\pm$1.12 &                   10.43$\pm$6.30 &             NaN &           12.6 \\
+           MDM & \textbf{22.08}$\pm$\textbf{12.24} &                    56.94$\pm$35.07 &                     1.45$\pm$1.69 &                   0.38$\pm$0.83 &                   1.28$\pm$1.37 &                  32.63$\pm$12.85 & 25.10$\pm$14.77 &          19.98 \\
+         TS+LR &                   21.49$\pm$10.13 &                    88.04$\pm$30.36 &                   11.69$\pm$11.83 & \textbf{3.74}$\pm$\textbf{3.35} & \textbf{3.31}$\pm$\textbf{2.74} &                  39.48$\pm$12.26 & 34.01$\pm$14.47 &          28.82 \\
+        TS+SVM &                   20.39$\pm$11.38 &                    86.01$\pm$31.17 &                   10.02$\pm$10.35 &                   2.61$\pm$2.68 &                   2.92$\pm$3.04 &                  38.53$\pm$11.92 & 28.21$\pm$14.16 &          26.95 \\
+ShallowConvNet &                   11.02$\pm$11.07 &                    46.70$\pm$35.22 &                    5.62$\pm$12.38 &                   0.87$\pm$1.94 &                   1.33$\pm$2.01 &                   17.48$\pm$8.09 &             NaN &          13.84 \\
+          TRCA &                     1.64$\pm$1.29 & \textbf{112.57}$\pm$\textbf{16.91} &                   14.30$\pm$13.67 &                   0.70$\pm$1.56 &                   0.17$\pm$0.17 & \textbf{50.78}$\pm$\textbf{2.63} &  62.39$\pm$2.66 & \textbf{34.65} \\
+       Average &                              9.65 &                              79.84 &                              9.45 &                            1.11 &                            1.13 &                             33.3 &           40.41 &           23.6 \\
+\bottomrule
+\end{tabular}\end{adjustbox}
+\end{table*}

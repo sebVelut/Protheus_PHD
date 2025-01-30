@@ -24,34 +24,105 @@ from tensorflow.keras.layers import (
     GlobalAveragePooling2D,
     concatenate
 )
-from tensorflow_addons.layers import GELU, Sparsemax
+#from tensorflow_addons.layers import GELU, Sparsemax
+
+class EEG2Code():
+    def __init__(self,n_channel_input, windows_size,optimizer,num_epochs) -> None:
+        self.n_channel_input = n_channel_input
+        self.windows_size = windows_size
+        self.optimizer = optimizer
+        self.num_epochs = num_epochs
+
+        self.model = Sequential()
+        self.model.add(InputLayer(input_shape=(n_channel_input, windows_size,1)))
+        self.model.add(
+            Conv2D(
+                16,
+                kernel_size=(n_channel_input, 1),
+                padding="valid",
+                strides=(1, 1),
+                data_format="channels_last",
+                kernel_initializer="he_uniform",
+                activation=None,
+            )
+        )
+        self.model.add(BatchNormalization(axis=1, scale=True, center=False))
+        self.model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2),
+                padding="same", data_format="channels_last"))
+        self.model.add(Dropout(0.5))
+        self.model.add(
+            Conv2D(
+                8,
+                kernel_size=(1, 32),
+                dilation_rate=(1, 2),
+                data_format="channels_last",
+                padding="same",
+                kernel_initializer="he_uniform",
+                activation=None,
+            )
+        )
+        self.model.add(BatchNormalization(axis=1, scale=True, center=False))
+        self.model.add(LeakyReLU(alpha=0.3))
+        self.model.add(MaxPooling2D(pool_size=(1, 2), strides=(1, 2), padding="same"))
+        self.model.add(Dropout(0.5))
+        self.model.add(
+            Conv2D(
+                4,
+                kernel_size=(5, 5),
+                dilation_rate=(2, 2),
+                data_format="channels_last",
+                padding="same",
+                kernel_initializer="he_uniform",
+                activation=None,
+            )
+        )
+        self.model.add(BatchNormalization(axis=1, scale=True, center=False))
+        self.model.add(LeakyReLU(alpha=0.3))
+        self.model.add(MaxPooling2D(pool_size=(2, 2),
+                data_format="channels_last", padding="same"))
+        self.model.add(Dropout(0.5))
+        self.model.add(Flatten())
+        self.model.add(Dense(int(256), activation=None))
+        self.model.add(LeakyReLU(alpha=0.3))
+        self.model.add(Dense(2, name="preds", activation="softmax"))
+
+        self.model.compile(loss='binary_crossentropy',optimizer=optimizer, metrics=['accuracy'])
+    
+    def fit(self,X,Y):
+
+        self.model.fit(np.expand_dims(X, axis=3),np.vstack([Y,(Y+1)%2]).transpose(1,0),epochs=self.num_epochs)
+        return self
+
+    def predict(self,X):
+        return self.model.predict(np.expand_dims(X, axis=3))[:,0]
+        
 
 
 def basearchi(n_channel_input, windows_size):
 
     model = Sequential()
-    model.add(InputLayer(input_shape=(1, n_channel_input, windows_size)))
+    model.add(InputLayer(input_shape=(n_channel_input, windows_size,1)))
     model.add(
         Conv2D(
             16,
             kernel_size=(n_channel_input, 1),
             padding="valid",
             strides=(1, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_initializer="he_uniform",
             activation=None,
         )
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2),
-              padding="same", data_format="channels_first"))
+              padding="same", data_format="channels_last"))
     model.add(Dropout(0.5))
     model.add(
         Conv2D(
             8,
             kernel_size=(1, 32),
             dilation_rate=(1, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -66,7 +137,7 @@ def basearchi(n_channel_input, windows_size):
             4,
             kernel_size=(5, 5),
             dilation_rate=(2, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -75,7 +146,7 @@ def basearchi(n_channel_input, windows_size):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(LeakyReLU(alpha=0.3))
     model.add(MaxPooling2D(pool_size=(2, 2),
-              data_format="channels_first", padding="same"))
+              data_format="channels_last", padding="same"))
     model.add(Dropout(0.5))
     model.add(Flatten())
     model.add(Dense(int(256), activation=None))
@@ -115,25 +186,25 @@ def vanilliaEEG2Code(windows_size, n_channel_input):
     model.add(InputLayer(input_shape=(1, n_channel_input, windows_size)))
     # layer1
     model.add(Conv2D(16, kernel_size=(n_channel_input, 1), padding='valid',
-              strides=(1, 1), data_format='channels_first', activation='relu'))
+              strides=(1, 1), data_format='channels_last', activation='relu'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     #model.add(Permute((2,1,3)))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
     # layer2
     model.add(Conv2D(8, kernel_size=(1, 64),
-              data_format='channels_first', padding='same'))
+              data_format='channels_last', padding='same'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
     model.add(Dropout(0.5))
     # layer3
     model.add(Conv2D(4, kernel_size=(5, 5),
-              data_format='channels_first', padding='same'))
+              data_format='channels_last', padding='same'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),
-              data_format='channels_first', padding='same'))
+              data_format='channels_last', padding='same'))
     model.add(Dropout(0.5))
     # layer4
     model.add(Flatten())
@@ -187,7 +258,7 @@ def basearchiv2(
     #         padding="same",
     #         input_shape=(1, n_channel_input, windows_size),
     #         #depth_multiplier=D,
-    #         data_format = 'channels_first',
+    #         data_format = 'channels_last',
     #         dilation_rate=(2, 1),
     #         #depthwise_initializer="he_uniform",
     #         kernel_initializer="he_uniform",
@@ -205,14 +276,14 @@ def basearchiv2(
             kernel_size=(n_channel_input, 1),
             use_bias=True,
             activation=None,
-            data_format = 'channels_first',
+            data_format = 'channels_last',
             kernel_initializer="he_uniform",
         )
     )
     # depthwise_constraint = max_norm(1.)))
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
-    #model.add(MaxPooling2D((4, 1), data_format="channels_first"))
+    #model.add(MaxPooling2D((4, 1), data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
 
     # layer3
@@ -224,14 +295,14 @@ def basearchiv2(
             #pointwise_initializer="he_uniform",
             use_bias=True,
             dilation_rate=(1, 3),
-            data_format = 'channels_first',
+            data_format = 'channels_last',
             padding="same",
             kernel_initializer="he_uniform"
         )
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act)
-    model.add(MaxPooling2D((1, 2), data_format="channels_first"))
+    model.add(MaxPooling2D((1, 2), data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
 
     # layer4
@@ -242,13 +313,13 @@ def basearchiv2(
             #depthwise_initializer="he_uniform",
             #pointwise_initializer="he_uniform",
             use_bias=True,
-            data_format = 'channels_first',
+            data_format = 'channels_last',
             padding="same",
         )
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act)
-    model.add(MaxPooling2D((1, 2), data_format="channels_first"))
+    model.add(MaxPooling2D((1, 2), data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
 
     model.add(
@@ -258,13 +329,13 @@ def basearchiv2(
             #depthwise_initializer="he_uniform",
             #pointwise_initializer="he_uniform",
             use_bias=True,
-            data_format = 'channels_first',
+            data_format = 'channels_last',
             padding="same",
         )
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act)
-    model.add(MaxPooling2D((1, 2), data_format="channels_first"))
+    model.add(MaxPooling2D((1, 2), data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
 
     # layer 4
@@ -289,7 +360,7 @@ def convmixer_block(input, filters, kernel_size):
     shortcut = input
 
     # Depthwise convolution
-    x = DepthwiseConv2D(kernel_size=kernel_size, data_format='channels_first', padding="same")(input)
+    x = DepthwiseConv2D(kernel_size=kernel_size, data_format='channels_last', padding="same")(input)
     x = BatchNormalization(axis=1, scale=True, center=False)(x)
     x = GELU()(x)
 
@@ -297,7 +368,7 @@ def convmixer_block(input, filters, kernel_size):
     x = Add()([shortcut, x])
 
     # Pointwise or 1x1 convolution
-    x = Conv2D(filters=filters, kernel_size=1, data_format='channels_first', padding="same")(x)
+    x = Conv2D(filters=filters, kernel_size=1, data_format='channels_last', padding="same")(x)
     x = BatchNormalization(axis=1, scale=True, center=False)(x)
     x = GELU()(x)
 
@@ -323,7 +394,7 @@ def convMixer(windows_size, n_channel_input, filters=10, dropoutType="Dropout"):
     # Input and patch embedding layer
     input = Input(input_shape)
     #x = Permute((3, 2, 1))(input)  # Permute from channel first to NHWC
-    x = Conv2D(filters=15, kernel_size=(1, patch_size), data_format='channels_first', strides=(1, patch_size))(
+    x = Conv2D(filters=15, kernel_size=(1, patch_size), data_format='channels_last', strides=(1, patch_size))(
         input
     )  #  Spatial embedding
     x = GELU()(x)
@@ -333,21 +404,21 @@ def convMixer(windows_size, n_channel_input, filters=10, dropoutType="Dropout"):
     # x = convmixer_block(x, filters, (4, 1))  # Spatial filtering
     # x = dropoutType(dropoutRate)(x)
     x = convmixer_block(x, filters, (1,41))  # Temporal filtering
-    x = MaxPooling2D(pool_size=(2, 2), data_format='channels_first', padding="same")(x)
+    x = MaxPooling2D(pool_size=(2, 2), data_format='channels_last', padding="same")(x)
     x = dropoutType(dropoutRate)(x)
     x = convmixer_block(x, filters, 7)
     x = dropoutType(dropoutRate)(x)
     x = convmixer_block(x, filters, 7)
     x = dropoutType(dropoutRate)(x)
-    x = MaxPooling2D(pool_size=(2, 2), data_format='channels_first', padding="same")(x)
+    x = MaxPooling2D(pool_size=(2, 2), data_format='channels_last', padding="same")(x)
     x = convmixer_block(x, filters // 2, 5)
     x = dropoutType(dropoutRate)(x)
     x = convmixer_block(x, filters // 2, 3)
     x = dropoutType(dropoutRate)(x)
-    x = MaxPooling2D(pool_size=(2, 2), data_format='channels_first', padding="same")(x)
+    x = MaxPooling2D(pool_size=(2, 2), data_format='channels_last', padding="same")(x)
 
     # Classification head
-    # x = GlobalAveragePooling2D(data_format='channels_first',)(x)
+    # x = GlobalAveragePooling2D(data_format='channels_last',)(x)
     x = Flatten()(x)
     x = Dense(128, activation=None)(x)
     x = LeakyReLU(alpha=0.3)(x)
@@ -401,7 +472,7 @@ def basearchi_patchembedding(windows_size, n_channel_input):
     model.add(
         Conv2D(
             filters=15,
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_size=(1, patch_size),
             strides=(1, patch_size),
         )
@@ -415,7 +486,7 @@ def basearchi_patchembedding(windows_size, n_channel_input):
         Conv2D(
             int(16 * factor_time),
             kernel_size=(n_channel_input, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="valid",
             strides=(1, 1),
             kernel_initializer="he_uniform",
@@ -424,7 +495,7 @@ def basearchi_patchembedding(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
-    # model.add(poolType(pool_size=(2, 1),data_format = 'channels_first',  strides=(2, 1),padding='same'))
+    # model.add(poolType(pool_size=(2, 1),data_format = 'channels_last',  strides=(2, 1),padding='same'))
     model.add(dropoutType(dropoutRate))
 
     # Temporal filtering
@@ -432,7 +503,7 @@ def basearchi_patchembedding(windows_size, n_channel_input):
         Conv2D(
             int(16 * factor_time),
             kernel_size=(1, 20),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             #groups = 8,
             kernel_initializer="he_uniform",
@@ -441,14 +512,14 @@ def basearchi_patchembedding(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act())
-    model.add(poolType(pool_size=(2, 2), strides=(2, 2), data_format = 'channels_first', padding='same'))
+    model.add(poolType(pool_size=(2, 2), strides=(2, 2), data_format = 'channels_last', padding='same'))
     model.add(dropoutType(dropoutRate))
     # 2D convo
     model.add(
         Conv2D(
             int(16 * factor_time),
             kernel_size=(5, 5),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             #groups = 8,
             kernel_initializer="he_uniform",
@@ -458,7 +529,7 @@ def basearchi_patchembedding(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act())
     model.add(Permute((1, 3, 2)))
-    model.add(poolType(pool_size=(2,2), padding='same')) # data_format = 'channels_first',
+    model.add(poolType(pool_size=(2,2), padding='same')) # data_format = 'channels_last',
     # model.add(dropoutType(dropoutRate))
     # layer4
     model.add(Flatten())
@@ -514,7 +585,7 @@ def basearchi_patchembeddingdilation(windows_size, n_channel_input):
     model.add(
         Conv2D(
             filters=10,
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_size=(1, patch_size),
             strides=(1, patch_size),
         )
@@ -528,7 +599,7 @@ def basearchi_patchembeddingdilation(windows_size, n_channel_input):
         Conv2D(
             int(16 * factor_time),
             kernel_size=(n_channel_input, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="valid",
             strides=(1, 1),
             kernel_initializer="he_uniform",
@@ -537,7 +608,7 @@ def basearchi_patchembeddingdilation(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
-    # model.add(poolType(pool_size=(2, 1),data_format = 'channels_first',  strides=(2, 1),padding='same'))
+    # model.add(poolType(pool_size=(2, 1),data_format = 'channels_last',  strides=(2, 1),padding='same'))
     model.add(dropoutType(dropoutRate))
 
     # Temporal filtering
@@ -545,7 +616,7 @@ def basearchi_patchembeddingdilation(windows_size, n_channel_input):
         Conv2D(
             int(16 * factor_time),
             kernel_size=(1, 20),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             dilation_rate = (1, 2),
             kernel_initializer="he_uniform",
@@ -554,14 +625,14 @@ def basearchi_patchembeddingdilation(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act())
-    model.add(poolType(pool_size=(2, 2), strides=(2, 2), data_format = 'channels_first', padding='same'))
+    model.add(poolType(pool_size=(2, 2), strides=(2, 2), data_format = 'channels_last', padding='same'))
     model.add(dropoutType(dropoutRate))
     # 2D convo
     model.add(
         Conv2D(
             int(16 * factor_time),
             kernel_size=(5, 5),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             dilation_rate = (2, 2),
             kernel_initializer="he_uniform",
@@ -571,7 +642,7 @@ def basearchi_patchembeddingdilation(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act())
     model.add(Permute((1, 3, 2)))
-    model.add(poolType(pool_size=(2,2), padding='same'))#, data_format="channels_first"))
+    model.add(poolType(pool_size=(2,2), padding='same'))#, data_format="channels_last"))
     # model.add(dropoutType(dropoutRate))
     # layer4
     model.add(Flatten())
@@ -629,7 +700,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
     model.add(
         Conv2D(
             filters=10,
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_size=(1, patch_size),
             strides=(1, patch_size),
         )
@@ -643,7 +714,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         Conv2D(
             int(16 * factor_time),
             kernel_size=(n_channel_input, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="valid",
             strides=(1, 1),
             kernel_initializer="he_uniform",
@@ -652,7 +723,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
-    # model.add(poolType(pool_size=(2, 1),data_format = 'channels_first',  strides=(2, 1),padding='same'))
+    # model.add(poolType(pool_size=(2, 1),data_format = 'channels_last',  strides=(2, 1),padding='same'))
     model.add(dropoutType(dropoutRate))
 
     # Temporal filtering
@@ -660,7 +731,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         Conv2D(
             int(16 * factor_time),
             kernel_size=(1, 20),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             #groups = 8,
             kernel_initializer="he_uniform",
@@ -669,7 +740,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act())
-    model.add(poolType(pool_size=(2, 2), strides=(2, 2), data_format = 'channels_first', padding='same'))
+    model.add(poolType(pool_size=(2, 2), strides=(2, 2), data_format = 'channels_last', padding='same'))
     model.add(dropoutType(dropoutRate))
     model.add(Permute((1, 3, 2)))
 
@@ -678,7 +749,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         DepthwiseConv2D(
             #int(16 * factor_time),
             kernel_size=(7, 7),
-            data_format="channels_first",
+            data_format="channels_last",
             dilation_rate = (2,2),
             padding="same",
             depthwise_initializer="he_uniform",
@@ -694,7 +765,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         SeparableConv2D(
             int(16 * factor_time),
             kernel_size=(7, 7),
-            data_format="channels_first",
+            data_format="channels_last",
             dilation_rate = (2,2),
             padding="same",
             depthwise_initializer="he_uniform",
@@ -704,7 +775,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
     )
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(act())
-    model.add(poolType(pool_size=(2, 2), data_format = 'channels_first', strides=(2, 2), padding='same'))
+    model.add(poolType(pool_size=(2, 2), data_format = 'channels_last', strides=(2, 2), padding='same'))
     model.add(dropoutType(dropoutRate))
     # 2D convo
 
@@ -712,7 +783,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         SeparableConv2D(
             int(16 * factor_time),
             kernel_size=(5, 5),
-            #data_format="channels_first",
+            #data_format="channels_last",
             padding="same",
             depthwise_initializer="he_uniform",
             pointwise_initializer="he_uniform",
@@ -725,7 +796,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         SeparableConv2D(
             int(16 * factor_time),
             kernel_size=(5, 5),
-            #data_format="channels_first",
+            #data_format="channels_last",
             padding="same",
             depthwise_initializer="he_uniform",
             pointwise_initializer="he_uniform",
@@ -740,7 +811,7 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
         SeparableConv2D(
             int(16 * factor_time),
             kernel_size=(5, 5),
-            #data_format="channels_first",
+            #data_format="channels_last",
             padding="same",
             depthwise_initializer="he_uniform",
             pointwise_initializer="he_uniform",
@@ -770,21 +841,21 @@ def basearchi_patchembeddingdepthwise(windows_size, n_channel_input):
 def inception_module(layer_in, f1, f2_in, f2_out, f3_in, f3_out, f4_out):
     """Inception module"""
     # 1x1 conv
-    conv1 = Conv2D(f1, (1,1), data_format = 'channels_first', padding='same', activation=None)(layer_in)
+    conv1 = Conv2D(f1, (1,1), data_format = 'channels_last', padding='same', activation=None)(layer_in)
     conv1 = keras.activations.gelu(conv1)
     # 3x3 conv
-    conv3 = Conv2D(f2_in, (1,1),data_format = 'channels_first', padding='same', activation=None)(layer_in)
+    conv3 = Conv2D(f2_in, (1,1),data_format = 'channels_last', padding='same', activation=None)(layer_in)
     conv3 = keras.activations.gelu(conv3)
-    conv3 = Conv2D(f2_out, (3,3), data_format = 'channels_first', dilation_rate = (2, 2),padding='same', activation=None)(conv3)
+    conv3 = Conv2D(f2_out, (3,3), data_format = 'channels_last', dilation_rate = (2, 2),padding='same', activation=None)(conv3)
     conv3 = keras.activations.gelu(conv3)
     # 5x5 conv
-    conv5 = Conv2D(f3_in, (1,1),data_format = 'channels_first', padding='same', activation=None)(layer_in)
+    conv5 = Conv2D(f3_in, (1,1),data_format = 'channels_last', padding='same', activation=None)(layer_in)
     conv5 = keras.activations.gelu(conv5)
-    conv5 = Conv2D(f3_out, (5,5),data_format = 'channels_first', dilation_rate = (3, 3), padding='same', activation=None)(conv5)
+    conv5 = Conv2D(f3_out, (5,5),data_format = 'channels_last', dilation_rate = (3, 3), padding='same', activation=None)(conv5)
     conv5 = keras.activations.gelu(conv5)
     # 3x3 max pooling
-    pool = MaxPooling2D((3,3), data_format = 'channels_first', strides=(1,1), padding='same')(layer_in)
-    pool = Conv2D(f4_out, (1,1),data_format = 'channels_first', padding='same', activation=None)(pool)
+    pool = MaxPooling2D((3,3), data_format = 'channels_last', strides=(1,1), padding='same')(layer_in)
+    pool = Conv2D(f4_out, (1,1),data_format = 'channels_last', padding='same', activation=None)(pool)
     pool = keras.activations.gelu(pool)
     # concatenate filters, assumes filters/channels last
     layer_out = concatenate([conv1, conv3, conv5, pool], axis=1)
@@ -807,7 +878,7 @@ def EEGnet_Inception(windows_size, n_channel_input):
     x = inception_module(x, 32 // factor_time, 50// factor_time, 52 // factor_time, 8 // factor_time, 30 // factor_time, 32 // factor_time)
 
     # Classification head
-    x = GlobalAveragePooling2D(data_format='channels_first',)(x)
+    x = GlobalAveragePooling2D(data_format='channels_last',)(x)
     x = Flatten()(x)
     x = Dense(128, activation=None)(x)
     x = LeakyReLU(alpha=0.3)(x)
@@ -823,22 +894,22 @@ def vanilliaEEG2Code2(windows_size,n_channel_input):
     # permute input so that it is as in EEG Net paper
     model.add(InputLayer(input_shape=(1, n_channel_input, windows_size)))
     # layer1
-    model.add(Conv2D(16, kernel_size=(n_channel_input, 1), padding='valid', strides=(1, 1), data_format='channels_first', activation='relu'))
+    model.add(Conv2D(16, kernel_size=(n_channel_input, 1), padding='valid', strides=(1, 1), data_format='channels_last', activation='relu'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     #model.add(Permute((2,1,3)))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2),padding='same'))
     # layer2
-    model.add(Conv2D(8,kernel_size=(1, 64),data_format='channels_first',padding='same'))
+    model.add(Conv2D(8,kernel_size=(1, 64),data_format='channels_last',padding='same'))
     model.add(BatchNormalization(axis=1,scale=False, center=False))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2),padding='same'))
     model.add(Dropout(0.5))
     # layer3
-    model.add(Conv2D(4,kernel_size=(5, 5),data_format='channels_first',padding='same'))
+    model.add(Conv2D(4,kernel_size=(5, 5),data_format='channels_last',padding='same'))
     model.add(BatchNormalization(axis=1,scale=False,center=False))
     model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2), data_format='channels_first',padding='same'))
+    model.add(MaxPooling2D(pool_size=(2, 2), data_format='channels_last',padding='same'))
     model.add(Dropout(0.5))
     # layer4
     model.add(Flatten())
@@ -855,7 +926,7 @@ def trueVanilliaEEG2Code2(windows_size,n_channel_input):
     # permute input so that it is as in EEG Net paper
     model.add(InputLayer(input_shape=(1, n_channel_input, windows_size)))
     # layer1
-    model.add(Conv2D(16, kernel_size=(n_channel_input, 1), padding='valid', strides=(1, 1), data_format='channels_first', activation='relu'))
+    model.add(Conv2D(16, kernel_size=(n_channel_input, 1), padding='valid', strides=(1, 1), data_format='channels_last', activation='relu'))
     model.add(Res)
     
     model.add(BatchNormalization(axis=1, scale=False, center=False))
@@ -863,16 +934,16 @@ def trueVanilliaEEG2Code2(windows_size,n_channel_input):
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2),padding='same'))
     # layer2
-    model.add(Conv2D(8,kernel_size=(1, 64),data_format='channels_first',padding='same'))
+    model.add(Conv2D(8,kernel_size=(1, 64),data_format='channels_last',padding='same'))
     model.add(BatchNormalization(axis=1,scale=False, center=False))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2),padding='same'))
     model.add(Dropout(0.5))
     # layer3
-    model.add(Conv2D(4,kernel_size=(5, 5),data_format='channels_first',padding='same'))
+    model.add(Conv2D(4,kernel_size=(5, 5),data_format='channels_last',padding='same'))
     model.add(BatchNormalization(axis=1,scale=False,center=False))
     model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2), data_format='channels_first',padding='same'))
+    model.add(MaxPooling2D(pool_size=(2, 2), data_format='channels_last',padding='same'))
     model.add(Dropout(0.5))
     # layer4
     model.add(Flatten())
@@ -891,25 +962,25 @@ def trueVanilliaEEG2Code(windows_size, n_channel_input):
     # model.add(InputLayer(input_shape=(1, windows_size, n_channel_input)))
     # layer1
     model.add(Conv2D(16, kernel_size=(1, n_channel_input), padding='valid',
-              strides=(1, 1), data_format='channels_first', activation='relu'))
+              strides=(1, 1), data_format='channels_last', activation='relu'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     #model.add(Permute((2,1,3)))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
     # layer2
     model.add(Conv2D(8, kernel_size=(1, 64),
-              data_format='channels_first', padding='same'))
+              data_format='channels_last', padding='same'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
     model.add(Dropout(0.5))
     # layer3
     model.add(Conv2D(4, kernel_size=(5, 5),
-              data_format='channels_first', padding='same'))
+              data_format='channels_last', padding='same'))
     model.add(BatchNormalization(axis=1, scale=False, center=False))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),
-              data_format='channels_first', padding='same'))
+              data_format='channels_last', padding='same'))
     model.add(Dropout(0.5))
     # layer4
     model.add(Flatten())
@@ -962,7 +1033,7 @@ def basearchitest_batchnorm(windows_size, n_channel_input):
             kernel_size=(n_channel_input, 1),
             padding="valid",
             strides=(1, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_initializer="he_uniform",
             activation=None,
         )
@@ -970,7 +1041,7 @@ def basearchitest_batchnorm(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
     model.add(poolType(pool_size=(2, 2), strides=(2, 2),
-              padding="same", data_format="channels_first"))
+              padding="same", data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
     # layer2
     model.add(
@@ -978,7 +1049,7 @@ def basearchitest_batchnorm(windows_size, n_channel_input):
             int(8 * factor_time),
             kernel_size=(1, 32),
             dilation_rate=(1, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -994,7 +1065,7 @@ def basearchitest_batchnorm(windows_size, n_channel_input):
             int(4 * factor_time),
             kernel_size=(5, 5),
             dilation_rate=(2, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1003,7 +1074,7 @@ def basearchitest_batchnorm(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(LeakyReLU(alpha=leak))
     model.add(poolType(pool_size=(2, 2),
-              data_format="channels_first", padding="same"))
+              data_format="channels_last", padding="same"))
     model.add(dropoutType(dropoutRate))
     # layer4
     model.add(Flatten())
@@ -1059,7 +1130,7 @@ def basearchitest_batchnorm2(windows_size, n_channel_input):
             kernel_size=(n_channel_input, 1),
             padding="valid",
             strides=(1, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_initializer="he_uniform",
             activation=None,
         )
@@ -1067,7 +1138,7 @@ def basearchitest_batchnorm2(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
     model.add(poolType(pool_size=(2, 2), strides=(2, 2),
-              padding="same", data_format="channels_first"))
+              padding="same", data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
     # layer2
     model.add(
@@ -1075,7 +1146,7 @@ def basearchitest_batchnorm2(windows_size, n_channel_input):
             int(8 * factor_time),
             kernel_size=(1, 32),
             dilation_rate=(1, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1091,7 +1162,7 @@ def basearchitest_batchnorm2(windows_size, n_channel_input):
             int(4 * factor_time),
             kernel_size=(5, 5),
             dilation_rate=(2, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1100,7 +1171,7 @@ def basearchitest_batchnorm2(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(LeakyReLU(alpha=leak))
     model.add(poolType(pool_size=(2, 2),
-              data_format="channels_first", padding="same"))
+              data_format="channels_last", padding="same"))
     model.add(dropoutType(dropoutRate))
     # layer4
     model.add(Flatten())
@@ -1156,7 +1227,7 @@ def basearchitest_layernorm(windows_size, n_channel_input):
             kernel_size=(n_channel_input, 1),
             padding="valid",
             strides=(1, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_initializer="he_uniform",
             activation=None,
         )
@@ -1164,7 +1235,7 @@ def basearchitest_layernorm(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
     model.add(poolType(pool_size=(2, 2), strides=(2, 2),
-              padding="same", data_format="channels_first"))
+              padding="same", data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
     # layer2
     model.add(
@@ -1172,7 +1243,7 @@ def basearchitest_layernorm(windows_size, n_channel_input):
             int(8 * factor_time),
             kernel_size=(1, 32),
             dilation_rate=(1, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1188,7 +1259,7 @@ def basearchitest_layernorm(windows_size, n_channel_input):
             int(4 * factor_time),
             kernel_size=(5, 5),
             dilation_rate=(2, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1197,7 +1268,7 @@ def basearchitest_layernorm(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(LeakyReLU(alpha=leak))
     model.add(poolType(pool_size=(2, 2),
-              data_format="channels_first", padding="same"))
+              data_format="channels_last", padding="same"))
     model.add(dropoutType(dropoutRate))
     # layer4
     model.add(Flatten())
@@ -1253,7 +1324,7 @@ def basearchitest_layernorm2(windows_size, n_channel_input):
             kernel_size=(n_channel_input, 1),
             padding="valid",
             strides=(1, 1),
-            data_format="channels_first",
+            data_format="channels_last",
             kernel_initializer="he_uniform",
             activation=None,
         )
@@ -1261,7 +1332,7 @@ def basearchitest_layernorm2(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     #model.add(act())
     model.add(poolType(pool_size=(2, 2), strides=(2, 2),
-              padding="same", data_format="channels_first"))
+              padding="same", data_format="channels_last"))
     model.add(dropoutType(dropoutRate))
     # layer2
     model.add(
@@ -1269,7 +1340,7 @@ def basearchitest_layernorm2(windows_size, n_channel_input):
             int(8 * factor_time),
             kernel_size=(1, 32),
             dilation_rate=(1, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1285,7 +1356,7 @@ def basearchitest_layernorm2(windows_size, n_channel_input):
             int(4 * factor_time),
             kernel_size=(5, 5),
             dilation_rate=(2, 2),
-            data_format="channels_first",
+            data_format="channels_last",
             padding="same",
             kernel_initializer="he_uniform",
             activation=None,
@@ -1294,7 +1365,7 @@ def basearchitest_layernorm2(windows_size, n_channel_input):
     model.add(BatchNormalization(axis=1, scale=True, center=False))
     model.add(LeakyReLU(alpha=leak))
     model.add(poolType(pool_size=(2, 2),
-              data_format="channels_first", padding="same"))
+              data_format="channels_last", padding="same"))
     model.add(dropoutType(dropoutRate))
     # layer4
     model.add(Flatten())

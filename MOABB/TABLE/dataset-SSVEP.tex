@@ -1,0 +1,23 @@
+%\begin{table*}
+%\centering
+\caption{SSVEP}{\rev{\textbf{SSVEP.} Average accuracy scores of all pipelines on all the SSVEP datasets, for classification of all classes simultaneously. Intra-session validation.  Bold numbers represent the best score in each dataset.}}
+\label{tab:SSVEP_agg_dataset}
+\begin{adjustbox}{scale=.7}
+\begin{tabular}{c|ccccccc|c}
+\toprule
+    \rowcolor{YellowOrange!50} pipeline &                       Kalunga2016 &                    Lee2019-SSVEP &                            MAMEM1 &                            MAMEM2 &                            MAMEM3 &                    Nakanishi2015 &        Wang2016 &        Average \\
+    \hline
+    \rowcolor{YellowOrange!10} CCA &                    33.88$\pm$3.36 &                  90.97$\pm$13.49 &                    21.74$\pm$3.89 &                    20.64$\pm$2.97 &                    22.80$\pm$4.53 &                  92.53$\pm$12.95 & 88.22$\pm$17.95 &          52.97 \\
+    \rowcolor{YellowOrange!20} EEGITNet &                    24.80$\pm$4.02 &                  86.84$\pm$17.80 &                   58.07$\pm$26.27 &                    22.72$\pm$6.71 &                    25.00$\pm$5.23 &                   80.86$\pm$2.86 &             NaN &          49.72 \\
+    \rowcolor{YellowOrange!10} EEGNeX &                   31.36$\pm$12.22 &                  93.81$\pm$14.08 & \textbf{67.11}$\pm$\textbf{23.79} &                    26.32$\pm$8.26 &                    24.80$\pm$4.53 &                   82.65$\pm$1.43 &             NaN &          54.34 \\
+    \rowcolor{YellowOrange!20} EEGNet-8.2 &                   43.52$\pm$19.62 &                  64.43$\pm$29.12 &                   43.03$\pm$25.88 &                    24.56$\pm$5.44 &                    27.50$\pm$8.44 &                  44.14$\pm$14.00 &             NaN &           41.2 \\
+    \rowcolor{YellowOrange!10} MDM & \textbf{70.89}$\pm$\textbf{13.44} &                  75.38$\pm$18.38 &                   27.31$\pm$11.64 &                    23.12$\pm$6.29 &                    34.40$\pm$9.96 &                  78.77$\pm$19.06 & 54.77$\pm$21.95 &          52.09 \\
+    \rowcolor{YellowOrange!20} TS+LR &                   70.86$\pm$11.64 &                  89.44$\pm$13.84 &                   53.71$\pm$24.25 & \textbf{39.36}$\pm$\textbf{12.06} & \textbf{42.10}$\pm$\textbf{14.33} &                  87.22$\pm$15.96 & 67.52$\pm$20.04 & \textbf{64.32} \\
+    \rowcolor{YellowOrange!10} TS+SVM &                   68.95$\pm$13.73 &                  88.58$\pm$14.47 &                   50.58$\pm$23.34 &                   34.80$\pm$11.76 &                   40.20$\pm$14.41 &                  86.30$\pm$15.88 & 59.58$\pm$20.57 &          61.28 \\
+    \rowcolor{YellowOrange!20} ShallowConvNet &                   54.42$\pm$16.43 &                  69.36$\pm$20.08 &                   36.04$\pm$23.22 &                    25.84$\pm$9.19 &                   33.10$\pm$11.51 &                  57.47$\pm$16.13 &             NaN &          46.04 \\
+    \rowcolor{YellowOrange!10} TRCA &                    34.20$\pm$8.43 & \textbf{97.78}$\pm$\textbf{7.65} &                   54.54$\pm$30.52 &                    22.64$\pm$9.21 &                    27.10$\pm$4.25 & \textbf{99.20}$\pm$\textbf{2.08} &  98.97$\pm$2.38 &          62.06 \\
+    \hline 
+    \rowcolor{YellowOrange!50} Average &                              48.1 &                            84.07 &                             45.79 &                             26.67 &                             30.78 &                            78.79 &           73.81 &          53.78 \\
+    \hline
+\end{tabular}\end{adjustbox}
+%\end{table*}

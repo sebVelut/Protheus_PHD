@@ -1,80 +1,80 @@
 import pandas as pd
-from EEG2CodeKeras import (basearchi,
-                           basearchitest_batchnorm,
-                           basearchi_patchembedding,
-                           basearchi_patchembeddingdilation,
-                           trueVanilliaEEG2Code,
-                           vanilliaEEG2Code,
-                           vanilliaEEG2Code2,
-                           EEGnet_Inception)
-from _utils import make_preds_accumul_aggresive, make_preds_pvalue
-from utils import prepare_data,get_BVEP_data,balance,get_y_pred
+# from EEG2CodeKeras import (basearchi,
+#                            basearchitest_batchnorm,
+#                            basearchi_patchembedding,
+#                            basearchi_patchembeddingdilation,
+#                            trueVanilliaEEG2Code,
+#                            vanilliaEEG2Code,
+#                            vanilliaEEG2Code2,
+#                            EEGnet_Inception)
+# from _utils import make_preds_accumul_aggresive, make_preds_pvalue
+# from utils import prepare_data,get_BVEP_data,balance,get_y_pred
 
 
-from sklearn.model_selection import train_test_split
-from sklearn.base import clone
-from sklearn.pipeline import make_pipeline
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
-from sklearn.metrics import balanced_accuracy_score,confusion_matrix
-from sklearn.cross_decomposition import CCA
-import keras
+# from sklearn.model_selection import train_test_split
+# from sklearn.base import clone
+# from sklearn.pipeline import make_pipeline
+# from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+# from sklearn.metrics import balanced_accuracy_score,confusion_matrix
+# from sklearn.cross_decomposition import CCA
+# import keras
 
-from pyriemann.estimation import XdawnCovariances, Xdawn
-from sklearn.manifold import TSNE
-from pyriemann.tangentspace import TangentSpace
-from pyriemann.estimation import Covariances
-from pyriemann.utils.distance import distance_riemann, distance
-from pyriemann.utils.utils import check_weights
-from pyriemann.utils.base import powm
-from pyriemann.tangentspace import TangentSpace
-from mne.decoding import Vectorizer
-from pyriemann.transfer import (
-    decode_domains,
-    encode_domains,
-    TLCenter,
-    TLStretch,
-    TLRotate,
-)
+# from pyriemann.estimation import XdawnCovariances, Xdawn
+# from sklearn.manifold import TSNE
+# from pyriemann.tangentspace import TangentSpace
+# from pyriemann.estimation import Covariances
+# from pyriemann.utils.distance import distance_riemann, distance
+# from pyriemann.utils.utils import check_weights
+# from pyriemann.utils.base import powm
+# from pyriemann.tangentspace import TangentSpace
+# from mne.decoding import Vectorizer
+# from pyriemann.transfer import (
+#     decode_domains,
+#     encode_domains,
+#     TLCenter,
+#     TLStretch,
+#     TLRotate,
+# )
 
-from tensorflow import keras
-from collections import OrderedDict
-import tensorflow as tf
-import mne
-import time
-import os
+# from tensorflow import keras
+# from collections import OrderedDict
+# import tensorflow as tf
+# import mne
+# import time
+# import os
 
-import torch
-import torch.optim as optim
-from torch.utils.data import DataLoader, TensorDataset
+# import torch
+# import torch.optim as optim
+# from torch.utils.data import DataLoader, TensorDataset
 
-import sys
-import numpy as np
-from imblearn.under_sampling import RandomUnderSampler
-from sklearn.metrics import accuracy_score
-np.set_printoptions(threshold=sys.maxsize)
-import matplotlib.pyplot as plt
-from moabb.evaluations import WithinSessionEvaluation
-from moabb.paradigms import CVEP, MotorImagery, LeftRightImagery
-from SPDNet.tensorflow.spd_net_2_tensorflow import SPDNet_AJD
-from SPDNet.tensorflow.spd_net_tensorflow import SPDNet_Tensorflow
-# from SPDNet.tensorflow.optimizer import riemannian_adam
-from SPDNet.torch.optimizers import riemannian_adam as torch_riemannian_adam
-from SPDNet.torch.spd_net_bn_torch import SPDNetBN_Torch, SPDNetBN_Module, CNNSPDNetBN_Module
-from DNorm_CLF.DNorm_SPD.DNorm_SPD import BNSPD_Net
-from sklearn.model_selection import GridSearchCV
-import moabb
-sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\moabb\\moabb\\datasets")
-sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\moabb\\moabb\\paradigms")
-sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\Protheus_PHD\\Scripts\\SPDNet")
-sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\riemannian_tSNE")
-from R_TSNE import R_TSNE
-from castillos2023 import CasitllosCVEP100,CasitllosCVEP40,CasitllosBurstVEP100,CasitllosBurstVEP40
-from liu2024 import Liu2024
-# get the functions from RPA package
-sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\RPA")
-import rpa.transfer_learning as TL
-import rpa.diffusion_map as DM
-import rpa.get_dataset as GD
+# import sys
+# import numpy as np
+# from imblearn.under_sampling import RandomUnderSampler
+# from sklearn.metrics import accuracy_score
+# np.set_printoptions(threshold=sys.maxsize)
+# import matplotlib.pyplot as plt
+# from moabb.evaluations import WithinSessionEvaluation
+# from moabb.paradigms import CVEP, MotorImagery, LeftRightImagery
+# from SPDNet.tensorflow.spd_net_2_tensorflow import SPDNet_AJD
+# from SPDNet.tensorflow.spd_net_tensorflow import SPDNet_Tensorflow
+# # from SPDNet.tensorflow.optimizer import riemannian_adam
+# from SPDNet.torch.optimizers import riemannian_adam as torch_riemannian_adam
+# from SPDNet.torch.spd_net_bn_torch import SPDNetBN_Torch, SPDNetBN_Module, CNNSPDNetBN_Module
+# from DNorm_CLF.DNorm_SPD.DNorm_SPD import BNSPD_Net
+# from sklearn.model_selection import GridSearchCV
+# import moabb
+# sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\moabb\\moabb\\datasets")
+# sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\moabb\\moabb\\paradigms")
+# sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\Protheus_PHD\\Scripts\\SPDNet")
+# sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\riemannian_tSNE")
+# from R_TSNE import R_TSNE
+# from castillos2023 import CasitllosCVEP100,CasitllosCVEP40,CasitllosBurstVEP100,CasitllosBurstVEP40
+# from liu2024 import Liu2024
+# # get the functions from RPA package
+# sys.path.insert(0,"C:\\Users\\s.velut\\Documents\\These\\RPA")
+# import rpa.transfer_learning as TL
+# import rpa.diffusion_map as DM
+# import rpa.get_dataset as GD
 
 # fps = 60
 # sfreq = 500
@@ -195,62 +195,96 @@ import rpa.get_dataset as GD
 
 #################### from csv per participant to global
 
-# prefix_file = ['CNN_DA_score_code_recentered_','CNN_DG_score_code_recentered_','CNN_SS_score_code_recentered_']
-# path_file = 'C:/Users/s.velut/Documents/These/Protheus_PHD/results/results/Score_TF/score_code/'
+# prefix_file = ['Green_DA_score_code_0.35_recentered_','Green_DA_Xdawn_score_code_0.25_recentered_','Green_DA_Xdawn_score_code_0.35_recentered_',
+#                'Green_DG_score_code_0.35_recentered_','Green_DG_Xdawn_score_code_0.25_recentered_','Green_DG_Xdawn_score_code_0.35_recentered_',
+#                'Green_SS_score_code_0.35_recentered_','Green_SS_Xdawn_score_code_0.25_recentered_','Green_SS_Xdawn_score_code_0.35_recentered_']
+# prefix_file = ['Green_DA_Xdawn_score_code_0.25_recentered_','Green_DG_Xdawn_score_code_0.25_recentered_','Green_SS_Xdawn_score_code_0.25_recentered_']
+# path_file = 'C:/Users/s.velut/Documents/These/Protheus_PHD/Scripts/Wavelets/Green_files/results/'
+# prefix_file = ['CNN_DA_tps_train_recentered_','CNN_DG_tps_train_recentered_','CNN_SS_tps_train_recentered_',
+#                'SPD_DA_tps_train_recentered_','SPD_DG_tps_train_recentered_','SPD_SS_tps_train_recentered_',
+#                'SPDBN_DA_tps_train_recentered_','SPDBN_DG_tps_train_recentered_','SPDBN_SS_tps_train_recentered_',]
+# path_file = 'C:/Users/s.velut/Documents/These/Protheus_PHD/results/'
+# prefix_file = ['Green_DA_score_code_0.35_recentered_','Green_DG_score_code_0.35_recentered_','Green_SS_score_code_0.35_recentered_']
+# path_file = 'C:/Users/s.velut/Documents/These/Protheus_PHD/Scripts/Wavelets/Green_files/results_new_dataset/'
 
+
+# mode = ['score/','score_code/','tps_pred/','tps_test/','tps_train/']
+# # mode = ["tps_train/"]
 # nb_subject= 12
+# # nb_subject= 24
 
 # df_results = {}
 
-# for pf in prefix_file:
-#     for i in range(nb_subject):
-#         df_sub = pd.read_csv(path_file+pf+str(i)+".csv")
-#         df_results[str(i)] = df_sub.values[:,1]
+# for m in mode:
+#     for pf in prefix_file:
+#         for i in range(nb_subject):
+#             tpf = pf.replace("score_code",m[:-1])
+#             df_sub = pd.read_csv(path_file+m+tpf+str(i)+".csv")
+#             df_results[str(i)] = df_sub.values[:,1]
 
-#     pd.DataFrame(df_results).to_csv(path_file+pf[:-1]+".csv")
+#         pd.DataFrame(df_results).to_csv(path_file+m+tpf[:-1]+".csv")
+
+#################### from csv per participant to global for Similarity
+prefix_file = ['Green_SS_score_code_0.35_']
+path_file = 'C:/Users/s.velut/Documents/These/Protheus_PHD/Scripts/Wavelets/Green_files/results_new_dataset_similarity/results/'
+mode = ['score/','score_code/','tps_pred/','tps_test/','tps_train/']
+similarity = ['0.05','0.1','0.15','0.2','0.25','0.3','0.35']
+nb_subject = 24
+
+df_results = {}
+
+for m in mode:
+    for pf in prefix_file:
+        for s in similarity:
+            for i in range(nb_subject):
+                tpf = pf.replace("score_code",m[:-1])
+                df_sub = pd.read_csv(path_file+m+tpf+s+'_recentered_'+str(i)+".csv")
+                df_results[str(i)] = df_sub.values[:,1]
+
+            pd.DataFrame(df_results).to_csv(path_file+m+tpf+s+'_recentered'+".csv")
 
 #################### test liu dataset of Taha
 
-ds = Liu2024()
-paradigm = LeftRightImagery()
+# ds = Liu2024()
+# paradigm = LeftRightImagery()
 
 
-print("\ntest\n")
+# print("\ntest\n")
 
-raw,lab,met = paradigm.get_data(ds,[1])
-# print(raw[0])
-# events = mne.events_from_annotations(raw[0])
-# print(events)
-# print(raw[0].get_data().shape)
+# raw,lab,met = paradigm.get_data(ds,[1])
+# # print(raw[0])
+# # events = mne.events_from_annotations(raw[0])
+# # print(events)
+# # print(raw[0].get_data().shape)
 
-print(lab)
-Elab = lab
-# Y = Elab[Elab>=3]
-# X = raw[0].get_data()[Elab>=3]
-# print(X.shape)
-# print(Y.shape)
+# print(lab)
+# Elab = lab
+# # Y = Elab[Elab>=3]
+# # X = raw[0].get_data()[Elab>=3]
+# # print(X.shape)
+# # print(Y.shape)
 
-# xtrain,y_train,x_test,y_test = train_test_split(X,Y,test_size=0.2)
+# # xtrain,y_train,x_test,y_test = train_test_split(X,Y,test_size=0.2)
 
-# clf  = LDA()
-clf = make_pipeline(Xdawn(nfilter=4, estimator="lwf"),Vectorizer(),
-            LDA(solver="lsqr", shrinkage="auto"))
+# # clf  = LDA()
+# clf = make_pipeline(Xdawn(nfilter=4, estimator="lwf"),Vectorizer(),
+#             LDA(solver="lsqr", shrinkage="auto"))
 
-pipes = {}
-pipes["LDA"] = clf
-# pipes["LDA"] = make_pipeline(clf)
+# pipes = {}
+# pipes["LDA"] = clf
+# # pipes["LDA"] = make_pipeline(clf)
 
-ds.subject_list = ds.subject_list[:2]
+# ds.subject_list = ds.subject_list[:2]
 
-evaluation = WithinSessionEvaluation(
-    paradigm=paradigm,
-    datasets=ds,
-    suffix="braindecode_example",
-    overwrite=True,
-    return_epochs=False,
-    n_jobs=1,
-)
+# evaluation = WithinSessionEvaluation(
+#     paradigm=paradigm,
+#     datasets=ds,
+#     suffix="braindecode_example",
+#     overwrite=True,
+#     return_epochs=False,
+#     n_jobs=1,
+# )
 
-results = evaluation.process(pipes)
+# results = evaluation.process(pipes)
 
-print(results.head())
+# print(results.head())
