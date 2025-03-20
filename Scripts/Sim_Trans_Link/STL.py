@@ -8,6 +8,7 @@ sys.path.append('D:/s.velut/Documents/Thèse/Protheus_PHD/Scripts')
 from EEG2CodeKeras import EEG2Code
 from Wavelets.Green_files.green.wavelet_layers import RealCovariance
 import torch
+import braindecode
 
 from Wavelets.Green_files.research_code.pl_utils import get_green
 mne.set_log_level('ERROR')
@@ -19,7 +20,7 @@ import time
 from pyriemann.estimation import Covariances, XdawnCovariances
 from pyriemann.tangentspace import TangentSpace
 from pyriemann.classification import MDM
-from sklearn.metrics import balanced_accuracy_score,f1_score,recall_score
+from sklearn.metrics import balanced_accuracy_score,f1_score,recall_score, precision_score
 from sklearn.model_selection import train_test_split
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 from sklearn.svm import SVC
@@ -134,17 +135,18 @@ def get_all_metrics(Y_test, Y_pred, code_test, code_pred):
     score = balanced_accuracy_score(Y_test,Y_pred)
     recall = recall_score(Y_test,Y_pred)
     f1 = f1_score(Y_test,Y_pred)
+    precision = precision_score(Y_test,Y_pred)
 
     score_code = balanced_accuracy_score(code_test,code_pred)
 
-    return score, recall, f1, score_code
+    return score, recall, f1, score_code,precision
 
 def full_preprocessed_data(path,participant):
     return np.load(path+"full_preprocess_data_"+participant+".npy")
 
 
 def solo_preprocessed_data(path,participant):
-    return np.load(path+"cal_2/full_solo_preprocess_data_"+participant+".npy")
+    return np.load(path+"full_solo_preprocess_data_"+participant+".npy")
 
 
 def similarity_score(Xt, Yt, Xs, Ys):
@@ -231,7 +233,7 @@ def perform_measure_TF(clf, X_train, Y_train, X_test, Y_test, codes, n_class=5, 
     
     tps_acc = np.mean(mean_long_accumul)
 
-    return Y_test, Y_pred, labels_pred_accumul, tps_train, tps_pred, tps_acc
+    return Y_test, Y_pred, labels_pred_accumul, tps_train, tps_pred, tps_acc, clf
 
 def get_train_test_data(Xt, Yt, Xs, Ys, domainst, domainss, codes, labels_code, method, clf_name, n_class=5, n_cal=4, window_size=0.35, freqwise=500,
                     test_size=0.2):
@@ -285,24 +287,23 @@ def main(path, file_path, fmin, fmax, sample_freq, fps, timewise, participants, 
     dl = STLDataLoader(path, fmin, fmax, window_size, sample_freq, fps, timewise, participants, 5)
     raw_data = dl.load_data()
     X, Y, domains, codes, labels_code = dl.get_epochs(raw_data)
+    # param_wavelets_tt = []
+    # param_wavelets_foi = []
+    # param_wavelets_fwhm = []
 
     # Initialisation
     similarity = {}
-    all_metrics = np.zeros((8,dl.nb_subjects, dl.nb_subjects))
+    all_metrics = np.zeros((9,dl.nb_subjects, dl.nb_subjects))
     # Start for loop on each participant (or just on a few to go faster)
     for i in range(dl.nb_subjects):
         print("Check participant ",i)
         similarity[participants[i]] = {}
         
         # Preprocess the data for data i with no data leak(index of the loop). HERE IF DOMAIN ADAPTATION
-        if method in ["DA","SiSu"]:
-            print("Preprocess the data of participant ",i)
-            temp_start = time.time()
-            Xt_preproc = solo_preprocessed_data(data_path,participants[i])
-            tps_preproc = time.time() - temp_start
-        else:
-            Xt_preproc=None
-        
+        tps_preproc = 0
+        # temp_param_wavelets_tt = []
+        # temp_param_wavelets_foi = []
+        # temp_param_wavelets_fwhm = []
         # Start another for loop to perform 2by2 measure (similarity, Domain Adaptation/Generalisation)
         for j in range(dl.nb_subjects):
             print("With participant", j)
@@ -314,8 +315,16 @@ def main(path, file_path, fmin, fmax, sample_freq, fps, timewise, participants, 
                 #     Xt_preproc = soloPreprocess(X[i], Y[i],X[j], Y[j], method="DG", n_class=dl.n_class, n_cal=4, window_size=dl.window_size,freqwise=dl.freqwise)
                 #     tps_preproc = time.time() - temp_start
 
-                X_preproc = full_preprocessed_data(data_path,participants[j])
-                if clf_name in ['PTGREEN','PTCNN']:
+                
+                if clf_name in ['PTGREEN','PTCNN','PTEEGNEX']:
+                    if method in ["DA","SiSu"]:
+                        print("Preprocess the data of participant ",i)
+                        temp_start = time.time()
+                        Xt_preproc = solo_preprocessed_data(data_path,participants[i])
+                        tps_preproc = time.time() - temp_start
+                    else:
+                        Xt_preproc=None
+                    X_preproc = full_preprocessed_data(data_path,participants[j])
                     X_train, Y_train, X_test, Y_test, labels_code_test = get_train_test_data(Xt_preproc, Y[i], X_preproc,
                                                                                 Y[j], domains[i], domains[j], codes, 
                                                                                 labels_code[i], method, clf_name, dl.n_class,2, window_size,
@@ -342,15 +351,29 @@ def main(path, file_path, fmin, fmax, sample_freq, fps, timewise, participants, 
                         model = EEG2Code(windows_size = X_train[0].shape[-1],
                                          n_channel_input = X_train[0].shape[-2],
                                          optimizer=optimizer,
-                                         num_epochs=num_epochs) 
+                                         num_epochs=num_epochs)
+                    elif clf_name=="PTEEGNEX":
+                        clf = braindecode.models.EEGNeX(n_chans=8,
+                                                                   n_outputs=2,
+                                                                   sfreq=500,
+                                                                   input_window_seconds=0.35,
+                                                                   n_times=175
+                                                                   )
+                        model = braindecode.EEGClassifier(clf,max_epochs=20,batch_size=64,optimizer=torch.optim.Adam)
+                    
                     # perform the train test with Xsource and Xtarget
                     print("Train and test")
-                    Y_test, Y_pred, labels_pred_accumul, tps_train, tps_pred, tps_acc = perform_measure_TF(model, X_train, Y_train, X_test, Y_test,
+                    Y_test, Y_pred, labels_pred_accumul, tps_train, tps_pred, tps_acc, clf = perform_measure_TF(model, X_train, Y_train, X_test, Y_test,
                                                                                                                     codes, dl.n_class,2, window_size,
                                                                                                                     dl.freqwise,test_size,batchsize,lr,
                                                                                                                     num_epochs)
+                    y_pred_total = clf.predict(Xt_preproc)
+                    Y_pred_total = np.array([1 if (y >= 0.5) else 0 for y in y_pred_total])
+
+                    
                 # Create the classifier
-                if clf_name in ["TS_LDA","TS_SVM","MDM","CCNN","CNN","CGREEN","GREEN","DACNN"]:
+                # if clf_name in ["TS_LDA","TS_SVM","MDM","CCNN","CNN","CGREEN","GREEN","DACNN"]:
+                else:
                     X_train, Y_train, X_test, Y_test, labels_code_test = get_train_test_data(X[i], Y[i], X[j],
                                                                                 Y[j], domains[i], domains[j], codes, 
                                                                                 labels_code[i], method, clf_name, dl.n_class,2, window_size,
@@ -420,27 +443,45 @@ def main(path, file_path, fmin, fmax, sample_freq, fps, timewise, participants, 
                                          optimizer=optimizer,
                                          num_epochs=num_epochs)
                         )
+                    elif clf_name=="EEGNEX":
+                        clf = braindecode.models.EEGNeX(n_chans=8,
+                                                                   n_outputs=2,
+                                                                   sfreq=500,
+                                                                   input_window_seconds=0.35,
+                                                                   n_times=175,
+                                                                   )
+                        model = braindecode.EEGClassifier(clf,max_epochs=20,batch_size=64,optimizer=torch.optim.Adam)
+                    
 
                     # perform the train test with Xsource and Xtarget
                     print("Train and test")
-                    Y_test, Y_pred, labels_pred_accumul, tps_train, tps_pred, tps_acc = perform_measure_TF(model, X_train, Y_train, X_test, Y_test,
+                    Y_test, Y_pred, labels_pred_accumul, tps_train, tps_pred, tps_acc, clf = perform_measure_TF(model, X_train, Y_train, X_test, Y_test,
                                                                                                                     codes, dl.n_class,2, window_size,
                                                                                                                     dl.freqwise,test_size,batchsize,lr,
-                                                                                                                    num_epochs) 
-                        
+                                                                                                                    num_epochs)
+                    # y_pred_total = clf.predict(X[i])
+                    # Y_pred_total = np.array([1 if (y >= 0.5) else 0 for y in y_pred_total])
+                # temp_param_wavelets_tt.append(model.conv_layers[0].tt.data.detach().numpy())
+                # temp_param_wavelets_foi.append(model.conv_layers[0].foi.data.detach().numpy())
+                # temp_param_wavelets_fwhm.append(model.conv_layers[0].fwhm.data.detach().numpy())
                 # perform the measure of similarity between Xsource and Xtarget
                 if method !="SiSu":
                     print("get the similarity score")
                     # similarity[participants[i]][participants[j]] = similarity_score(Xt_preproc, Y[i], X_preproc, Y[j])
-            
+
                 # Calcul the different classification metric 
-                score, recall, f1, score_code = get_all_metrics(Y_test, Y_pred, labels_code_test, labels_pred_accumul)
+                score, recall, f1, score_code,precision = get_all_metrics(Y_test, Y_pred, labels_code_test, labels_pred_accumul)
                 print("score_code",score_code)
-                all_metrics[:,i,j] = np.array([tps_preproc, tps_train, tps_pred, tps_acc, score, recall, f1, score_code])
+                all_metrics[:,i,j] = np.array([tps_preproc, tps_train, tps_pred, tps_acc, score, recall, f1, score_code,precision])
+                # predict_one = Y_pred_total[Y[i]==1]
+                # np.save('/'.join([file_path,"ws"+str(window_size),timewise,"results","cal_2",'pred_one_'+str(i+1)+"_"+str(j+1)+".npy"]),predict_one )
+        # param_wavelets_tt.append(np.mean(temp_param_wavelets_tt,axis=0))
+        # param_wavelets_foi.append(np.mean(temp_param_wavelets_foi,axis=0))
+        # param_wavelets_fwhm.append(np.mean(temp_param_wavelets_fwhm,axis=0))
 
     save_path = '/'.join([file_path,"ws"+str(window_size),timewise,"results","cal_2",''])
     # np.save(save_path+"similarity_"+prefix+".npy",similarity)
-    name = ["tps_preproc_"+prefix+".npy", "tps_train_"+prefix+".npy", "tps_pred_"+prefix+".npy", "tps_acc_"+prefix+".npy", "score_"+prefix+".npy","recall_"+prefix+".npy", "f1_"+prefix+".npy", "score_code_"+prefix+".npy"]
+    name = ["tps_preproc_"+prefix+".npy", "tps_train_"+prefix+".npy", "tps_pred_"+prefix+".npy", "tps_acc_"+prefix+".npy", "score_"+prefix+".npy","recall_"+prefix+".npy", "f1_"+prefix+".npy", "score_code_"+prefix+".npy","precision_"+prefix+".npy"]
     for i in range(all_metrics.shape[0]):
         # np.save(save_path+name[i],all_metrics[i])
         print(i,all_metrics[i])
@@ -470,13 +511,13 @@ if __name__ == '__main__':
     sfreq = 500
     num_epochs = 20
     timewise="time_sample"
-    clf_name = "PTGREEN"
+    clf_name = "CNN"
     method = "SiSu"
-    participants = '["P1"]'
+    # participants = '["P1","P2"]'
     # participants = '["P1","P17","P16","P14","P19","P23"]'
-    # participants = "['P1','P2','P3','P4','P5','P6','P7','P8','P9','P10',\
-    #                 'P11','P12','P13','P14','P15','P16','P17','P18','P19','P20',\
-    #                 'P21','P22','P23','P24']"
+    participants = "['P1','P2','P3','P4','P5','P6','P7','P8','P9','P10',\
+                    'P11','P12','P13','P14','P15','P16','P17','P18','P19','P20',\
+                    'P21','P22','P23','P24']"
     test_size=0.2
     batchsize=64
     lr=1e-03

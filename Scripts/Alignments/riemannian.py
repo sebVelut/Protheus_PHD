@@ -10,11 +10,12 @@ from .covariance import compute_covariances, mean_covariance
 
 def compute_ref_riemann(data=None, mean=None, dtype='covmat'):
     data = copy.deepcopy(data)
-    if dtype != 'covmat':
-        covmats = compute_covariances(data, estimator='lwf')
-        data = covmats
+    
 
     if mean is None:
+        if dtype != 'covmat':
+            covmats = compute_covariances(data, estimator='lwf')
+            data = covmats
         mean = mean_covariance(data, metric='riemann')
 
     compare = np.allclose(mean, np.identity(mean.shape[0]))
@@ -45,7 +46,7 @@ def compute_ref_riemann(data=None, mean=None, dtype='covmat'):
 
 def compute_riemannian_alignment(data, mean=None, dtype='covmat'):
     data = copy.deepcopy(data)
-
+    
     r_ra = compute_ref_riemann(data=data, mean=mean, dtype=dtype)
 
     if dtype == 'covmat':

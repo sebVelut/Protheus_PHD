@@ -54,7 +54,6 @@ def _compute_gaborwavelet(
 
     foi_oct = 2**torch.clamp(foi, min_foi_oct, max_foi_oct)
     fwhm_oct = 2**torch.clamp(fwhm, min_fwhm_oct, max_fwhm_oct)
-
     wavelets = torch.stack([
         torch.exp(2j * np.pi * f * tt) * torch.exp(
             -4 * np.log(2) * tt**2 / h**2
@@ -146,7 +145,6 @@ class WaveletConv(nn.Module):
         after the convolution.
 
         """
-
         wavelets = _compute_gaborwavelet(
             tt=self.tt,
             foi=self.foi,
@@ -156,6 +154,9 @@ class WaveletConv(nn.Module):
             scaling=self.scaling
         )
         n_freqs = wavelets.shape[0]
+        # print("tt",self.tt)
+        # print("foi",self.foi)
+        # print("fvhm",self.fwhm)
 
         # If single epoch
         if X.dim() == 3:

@@ -56,14 +56,9 @@ class STLDataLoader():
                 count += 1
             
             for idx in range(length):
-                # print('Xidx:', trial_nb*length+idx, "Tidxm:", idx, 'TidxM:', idx +
-                #       n_samples_windows, 'Ltrial', trial[:, idx:idx+n_samples_windows].shape)
                 idx_taken.append(trial_nb*length+idx)
-        # if normalise:
-        #     X_std = X.std(axis=0)
-        #     X /= X_std + 1e-8
-        y_pred = np.vstack((y,np.abs(1-y))).T
-        y = np.array([1 if (y >= 0.5) else 0 for y in y_pred[:,0]])
+        # y_pred = np.vstack((y,np.abs(1-y))).T
+        # y = np.array([1 if (y >= 0.5) else 0 for y in y_pred[:,0]])
 
         return X, y, np.array(idx_taken)
 

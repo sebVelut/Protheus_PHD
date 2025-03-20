@@ -9,18 +9,16 @@ from torch import Tensor
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
-import sys
-sys.path.append('D:/s.velut/Documents/Thèse/Protheus_PHD/Scripts')
-from SPDNet.SPD_torch.optimizers import riemannian_adam as torch_riemannian_adam
-from Wavelets.Green_files.green.spd_layers import BiMap
-from Wavelets.Green_files.green.spd_layers import LogMap
-from Wavelets.Green_files.green.spd_layers import Shrinkage
-from Wavelets.Green_files.green.wavelet_layers import PW_PLV
-from Wavelets.Green_files.green.wavelet_layers import CombinedPooling
-from Wavelets.Green_files.green.wavelet_layers import CrossCovariance
-from Wavelets.Green_files.green.wavelet_layers import CrossPW_PLV
-from Wavelets.Green_files.green.wavelet_layers import RealCovariance
-from Wavelets.Green_files.green.wavelet_layers import WaveletConv
+from ..optimizers import riemannian_adam as torch_riemannian_adam
+from ..green.spd_layers import BiMap
+from ..green.spd_layers import LogMap
+from ..green.spd_layers import Shrinkage
+from ..green.wavelet_layers import PW_PLV
+from ..green.wavelet_layers import CombinedPooling
+from ..green.wavelet_layers import CrossCovariance
+from ..green.wavelet_layers import CrossPW_PLV
+from ..green.wavelet_layers import RealCovariance
+from ..green.wavelet_layers import WaveletConv
 
 
 def vectorize_upper(X: Tensor) -> Tensor:
@@ -152,7 +150,7 @@ class Green(nn.Module):
     def set_params(self):
         pass
 
-    def fit(self,X_train,Y_train, epochs=20, batch_size=64,shuffle=True):
+    def fit(self,X_train,Y_train, epochs=20, batch_size=64,shuffle=True, verbose=False):
         """
         fit the green classifier
         parameters:
@@ -225,9 +223,10 @@ class Green(nn.Module):
 
 
             val_accuracy = balanced_accuracy_score(y_val,np.array([1 if (y >= 0.5) else 0 for y in np.concatenate(val_y_pred)]))
-            print(f"Epoch {epoch+1} train Accuracy: {train_accuracy} ||  Validation Accuracy: {val_accuracy}")
+            if verbose:
+                print(f"Epoch {epoch+1} train Accuracy: {train_accuracy} ||  Validation Accuracy: {val_accuracy}")
 
-            print(f"Epoch {epoch+1}, Loss: {running_loss / len(train_dataloader)}")
+                print(f"Epoch {epoch+1}, Loss: {running_loss / len(train_dataloader)}")
 
         print("Training finished!")
 
