@@ -511,13 +511,13 @@ if __name__ == '__main__':
     sfreq = 500
     num_epochs = 20
     timewise="time_sample"
-    clf_name = "CNN"
+    clf_name = "PTGREEN"
     method = "SiSu"
     # participants = '["P1","P2"]'
-    # participants = '["P1","P17","P16","P14","P19","P23"]'
-    participants = "['P1','P2','P3','P4','P5','P6','P7','P8','P9','P10',\
-                    'P11','P12','P13','P14','P15','P16','P17','P18','P19','P20',\
-                    'P21','P22','P23','P24']"
+    participants = '["P1","P17","P16","P14","P19","P23"]'
+    # participants = "['P1','P2','P3','P4','P5','P6','P7','P8','P9','P10',\
+    #                 'P11','P12','P13','P14','P15','P16','P17','P18','P19','P20',\
+    #                 'P21','P22','P23','P24']"
     test_size=0.2
     batchsize=64
     lr=1e-03
